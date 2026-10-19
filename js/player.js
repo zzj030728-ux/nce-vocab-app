@@ -26,6 +26,12 @@ const Player = {
     this.currentIndex = -1;
     this.audio.pause();
     if (url) {
+      // blob: URL cannot use CORS anonymous; remote NCE needs it
+      if (String(url).startsWith("blob:")) {
+        this.audio.removeAttribute("crossorigin");
+      } else {
+        this.audio.crossOrigin = "anonymous";
+      }
       this.audio.src = url;
       this.audio.load();
     } else {

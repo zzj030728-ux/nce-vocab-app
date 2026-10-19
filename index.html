@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="description" content="英语词库：960+ 词书浏览、新概念点读、生词与间隔复习">
+  <meta name="description" content="英语词库：960+ 词书浏览、点读、生词与间隔复习">
   <title>英语词库</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-192.png">
@@ -17,7 +17,7 @@
   <header>
     <div>
       <h1 id="header-title">英语词库</h1>
-      <p class="subtitle" id="header-sub">全库浏览 · 新概念点读 · 间隔复习</p>
+      <p class="subtitle" id="header-sub">全库浏览 · 点读 · 间隔复习</p>
     </div>
   </header>
 
@@ -53,20 +53,65 @@
       <button class="back-btn" id="book-back" type="button">← 返回词书</button>
       <h2 class="view-title" id="book-title"></h2>
       <div class="book-meta" id="book-meta"></div>
-      <div class="search-bar">
-        <input type="search" id="word-search" placeholder="搜索单词…" autocomplete="off">
+      <div class="book-toolbar">
+        <div class="search-bar book-search-wrap">
+          <input type="search" id="word-search" placeholder="搜索单词…" autocomplete="off">
+        </div>
+        <label class="card-mode-toggle" title="卡片模式：大卡片翻面记词">
+          <input type="checkbox" id="card-mode-toggle">
+          <span>卡片模式</span>
+        </label>
       </div>
       <div id="word-list" class="word-list"></div>
+      <div id="card-mode-panel" class="card-mode-panel" style="display:none;">
+        <div id="flash-card" class="flash-card" tabindex="0">
+          <div class="flash-front">
+            <div class="flash-word" id="flash-word"></div>
+            <div class="flash-hint">点按翻面</div>
+          </div>
+          <div class="flash-back">
+            <div class="flash-word-sm" id="flash-word-back"></div>
+            <div class="flash-ipa" id="flash-ipa"></div>
+            <div class="flash-def" id="flash-def"></div>
+            <div class="flash-example" id="flash-example"></div>
+          </div>
+        </div>
+        <div class="flash-nav">
+          <button type="button" id="flash-prev" class="pager-btn">上一词</button>
+          <div class="pager-info" id="flash-pos"></div>
+          <button type="button" id="flash-next" class="pager-btn">下一词</button>
+        </div>
+        <div class="flash-actions">
+          <button type="button" id="flash-speak" class="btn-secondary">发音</button>
+          <button type="button" id="flash-save" class="btn-primary">加入生词本</button>
+        </div>
+      </div>
       <div class="pager" id="word-pager"></div>
     </div>
 
-    <!-- 新概念：目录 -->
-    <div id="lessons-view" style="display:none;">
-      <div class="book-tabs" id="book-tabs"></div>
-      <div class="lesson-list" id="lesson-list"></div>
+    <!-- 点读：外壳（子 Tab：新概念 / 我的教材） -->
+    <div id="listen-view" style="display:none;">
+      <div class="sub-tabs" id="listen-sub-tabs">
+        <button type="button" class="sub-tab active" data-sub="nce">新概念</button>
+        <button type="button" class="sub-tab" data-sub="materials">我的教材</button>
+      </div>
+      <div id="nce-pane">
+        <div class="book-tabs" id="book-tabs"></div>
+        <div class="lesson-list" id="lesson-list"></div>
+      </div>
+      <div id="materials-pane" style="display:none;">
+        <div class="materials-intro">
+          <p>导入你自己拥有的正版 <strong>.mp3</strong> 与同名 <strong>.lrc</strong>（成对），存于本机 IndexedDB，不上传服务器。四级 / 星火等请自备正版音频，本站不提供整包拷贝。</p>
+          <label class="btn-primary import-btn">
+            导入 MP3 + LRC
+            <input type="file" id="materials-file" accept=".mp3,.m4a,.wav,.ogg,.lrc,audio/*,text/plain" multiple hidden>
+          </label>
+        </div>
+        <div id="materials-list" class="lesson-list"></div>
+      </div>
     </div>
 
-    <!-- 新概念：点读 -->
+    <!-- 点读：播放器（新概念 + 我的教材共用） -->
     <div id="reader-view" class="reader">
       <button class="back-btn" id="back-btn" type="button">← 返回</button>
       <div class="player-bar">
@@ -97,8 +142,8 @@
     <button data-tab="vault" class="active" type="button">
       <span class="icon">📚</span>词库
     </button>
-    <button data-tab="lessons" type="button">
-      <span class="icon">📖</span>新概念
+    <button data-tab="listen" type="button">
+      <span class="icon">🎧</span>点读
     </button>
     <button data-tab="vocab" type="button">
       <span class="icon">📝</span>生词
@@ -110,7 +155,10 @@
 
   <div class="modal-overlay" id="modal-overlay">
     <div class="modal">
-      <h3 id="modal-word"></h3>
+      <div class="modal-word-row">
+        <h3 id="modal-word"></h3>
+        <button type="button" id="speak-btn" class="speak-btn" title="发音">🔊 发音</button>
+      </div>
       <div class="ipa" id="modal-ipa"></div>
       <div class="def" id="modal-def"></div>
       <div class="example" id="modal-example"></div>
@@ -122,7 +170,9 @@
   </div>
 
   <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
+  <script src="js/lrc.js"></script>
   <script src="js/lessons.js"></script>
+  <script src="js/materials.js"></script>
   <script src="js/vocab.js"></script>
   <script src="js/player.js"></script>
   <script src="js/catalog.js"></script>

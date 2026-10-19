@@ -428,3 +428,212 @@ header .subtitle { margin: 2px 0 0; font-size: .8rem; color: var(--muted); }
   border: 1px solid var(--border);
   font-size: .8rem;
 }
+
+/* —— A/B/C enhancements —— */
+
+.book-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.book-search-wrap { flex: 1; margin-bottom: 0; }
+.card-mode-toggle {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .85rem;
+  color: var(--muted);
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+}
+.card-mode-toggle input { accent-color: var(--primary); width: 16px; height: 16px; }
+
+.word-def {
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+}
+
+/* Flash card mode */
+.card-mode-panel { margin-top: 4px; }
+.flash-card {
+  position: relative;
+  min-height: 260px;
+  perspective: 1000px;
+  cursor: pointer;
+  margin-bottom: 14px;
+}
+.flash-front, .flash-back {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  padding: 28px 20px;
+  min-height: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  transition: transform .35s ease;
+  transform-style: preserve-3d;
+}
+.flash-front { transform: rotateY(0deg); }
+.flash-back {
+  position: absolute;
+  inset: 0;
+  transform: rotateY(180deg);
+}
+.flash-card.flipped .flash-front { transform: rotateY(180deg); }
+.flash-card.flipped .flash-back { transform: rotateY(360deg); }
+.flash-word {
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: .02em;
+}
+.flash-hint { margin-top: 16px; font-size: .8rem; color: var(--muted); }
+.flash-word-sm { font-size: 1.25rem; font-weight: 650; margin-bottom: 6px; }
+.flash-ipa { color: var(--primary); font-size: 1.05rem; margin-bottom: 10px; }
+.flash-def { font-size: 1.05rem; line-height: 1.5; margin-bottom: 10px; }
+.flash-example {
+  background: var(--bg);
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: .9rem;
+  color: var(--muted);
+  width: 100%;
+  text-align: left;
+}
+.flash-nav {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+.flash-actions {
+  display: flex;
+  gap: 10px;
+}
+.flash-actions button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  font-size: .95rem;
+  font-weight: 550;
+  cursor: pointer;
+}
+
+/* Modal speak */
+.modal-word-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+.modal-word-row h3 { margin: 0; }
+.speak-btn {
+  flex: none !important;
+  padding: 8px 12px !important;
+  border-radius: 10px !important;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  font-size: .85rem !important;
+  font-weight: 500 !important;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.speak-btn:active { opacity: .8; }
+
+/* B: words already in vocab notebook */
+.word.in-vocab {
+  text-decoration: underline;
+  text-decoration-color: var(--success);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  position: relative;
+}
+.word.in-vocab::after {
+  content: "";
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--success);
+  margin-left: 2px;
+  vertical-align: super;
+}
+
+/* C: listen sub-tabs + materials */
+.sub-tabs {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 14px;
+}
+.sub-tab {
+  flex: 1;
+  padding: 10px 12px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--text);
+  font-size: .95rem;
+  font-weight: 550;
+  cursor: pointer;
+}
+.sub-tab.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+}
+
+.materials-intro {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  margin-bottom: 14px;
+  font-size: .9rem;
+  color: var(--muted);
+}
+.materials-intro p { margin: 0 0 12px; line-height: 1.5; }
+.import-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: .95rem;
+  font-weight: 550;
+  border: none;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.materials-card { gap: 10px; }
+.materials-card-main { flex: 1; min-width: 0; cursor: pointer; }
+.materials-card-main h3 {
+  margin: 0 0 2px;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mat-del {
+  flex-shrink: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--muted);
+  font-size: .8rem;
+  cursor: pointer;
+}
+.mat-del:active { color: #b91c1c; border-color: #fecaca; }

@@ -1,4 +1,4 @@
-// app.js — 英语词库总站：词库浏览 + 新概念点读 + 生词/复习
+// app.js — 英语词库：词库浏览 + 点读（新概念/我的教材）+ 生词/复习
 let currentBook = "nce1";
 let currentLesson = null;
 let catalogCache = {};
@@ -8,6 +8,13 @@ let currentVaultBook = null;
 let wordPage = 1;
 let wordQuery = "";
 let loadedEntries = [];
+let cardMode = false;
+let flashIndex = 0;
+let flashFlipped = false;
+let listenSub = "nce"; // nce | materials
+let readerBackTarget = "listen"; // where back from reader goes
+let materialObjectUrl = null;
+let modalSpeakWord = "";
 
 function $(id) { return document.getElementById(id); }
 
@@ -27,11 +34,11 @@ function toast(msg) {
 
 function setHeader(title, sub) {
   $("header-title").textContent = title || "英语词库";
-  $("header-sub").textContent = sub || "全库浏览 · 新概念点读 · 间隔复习";
+  $("header-sub").textContent = sub || "全库浏览 · 点读 · 间隔复习";
 }
 
 function showView(name) {
-  const views = ["vault", "books", "book", "lessons", "reader", "vocab", "review"];
+  const views = ["vault", "books", "book", "listen", "reader", "vocab", "review"];
   views.forEach(v => {
     const el = $(v + "-view");
     if (!el) return;
@@ -42,20 +49,94 @@ function showView(name) {
       el.style.display = name === v ? "block" : "none";
     }
   });
-  const tabMap = { vault: "vault", books: "vault", book: "vault", lessons: "lessons", reader: "lessons", vocab: "vocab", review: "review" };
+  const tabMap = {
+    vault: "vault", books: "vault", book: "vault",
+    listen: "listen", reader: "listen",
+    vocab: "vocab", review: "review"
+  };
   const activeTab = tabMap[name] || name;
   document.querySelectorAll(".bottom-nav button").forEach(b => {
     b.classList.toggle("active", b.dataset.tab === activeTab);
   });
 }
 
+function escapeHtml(s) {
+  return String(s || "")
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;");
+}
+
+function shortCatName(name) {
+  return name.replace(/^\d+\./, "");
+}
+
+function shortSource(s) {
+  if (!s) return "";
+  if (s.startsWith("nce:")) return "新概念 · " + s.slice(4).toUpperCase();
+  if (s.startsWith("material:")) return "我的教材 · " + s.slice(9);
+  const parts = s.split("/");
+  const last = parts[parts.length - 1] || s;
+  return last.replace(/\.(xlsx|xls|txt)$/i, "") || s;
+}
+
+function speakEnglish(word) {
+  const text = (word || "").trim();
+  if (!text) return;
+  if (!window.speechSynthesis) {
+    toast("当前浏览器不支持语音合成");
+    return;
+  }
+  window.speechSynthesis.cancel();
+  const u = new SpeechSynthesisUtterance(text);
+  u.lang = "en-US";
+  u.rate = 0.95;
+  window.speechSynthesis.speak(u);
+}
+
+function savedWordSet() {
+  const set = new Set();
+  Vocab.getSaved().forEach(w => {
+    if (w && w.word) set.add(String(w.word).toLowerCase());
+  });
+  return set;
+}
+
+function isSavedWord(word) {
+  const w = (word || "").toLowerCase().replace(/[^a-z'-]/gi, "");
+  if (!w) return false;
+  return savedWordSet().has(w) || Vocab.getSaved().some(s => (s.word || "").toLowerCase() === w);
+}
+
+function truncateDef(def, n) {
+  const s = String(def || "").replace(/\s+/g, " ").trim();
+  if (!s) return "暂无释义";
+  if (s.length <= (n || 48)) return s;
+  return s.slice(0, n || 48) + "…";
+}
+
 function renderWordSpans(text) {
+  const saved = savedWordSet();
   return text.split(/(\s+)/).map(part => {
     if (/^\s+$/.test(part)) return part;
     const clean = part.replace(/^[^\w']+|[^\w']+$/g, "");
     if (!/[a-zA-Z]/.test(clean)) return part;
-    return `<span class="word" data-word="${clean}">${part}</span>`;
+    const inVocab = saved.has(clean.toLowerCase()) ? " in-vocab" : "";
+    return `<span class="word${inVocab}" data-word="${escapeHtml(clean)}">${part}</span>`;
   }).join("");
+}
+
+function currentSentenceEn() {
+  if (!currentLesson || !Player || Player.currentIndex < 0) return "";
+  const s = currentLesson.sentences[Player.currentIndex];
+  return (s && s.en) || "";
+}
+
+function lookupLoadedEntry(word) {
+  const w = (word || "").toLowerCase().replace(/[^a-z'-]/gi, "");
+  if (!w || !loadedEntries.length) return null;
+  return loadedEntries.find(e => (e.word || "").toLowerCase() === w) || null;
 }
 
 /* ========== 词库 ========== */
@@ -86,19 +167,6 @@ async function renderVaultHome(q) {
   } catch (err) {
     grid.innerHTML = `<div class="empty">目录加载失败<br>${escapeHtml(err.message || String(err))}</div>`;
   }
-}
-
-function shortCatName(name) {
-  // "1.全国各大教材版本中小学同步" -> keep readable
-  return name.replace(/^\d+\./, "");
-}
-
-function escapeHtml(s) {
-  return String(s || "")
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;");
 }
 
 function openCategory(id) {
@@ -141,12 +209,16 @@ async function openVaultBook(book) {
   wordPage = 1;
   wordQuery = "";
   loadedEntries = [];
+  flashIndex = 0;
+  flashFlipped = false;
   $("word-search").value = "";
+  $("card-mode-toggle").checked = cardMode;
   showView("book");
   $("book-title").textContent = book.name;
   $("book-meta").textContent = "正在从 GitHub 拉取并解析…";
   $("word-list").innerHTML = `<div class="empty">加载中…</div>`;
   $("word-pager").innerHTML = "";
+  $("card-mode-panel").style.display = "none";
   setHeader(book.name.replace(/\.(xlsx|xls|txt)$/i, ""), "词表浏览");
   try {
     const result = await BookLoader.load(book);
@@ -159,8 +231,56 @@ async function openVaultBook(book) {
   }
 }
 
+function getFilteredEntries() {
+  return BookLoader.filterEntries(loadedEntries, wordQuery);
+}
+
 function renderWordPage() {
-  const filtered = BookLoader.filterEntries(loadedEntries, wordQuery);
+  const filtered = getFilteredEntries();
+  if (cardMode) {
+    $("word-list").style.display = "none";
+    $("word-pager").style.display = "none";
+    $("card-mode-panel").style.display = "block";
+    if (!filtered.length) {
+      $("card-mode-panel").innerHTML = `<div class="empty">没有匹配的单词</div>`;
+      return;
+    }
+    // restore panel structure if wiped
+    if (!$("flash-card")) {
+      $("card-mode-panel").innerHTML = `
+        <div id="flash-card" class="flash-card" tabindex="0">
+          <div class="flash-front">
+            <div class="flash-word" id="flash-word"></div>
+            <div class="flash-hint">点按翻面</div>
+          </div>
+          <div class="flash-back">
+            <div class="flash-word-sm" id="flash-word-back"></div>
+            <div class="flash-ipa" id="flash-ipa"></div>
+            <div class="flash-def" id="flash-def"></div>
+            <div class="flash-example" id="flash-example"></div>
+          </div>
+        </div>
+        <div class="flash-nav">
+          <button type="button" id="flash-prev" class="pager-btn">上一词</button>
+          <div class="pager-info" id="flash-pos"></div>
+          <button type="button" id="flash-next" class="pager-btn">下一词</button>
+        </div>
+        <div class="flash-actions">
+          <button type="button" id="flash-speak" class="btn-secondary">发音</button>
+          <button type="button" id="flash-save" class="btn-primary">加入生词本</button>
+        </div>`;
+      bindFlashControls();
+    }
+    if (flashIndex >= filtered.length) flashIndex = filtered.length - 1;
+    if (flashIndex < 0) flashIndex = 0;
+    renderFlashCard();
+    return;
+  }
+
+  $("word-list").style.display = "";
+  $("word-pager").style.display = "";
+  $("card-mode-panel").style.display = "none";
+
   const page = BookLoader.page(filtered, wordPage);
   wordPage = page.page;
   const list = $("word-list");
@@ -169,15 +289,18 @@ function renderWordPage() {
     $("word-pager").innerHTML = "";
     return;
   }
-  list.innerHTML = page.items.map((e, i) => `
-    <button type="button" class="word-row" data-i="${(page.page - 1) * page.size + i}">
+  list.innerHTML = page.items.map((e, i) => {
+    const abs = (page.page - 1) * page.size + i;
+    const defLine = truncateDef(e.definition, 56);
+    return `
+    <button type="button" class="word-row" data-i="${abs}">
       <div class="word-row-top">
         <strong>${escapeHtml(e.word)}</strong>
         <span class="word-ipa">${escapeHtml(e.ipa || "")}</span>
       </div>
-      <div class="word-def">${escapeHtml(e.definition || "暂无释义")}</div>
-    </button>
-  `).join("");
+      <div class="word-def">${escapeHtml(defLine)}</div>
+    </button>`;
+  }).join("");
   list.querySelectorAll(".word-row").forEach(btn => {
     btn.onclick = () => {
       const idx = parseInt(btn.dataset.i, 10);
@@ -201,8 +324,80 @@ function renderWordPage() {
   }
 }
 
+function bindFlashControls() {
+  const card = $("flash-card");
+  if (card) {
+    card.onclick = () => {
+      flashFlipped = !flashFlipped;
+      card.classList.toggle("flipped", flashFlipped);
+    };
+  }
+  const prev = $("flash-prev");
+  const next = $("flash-next");
+  if (prev) prev.onclick = () => {
+    flashIndex = Math.max(0, flashIndex - 1);
+    flashFlipped = false;
+    renderFlashCard();
+  };
+  if (next) next.onclick = () => {
+    const filtered = getFilteredEntries();
+    flashIndex = Math.min(filtered.length - 1, flashIndex + 1);
+    flashFlipped = false;
+    renderFlashCard();
+  };
+  const speak = $("flash-speak");
+  if (speak) speak.onclick = (e) => {
+    e.stopPropagation();
+    const filtered = getFilteredEntries();
+    const entry = filtered[flashIndex];
+    if (entry) speakEnglish(entry.word);
+  };
+  const save = $("flash-save");
+  if (save) save.onclick = (e) => {
+    e.stopPropagation();
+    const filtered = getFilteredEntries();
+    const entry = filtered[flashIndex];
+    if (!entry) return;
+    Vocab.saveWord({
+      ...entry,
+      bookSource: currentVaultBook ? (currentVaultBook.path || currentVaultBook.name) : ""
+    });
+    toast("已加入生词本");
+  };
+}
+
+function renderFlashCard() {
+  const filtered = getFilteredEntries();
+  if (!filtered.length) return;
+  const entry = filtered[flashIndex];
+  const card = $("flash-card");
+  if (!card) {
+    bindFlashControls();
+  }
+  const c = $("flash-card");
+  if (c) c.classList.toggle("flipped", flashFlipped);
+  $("flash-word").textContent = entry.word;
+  $("flash-word-back").textContent = entry.word;
+  $("flash-ipa").textContent = entry.ipa || "";
+  $("flash-def").textContent = entry.definition || "暂无释义";
+  const ex = $("flash-example");
+  if (entry.example) {
+    ex.textContent = entry.example;
+    ex.style.display = "block";
+  } else {
+    ex.textContent = "";
+    ex.style.display = "none";
+  }
+  $("flash-pos").textContent = `${flashIndex + 1} / ${filtered.length}`;
+  const prev = $("flash-prev");
+  const next = $("flash-next");
+  if (prev) prev.disabled = flashIndex <= 0;
+  if (next) next.disabled = flashIndex >= filtered.length - 1;
+}
+
 function openEntryModal(entry, book) {
   const overlay = $("modal-overlay");
+  modalSpeakWord = entry.word || "";
   $("modal-word").textContent = entry.word;
   $("modal-ipa").textContent = entry.ipa || "";
   $("modal-def").textContent = entry.definition || "暂无释义";
@@ -210,6 +405,7 @@ function openEntryModal(entry, book) {
     $("modal-example").textContent = entry.example;
     $("modal-example").style.display = "block";
   } else {
+    $("modal-example").textContent = "";
     $("modal-example").style.display = "none";
   }
   $("save-btn").textContent = "加入生词本";
@@ -224,7 +420,23 @@ function openEntryModal(entry, book) {
   overlay.classList.add("active");
 }
 
-/* ========== 新概念 ========== */
+/* ========== 点读：新概念 ========== */
+function renderListenHome() {
+  showView("listen");
+  setHeader("点读", listenSub === "nce" ? "新概念英语" : "我的教材");
+  document.querySelectorAll("#listen-sub-tabs .sub-tab").forEach(b => {
+    b.classList.toggle("active", b.dataset.sub === listenSub);
+  });
+  $("nce-pane").style.display = listenSub === "nce" ? "block" : "none";
+  $("materials-pane").style.display = listenSub === "materials" ? "block" : "none";
+  if (listenSub === "nce") {
+    renderBookTabs();
+    renderLessonList();
+  } else {
+    renderMaterialsList();
+  }
+}
+
 function renderBookTabs() {
   const tabs = $("book-tabs");
   tabs.innerHTML = Object.keys(LessonSource.books).map(b =>
@@ -272,15 +484,19 @@ async function renderLessonList() {
 async function openLesson(id) {
   const meta = (catalogCache[currentBook] || []).find(l => l.id === id);
   if (!meta) return;
+  readerBackTarget = "listen";
+  listenSub = "nce";
   const container = $("sentences");
   $("lesson-title").textContent = meta.title;
   container.innerHTML = `<div class="empty">正在加载课文与音频…</div>`;
   showView("reader");
   setHeader("新概念英语", meta.title);
+  $("mark-done").style.display = "";
   try {
     await Vocab.load(meta.book);
     const lesson = await Lessons.loadLesson(meta);
     currentLesson = lesson;
+    revokeMaterialUrl();
     if (!lesson.sentences.length) {
       container.innerHTML = `<div class="empty">该课暂无字幕</div>`;
       Player.load(lesson.audio, []);
@@ -299,34 +515,182 @@ async function openLesson(id) {
   }
 }
 
+function revokeMaterialUrl() {
+  if (materialObjectUrl) {
+    try { URL.revokeObjectURL(materialObjectUrl); } catch (e) {}
+    materialObjectUrl = null;
+  }
+}
+
+/* ========== 点读：我的教材 ========== */
+async function renderMaterialsList() {
+  const list = $("materials-list");
+  list.innerHTML = `<div class="empty">加载中…</div>`;
+  try {
+    const items = await Materials.list();
+    if (!items.length) {
+      list.innerHTML = `<div class="empty">还没有导入教材<br>选择同名的 .mp3 与 .lrc 即可</div>`;
+      return;
+    }
+    list.innerHTML = items.map(m => `
+      <div class="lesson-card materials-card" data-id="${escapeHtml(m.id)}">
+        <div class="materials-card-main" data-open="${escapeHtml(m.id)}">
+          <h3>${escapeHtml(m.title)}</h3>
+          <div class="meta">本机导入 · ${new Date(m.createdAt).toLocaleDateString("zh-CN")}</div>
+        </div>
+        <button type="button" class="mat-del" data-del="${escapeHtml(m.id)}" title="删除">删除</button>
+      </div>
+    `).join("");
+    list.querySelectorAll("[data-open]").forEach(el => {
+      el.onclick = () => openMaterialLesson(el.dataset.open);
+    });
+    list.querySelectorAll("[data-del]").forEach(btn => {
+      btn.onclick = async (e) => {
+        e.stopPropagation();
+        if (!confirm("删除此教材？")) return;
+        await Materials.remove(btn.dataset.del);
+        toast("已删除");
+        renderMaterialsList();
+      };
+    });
+  } catch (err) {
+    list.innerHTML = `<div class="empty">无法读取本机教材<br>${escapeHtml(err.message || String(err))}</div>`;
+  }
+}
+
+async function openMaterialLesson(id) {
+  readerBackTarget = "listen";
+  listenSub = "materials";
+  const container = $("sentences");
+  container.innerHTML = `<div class="empty">正在打开…</div>`;
+  showView("reader");
+  $("mark-done").style.display = "none";
+  try {
+    revokeMaterialUrl();
+    const lesson = await Materials.loadLesson(id);
+    materialObjectUrl = lesson._objectUrl || null;
+    currentLesson = lesson;
+    $("lesson-title").textContent = lesson.title;
+    setHeader("我的教材", lesson.title);
+    if (!lesson.sentences.length) {
+      container.innerHTML = `<div class="empty">该教材暂无字幕</div>`;
+      Player.load(lesson.audio, []);
+      return;
+    }
+    container.innerHTML = lesson.sentences.map((s, i) => `
+      <div class="sentence" data-index="${i}">
+        <div class="en">${renderWordSpans(s.en)}</div>
+        <div class="cn">${escapeHtml(s.cn || "")}</div>
+      </div>
+    `).join("");
+    Player.load(lesson.audio, lesson.sentences);
+    $("play-btn").textContent = "▶";
+  } catch (err) {
+    container.innerHTML = `<div class="empty">打开失败<br>${escapeHtml(err.message || String(err))}</div>`;
+  }
+}
+
+async function handleMaterialsImport(fileList) {
+  try {
+    const results = await Materials.importFiles(fileList);
+    const ok = results.filter(r => r.ok).length;
+    const fail = results.filter(r => !r.ok);
+    if (ok) toast(`成功导入 ${ok} 组`);
+    if (fail.length) {
+      toast(fail.map(f => f.title + ": " + f.reason).join("；"));
+    }
+    renderMaterialsList();
+  } catch (err) {
+    toast(err.message || String(err));
+  }
+}
+
+/* ========== 查词弹层（点读联动） ========== */
 function openWordModal(word) {
-  const entry = Vocab.lookup(currentBook, word);
   const overlay = $("modal-overlay");
+  const clean = (word || "").replace(/^[^\w']+|[^\w']+$/g, "");
+  // 1) local NCE vocab
+  let entry = Vocab.lookup(currentBook, clean);
+  // also try other nce books briefly if current empty
+  if (!entry) {
+    for (const b of ["nce1", "nce2", "nce3", "nce4"]) {
+      if (b === currentBook) continue;
+      entry = Vocab.lookup(b, clean);
+      if (entry) break;
+    }
+  }
+  // 2) currently opened vault book
+  if (!entry) entry = lookupLoadedEntry(clean);
+
+  const sentenceEn = currentSentenceEn();
+  const bookSource = currentLesson && currentLesson.book === "materials"
+    ? "material:" + (currentLesson.title || "")
+    : "nce:" + (currentLesson && currentLesson.book ? currentLesson.book : currentBook);
+
+  modalSpeakWord = (entry && entry.word) || clean;
+
   if (entry) {
     $("modal-word").textContent = entry.word;
     $("modal-ipa").textContent = entry.ipa || "";
     $("modal-def").textContent = entry.definition || "暂无释义";
-    $("modal-example").textContent = entry.example || "";
-    $("modal-example").style.display = entry.example ? "block" : "none";
+    const example = entry.example || sentenceEn || "";
+    if (example) {
+      $("modal-example").textContent = example;
+      $("modal-example").style.display = "block";
+    } else {
+      $("modal-example").textContent = "";
+      $("modal-example").style.display = "none";
+    }
     $("save-btn").textContent = "加入生词本";
     $("save-btn").onclick = () => {
-      Vocab.saveWord({ ...entry, bookSource: "nce:" + currentBook });
+      const toSave = {
+        ...entry,
+        example: entry.example || sentenceEn || "",
+        bookSource
+      };
+      Vocab.saveWord(toSave);
       overlay.classList.remove("active");
       toast("已加入生词本");
+      refreshSentenceMarks();
     };
   } else {
-    $("modal-word").textContent = word;
+    $("modal-word").textContent = clean;
     $("modal-ipa").textContent = "";
     $("modal-def").textContent = "词库中暂无此词，仍可收藏";
-    $("modal-example").style.display = "none";
+    if (sentenceEn) {
+      $("modal-example").textContent = sentenceEn;
+      $("modal-example").style.display = "block";
+    } else {
+      $("modal-example").textContent = "";
+      $("modal-example").style.display = "none";
+    }
     $("save-btn").textContent = "收藏生词";
     $("save-btn").onclick = () => {
-      Vocab.saveWord({ word, ipa: "", definition: "（手动收藏）", example: "", bookSource: "nce:" + currentBook });
+      Vocab.saveWord({
+        word: clean,
+        ipa: "",
+        definition: "（手动收藏）",
+        example: sentenceEn || "",
+        bookSource
+      });
       overlay.classList.remove("active");
       toast("已收藏");
+      refreshSentenceMarks();
     };
   }
   overlay.classList.add("active");
+}
+
+function refreshSentenceMarks() {
+  const container = $("sentences");
+  if (!container || !currentLesson) return;
+  container.querySelectorAll(".sentence").forEach(el => {
+    const idx = parseInt(el.dataset.index, 10);
+    const s = currentLesson.sentences[idx];
+    if (!s) return;
+    const en = el.querySelector(".en");
+    if (en) en.innerHTML = renderWordSpans(s.en);
+  });
 }
 
 /* ========== 生词 / 复习 ========== */
@@ -354,13 +718,6 @@ function renderVocabList() {
       renderVocabList();
     };
   });
-}
-
-function shortSource(s) {
-  if (!s) return "";
-  if (s.startsWith("nce:")) return "新概念 · " + s.slice(4).toUpperCase();
-  const parts = s.split("/");
-  return parts[parts.length - 1] || s;
 }
 
 function renderReview() {
@@ -423,6 +780,7 @@ function init() {
   });
   setupInstall();
   renderVaultHome("");
+  bindFlashControls();
 
   let vaultSearchTimer = null;
   $("vault-search").addEventListener("input", e => {
@@ -438,8 +796,17 @@ function init() {
     wordSearchTimer = setTimeout(() => {
       wordQuery = e.target.value;
       wordPage = 1;
+      flashIndex = 0;
+      flashFlipped = false;
       renderWordPage();
     }, 200);
+  });
+
+  $("card-mode-toggle").addEventListener("change", e => {
+    cardMode = !!e.target.checked;
+    flashFlipped = false;
+    flashIndex = 0;
+    renderWordPage();
   });
 
   $("books-back").onclick = () => {
@@ -450,6 +817,20 @@ function init() {
     if (currentCategoryId) renderBooksList($("books-search").value);
     else renderVaultHome("");
   };
+
+  document.querySelectorAll("#listen-sub-tabs .sub-tab").forEach(btn => {
+    btn.onclick = () => {
+      listenSub = btn.dataset.sub;
+      Player.pause();
+      renderListenHome();
+    };
+  });
+
+  $("materials-file").addEventListener("change", e => {
+    const files = e.target.files;
+    if (files && files.length) handleMaterialsImport(files);
+    e.target.value = "";
+  });
 
   document.addEventListener("click", e => {
     const wordEl = e.target.closest(".word");
@@ -465,10 +846,27 @@ function init() {
     }
   });
 
+  // keyboard for flash cards
+  document.addEventListener("keydown", e => {
+    if ($("card-mode-panel").style.display === "none" || !cardMode) return;
+    if (e.key === "ArrowLeft") {
+      $("flash-prev") && $("flash-prev").click();
+    } else if (e.key === "ArrowRight") {
+      $("flash-next") && $("flash-next").click();
+    } else if (e.key === " " || e.key === "Enter") {
+      if (document.activeElement && document.activeElement.tagName === "INPUT") return;
+      e.preventDefault();
+      flashFlipped = !flashFlipped;
+      const c = $("flash-card");
+      if (c) c.classList.toggle("flipped", flashFlipped);
+    }
+  });
+
   $("modal-overlay").addEventListener("click", e => {
     if (e.target.id === "modal-overlay") e.target.classList.remove("active");
   });
   $("close-modal").onclick = () => $("modal-overlay").classList.remove("active");
+  $("speak-btn").onclick = () => speakEnglish(modalSpeakWord || $("modal-word").textContent);
 
   document.querySelectorAll(".bottom-nav button").forEach(btn => {
     btn.onclick = () => {
@@ -476,12 +874,9 @@ function init() {
       if (tab === "vault") {
         Player.pause();
         renderVaultHome($("vault-search").value);
-      } else if (tab === "lessons") {
+      } else if (tab === "listen") {
         Player.pause();
-        showView("lessons");
-        setHeader("新概念英语", "点词查词 · 课文点读");
-        renderBookTabs();
-        renderLessonList();
+        renderListenHome();
       } else if (tab === "vocab") {
         showView("vocab");
         renderVocabList();
@@ -506,16 +901,16 @@ function init() {
     $("speed-btn").textContent = next + "x";
   };
   $("mark-done").onclick = () => {
-    if (currentLesson) {
+    if (currentLesson && currentLesson.book !== "materials") {
       Vocab.markDone(currentLesson.id);
       toast("已标记学完");
     }
   };
   $("back-btn").onclick = () => {
     Player.pause();
-    showView("lessons");
-    setHeader("新概念英语", "点词查词 · 课文点读");
-    renderLessonList();
+    revokeMaterialUrl();
+    currentLesson = null;
+    renderListenHome();
   };
 }
 

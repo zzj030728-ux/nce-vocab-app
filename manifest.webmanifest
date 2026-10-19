@@ -1,7 +1,7 @@
 {
   "name": "英语词库",
   "short_name": "英语词库",
-  "description": "960+ 词书浏览 · 新概念点读 · 生词与间隔复习",
+  "description": "960+ 词书浏览 · 点读 · 生词与间隔复习",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
