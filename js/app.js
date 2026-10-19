@@ -12,6 +12,13 @@ let cardMode = false;
 let flashIndex = 0;
 let flashFlipped = false;
 let listenSub = "nce"; // nce | materials
+let drillOpen = false;
+let drillTab = "pattern"; // pattern | dictation
+let drillPatterns = [];
+let drillDictation = [];
+let drillDictationIndex = 0;
+let drillPatternRecId = null; // which pattern is being recorded
+let openDrillAfterLoad = false;
 let readerBackTarget = "listen"; // where back from reader goes
 let materialObjectUrl = null;
 let modalSpeakWord = "";
@@ -485,10 +492,12 @@ async function renderTodayPage() {
           <p class="today-desc">${escapeHtml(task.stage.desc || "")}</p>
           <ul class="today-checklist">
             <li>${task.doneToday ? "✅" : "☐"} 点读本课（听原音 + 跟读）</li>
+            <li>☐ 句型口头练习 + 听写默写</li>
             <li>☐ 建议复习约 ${task.step.vocabHint || 20} 个单词（词库任选）</li>
           </ul>
           <div class="today-actions">
             <button type="button" class="btn-primary" id="today-start-lesson">开始今日课文</button>
+            <button type="button" class="btn-secondary" id="today-start-drill">今日练习</button>
             <button type="button" class="btn-secondary" id="today-complete" ${task.doneToday ? "disabled" : ""}>
               ${task.doneToday ? "今日已完成" : "完成今日"}
             </button>
@@ -507,7 +516,17 @@ async function renderTodayPage() {
 
     const startBtn = $("today-start-lesson");
     if (startBtn && task.step) {
-      startBtn.onclick = () => openPathLesson(task.step);
+      startBtn.onclick = () => {
+        openDrillAfterLoad = false;
+        openPathLesson(task.step);
+      };
+    }
+    const drillBtn = $("today-start-drill");
+    if (drillBtn && task.step) {
+      drillBtn.onclick = () => {
+        openDrillAfterLoad = true;
+        openPathLesson(task.step);
+      };
     }
     const completeBtn = $("today-complete");
     if (completeBtn) {
@@ -571,6 +590,292 @@ function updateShadowUI(state) {
     else hint.textContent = "先点选一句，再听原音 / 录音";
   }
 }
+
+
+function closeDrillPanel() {
+  drillOpen = false;
+  const panel = $("drill-panel");
+  const btn = $("drill-mode-btn");
+  if (panel) panel.style.display = "none";
+  if (btn) btn.classList.remove("on");
+  if (drillPatternRecId && Shadow.recording) {
+    Shadow.stopRecording(false);
+  }
+  drillPatternRecId = null;
+}
+
+function openDrillPanel() {
+  if (!currentLesson || !currentLesson.sentences || !currentLesson.sentences.length) {
+    toast("请先打开有字幕的课文");
+    return;
+  }
+  // close shadow bar to reduce clutter
+  if (Shadow.mode) {
+    Shadow.setMode(false);
+    updateShadowUI({ mode: false, recording: false, hasTake: !!Shadow.blobUrl });
+  }
+  drillOpen = true;
+  const panel = $("drill-panel");
+  const btn = $("drill-mode-btn");
+  if (panel) panel.style.display = "block";
+  if (btn) btn.classList.add("on");
+  prepareDrillData();
+  switchDrillTab(drillTab || "pattern");
+}
+
+function toggleDrillPanel() {
+  if (drillOpen) closeDrillPanel();
+  else openDrillPanel();
+}
+
+function prepareDrillData() {
+  const sents = (currentLesson && currentLesson.sentences) || [];
+  drillPatterns = Drill.extractPatterns(sents);
+  drillDictation = Drill.extractDictationWords(sents, 6);
+  drillDictationIndex = 0;
+}
+
+function switchDrillTab(tab) {
+  drillTab = tab;
+  document.querySelectorAll(".drill-tab").forEach(b => {
+    b.classList.toggle("active", b.dataset.drillTab === tab);
+  });
+  const pat = $("drill-pattern-pane");
+  const dic = $("drill-dictation-pane");
+  if (pat) pat.style.display = tab === "pattern" ? "block" : "none";
+  if (dic) dic.style.display = tab === "dictation" ? "block" : "none";
+  if (tab === "pattern") renderPatternPane();
+  else renderDictationPane();
+}
+
+function renderPatternPane() {
+  const pane = $("drill-pattern-pane");
+  if (!pane) return;
+  const lessonKey = Drill.lessonKey(currentLesson);
+  if (!drillPatterns.length) {
+    pane.innerHTML = `<div class="drill-intro">本课暂未抽出合适句型（句子太短或结构单一）。可换一课或先用跟读。</div>`;
+    return;
+  }
+  pane.innerHTML = `
+    <div class="drill-intro">从本课抽出 ${drillPatterns.length} 条可替换句型：听模板 → 口头说（可录音）→ 勾选「练过」。提示词可替换空白处。</div>
+    ${drillPatterns.map((p, i) => {
+      const done = Drill.isPatternPracticed(lessonKey, p.id);
+      return `
+      <div class="pattern-card${done ? " practiced" : ""}" data-pid="${escapeHtml(p.id)}">
+        <div class="pattern-template">${escapeHtml(p.template)}</div>
+        <div class="pattern-original">原句：${escapeHtml(p.original)}</div>
+        <div class="pattern-hints">试着换成：<strong>${p.hints.map(h => escapeHtml(h)).join(" / ")}</strong></div>
+        <div class="pattern-actions">
+          <button type="button" class="btn-secondary" data-pat-listen="${i}">听模板</button>
+          <button type="button" class="btn-primary" data-pat-rec="${i}">录音</button>
+          <button type="button" class="btn-secondary" data-pat-play="${i}" ${Shadow.blobUrl && drillPatternRecId === p.id ? "" : "disabled"}>播放我的</button>
+          <label class="pattern-check">
+            <input type="checkbox" data-pat-done="${escapeHtml(p.id)}" ${done ? "checked" : ""}>
+            练过
+          </label>
+        </div>
+      </div>`;
+    }).join("")}
+  `;
+  pane.querySelectorAll("[data-pat-listen]").forEach(btn => {
+    btn.onclick = () => {
+      const p = drillPatterns[parseInt(btn.dataset.patListen, 10)];
+      if (!p) return;
+      // Prefer speaking the original full sentence as template
+      if (!Drill.speak(p.original)) toast("当前浏览器不支持语音合成");
+    };
+  });
+  pane.querySelectorAll("[data-pat-rec]").forEach(btn => {
+    btn.onclick = async () => {
+      const idx = parseInt(btn.dataset.patRec, 10);
+      const p = drillPatterns[idx];
+      if (!p) return;
+      if (Shadow.recording && drillPatternRecId === p.id) {
+        Shadow.stopRecording(true);
+        toast("录音完成");
+        renderPatternPane();
+        return;
+      }
+      if (Shadow.recording) {
+        Shadow.stopRecording(false);
+      }
+      Player.pause();
+      drillPatternRecId = p.id;
+      try {
+        await Shadow.startRecording();
+        toast("开始录音：口头说出替换后的句子");
+        btn.textContent = "停止";
+        btn.classList.add("recording");
+      } catch (err) {
+        drillPatternRecId = null;
+        toast(err.message || String(err));
+      }
+    };
+  });
+  pane.querySelectorAll("[data-pat-play]").forEach(btn => {
+    btn.onclick = () => {
+      const p = drillPatterns[parseInt(btn.dataset.patPlay, 10)];
+      if (!p) return;
+      if (drillPatternRecId !== p.id || !Shadow.blobUrl) {
+        toast("请先为本句型录音");
+        return;
+      }
+      if (!Shadow.playMine()) toast("还没有录音");
+    };
+  });
+  pane.querySelectorAll("[data-pat-done]").forEach(cb => {
+    cb.onchange = () => {
+      Drill.setPatternPracticed(lessonKey, cb.dataset.patDone, cb.checked);
+      const card = cb.closest(".pattern-card");
+      if (card) card.classList.toggle("practiced", cb.checked);
+      if (cb.checked) toast("已标记练过");
+    };
+  });
+}
+
+function renderDictationPane() {
+  const pane = $("drill-dictation-pane");
+  if (!pane) return;
+  if (!drillDictation.length) {
+    pane.innerHTML = `<div class="drill-intro">本课暂未抽出合适听写词。</div>`;
+    return;
+  }
+  if (drillDictationIndex >= drillDictation.length) {
+    const missed = Drill.getMissed();
+    pane.innerHTML = `
+      <div class="dictation-done">
+        <h4>本轮听写完成</h4>
+        <p class="drill-intro">共 ${drillDictation.length} 词。错词已记入错词本（生词页可查看）。</p>
+        <div class="dictation-actions" style="justify-content:center;">
+          <button type="button" class="btn-primary" id="dictation-restart">再练一轮</button>
+        </div>
+        <p class="drill-intro" style="margin-top:12px;">错词本现有 ${missed.length} 个</p>
+      </div>`;
+    const restart = $("dictation-restart");
+    if (restart) restart.onclick = () => {
+      drillDictationIndex = 0;
+      // reshuffle lightly
+      drillDictation = Drill.extractDictationWords((currentLesson && currentLesson.sentences) || [], 6);
+      renderDictationPane();
+    };
+    return;
+  }
+
+  const item = drillDictation[drillDictationIndex];
+  pane.innerHTML = `
+    <div class="dictation-card">
+      <div class="dictation-progress">听写 ${drillDictationIndex + 1} / ${drillDictation.length}</div>
+      <div class="drill-intro">先点「听拼写」，听完后在下方输入英文单词（不区分大小写）。</div>
+      <div class="dictation-actions">
+        <button type="button" class="btn-primary" id="dictation-listen">听拼写</button>
+        <button type="button" class="btn-secondary" id="dictation-listen-slow">慢速再听</button>
+      </div>
+      <div class="dictation-hint">语境提示：${escapeHtml(item.sentenceHint)}</div>
+      <div class="dictation-input-row">
+        <input type="text" id="dictation-input" autocomplete="off" autocapitalize="off" spellcheck="false" placeholder="输入听到的单词">
+      </div>
+      <div class="dictation-feedback" id="dictation-feedback"></div>
+      <div class="dictation-actions">
+        <button type="button" class="btn-primary" id="dictation-check">核对</button>
+        <button type="button" class="btn-secondary" id="dictation-skip">跳过</button>
+        <button type="button" class="btn-secondary" id="dictation-to-vocab" style="display:none;">加入生词本</button>
+      </div>
+    </div>`;
+
+  const input = $("dictation-input");
+  const feedback = $("dictation-feedback");
+  const toVocab = $("dictation-to-vocab");
+
+  function speakWord(slow) {
+    const t = item.word;
+    if (!window.speechSynthesis) {
+      toast("当前浏览器不支持语音合成");
+      return;
+    }
+    window.speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(t);
+    u.lang = "en-US";
+    u.rate = slow ? 0.7 : 0.9;
+    window.speechSynthesis.speak(u);
+  }
+
+  $("dictation-listen").onclick = () => speakWord(false);
+  $("dictation-listen-slow").onclick = () => speakWord(true);
+
+  function finishItem(ok) {
+    setTimeout(() => {
+      drillDictationIndex++;
+      renderDictationPane();
+    }, ok ? 700 : 1100);
+  }
+
+  function doCheck() {
+    const ans = Drill.normalizeAnswer(input.value);
+    const expect = Drill.normalizeAnswer(item.word);
+    if (!ans) {
+      toast("请先输入");
+      return;
+    }
+    if (ans === expect) {
+      feedback.textContent = "✓ 正确！";
+      feedback.className = "dictation-feedback ok";
+      input.disabled = true;
+      finishItem(true);
+    } else {
+      feedback.textContent = `✗ 不对，答案是 ${item.word}`;
+      feedback.className = "dictation-feedback bad";
+      Drill.addMissed(item.word, {
+        sentenceHint: item.sentenceHint,
+        lessonId: Drill.lessonKey(currentLesson)
+      });
+      if (toVocab) toVocab.style.display = "";
+      input.disabled = true;
+      // allow manual next via skip becoming 下一词
+      const skip = $("dictation-skip");
+      if (skip) skip.textContent = "下一词";
+    }
+  }
+
+  $("dictation-check").onclick = doCheck;
+  input.addEventListener("keydown", e => {
+    if (e.key === "Enter") {
+      e.preventDefault();
+      if (!input.disabled) doCheck();
+      else finishItem(false);
+    }
+  });
+  $("dictation-skip").onclick = () => {
+    if (!input.disabled) {
+      // skip without marking? still optional miss — we skip quietly
+    }
+    drillDictationIndex++;
+    renderDictationPane();
+  };
+  if (toVocab) {
+    toVocab.onclick = () => {
+      const bookSource = currentLesson && currentLesson.book === "materials"
+        ? "material:" + (currentLesson.title || "")
+        : "nce:" + (currentLesson && currentLesson.book ? currentLesson.book : currentBook);
+      let entry = Vocab.lookup(currentBook, item.word);
+      if (!entry) {
+        for (const b of ["nce1", "nce2", "nce3", "nce4"]) {
+          entry = Vocab.lookup(b, item.word);
+          if (entry) break;
+        }
+      }
+      Vocab.saveWord({
+        word: (entry && entry.word) || item.word,
+        ipa: (entry && entry.ipa) || "",
+        definition: (entry && entry.definition) || "（听写错词）",
+        example: (entry && entry.example) || item.sentenceHint || "",
+        bookSource
+      });
+      toast("已加入生词本");
+    };
+  }
+  setTimeout(() => { if (input) input.focus(); }, 50);
+}
+
 
 /* ========== 点读：新概念 ========== */
 
@@ -641,6 +946,7 @@ async function openLesson(id, opts) {
   listenSub = "nce";
   Shadow.dispose();
   updateShadowUI({ mode: false, recording: false, hasTake: false });
+  closeDrillPanel();
   const container = $("sentences");
   $("lesson-title").textContent = meta.title;
   container.innerHTML = `<div class="empty">正在加载课文与音频…</div>`;
@@ -655,6 +961,7 @@ async function openLesson(id, opts) {
     if (!lesson.sentences.length) {
       container.innerHTML = `<div class="empty">该课暂无字幕</div>`;
       Player.load(lesson.audio, []);
+      openDrillAfterLoad = false;
       return;
     }
     container.innerHTML = lesson.sentences.map((s, i) => `
@@ -665,7 +972,12 @@ async function openLesson(id, opts) {
     `).join("");
     Player.load(lesson.audio, lesson.sentences);
     $("play-btn").textContent = "▶";
+    if (openDrillAfterLoad) {
+      openDrillAfterLoad = false;
+      openDrillPanel();
+    }
   } catch (err) {
+    openDrillAfterLoad = false;
     container.innerHTML = `<div class="empty">课文加载失败<br>${escapeHtml(err.message || String(err))}</div>`;
   }
 }
@@ -718,6 +1030,7 @@ async function openMaterialLesson(id) {
   listenSub = "materials";
   Shadow.dispose();
   updateShadowUI({ mode: false, recording: false, hasTake: false });
+  closeDrillPanel();
   const container = $("sentences");
   container.innerHTML = `<div class="empty">正在打开…</div>`;
   showView("reader");
@@ -853,13 +1166,14 @@ function refreshSentenceMarks() {
 /* ========== 生词 / 复习 ========== */
 function renderVocabList() {
   const saved = Vocab.getSaved();
+  const missed = Drill.getMissed();
   const container = $("vocab-items");
-  setHeader("生词本", `${saved.length} 个生词`);
+  setHeader("生词本", `${saved.length} 个生词` + (missed.length ? ` · ${missed.length} 错词` : ""));
+  let html = "";
   if (!saved.length) {
-    container.innerHTML = `<div class="empty">还没有生词<br>在词库或课文中点击单词即可收藏</div>`;
-    return;
-  }
-  container.innerHTML = saved.map(w => `
+    html += `<div class="empty">还没有生词<br>在词库或课文中点击单词即可收藏</div>`;
+  } else {
+    html += saved.map(w => `
     <div class="vocab-item">
       <strong>${escapeHtml(w.word)}</strong>
       <span style="color:var(--primary);margin-left:8px;">${escapeHtml(w.ipa || "")}</span>
@@ -869,9 +1183,58 @@ function renderVocabList() {
       <button data-remove="${escapeHtml(w.word)}" class="btn-secondary remove-btn">移除</button>
     </div>
   `).join("");
+  }
+  html += `
+    <div class="missed-section">
+      <h3>听写错词本</h3>
+      <p class="missed-intro">听写拼错的词会记在这里（localStorage <code>nce-missed</code>）。可加入生词本或清除。</p>
+      ${!missed.length ? `<div class="empty">暂无错词</div>` : missed.map(m => `
+        <div class="missed-item">
+          <strong>${escapeHtml(m.word)}</strong>
+          <div class="missed-meta">错 ${m.count || 1} 次${m.sentenceHint ? " · " + escapeHtml(m.sentenceHint) : ""}</div>
+          <div class="missed-actions">
+            <button type="button" class="btn-primary" data-missed-save="${escapeHtml(m.word)}">加入生词本</button>
+            <button type="button" class="btn-secondary" data-missed-speak="${escapeHtml(m.word)}">发音</button>
+            <button type="button" class="btn-secondary" data-missed-remove="${escapeHtml(m.word)}">清除</button>
+          </div>
+        </div>
+      `).join("")}
+    </div>`;
+  container.innerHTML = html;
   container.querySelectorAll("[data-remove]").forEach(btn => {
     btn.onclick = () => {
       Vocab.removeWord(btn.dataset.remove);
+      renderVocabList();
+    };
+  });
+  container.querySelectorAll("[data-missed-remove]").forEach(btn => {
+    btn.onclick = () => {
+      Drill.removeMissed(btn.dataset.missedRemove);
+      renderVocabList();
+    };
+  });
+  container.querySelectorAll("[data-missed-speak]").forEach(btn => {
+    btn.onclick = () => speakEnglish(btn.dataset.missedSpeak);
+  });
+  container.querySelectorAll("[data-missed-save]").forEach(btn => {
+    btn.onclick = () => {
+      const word = btn.dataset.missedSave;
+      const m = Drill.getMissed().find(x => (x.word || "").toLowerCase() === word.toLowerCase());
+      let entry = Vocab.lookup(currentBook, word);
+      if (!entry) {
+        for (const b of ["nce1", "nce2", "nce3", "nce4"]) {
+          entry = Vocab.lookup(b, word);
+          if (entry) break;
+        }
+      }
+      Vocab.saveWord({
+        word: (entry && entry.word) || word,
+        ipa: (entry && entry.ipa) || "",
+        definition: (entry && entry.definition) || "（听写错词）",
+        example: (entry && entry.example) || (m && m.sentenceHint) || "",
+        bookSource: (m && m.lessonId) ? ("nce-missed:" + m.lessonId) : "nce-missed"
+      });
+      toast("已加入生词本");
       renderVocabList();
     };
   });
@@ -1068,6 +1431,7 @@ function init() {
     Player.pause();
     Shadow.dispose();
     updateShadowUI({ mode: false, recording: false, hasTake: false });
+    closeDrillPanel();
     revokeMaterialUrl();
     currentLesson = null;
     const back = readerBackTarget;
@@ -1079,8 +1443,8 @@ function init() {
   $("today-card").onclick = () => renderTodayPage();
   $("today-back").onclick = () => renderVaultHome($("vault-search").value || "");
 
-  Shadow.onState(updateShadowUI);
   $("shadow-mode-btn").onclick = () => {
+    if (!Shadow.mode) closeDrillPanel();
     const on = Shadow.toggleMode();
     toast(on ? "跟读模式开：点选句子后听原音/录音" : "跟读模式关");
     updateShadowUI({ mode: Shadow.mode, recording: Shadow.recording, hasTake: !!Shadow.blobUrl });
@@ -1113,6 +1477,36 @@ function init() {
   $("shadow-play").onclick = () => {
     if (!Shadow.playMine()) toast("还没有录音");
   };
+
+  $("drill-mode-btn").onclick = () => {
+    toggleDrillPanel();
+    toast(drillOpen ? "练习面板已打开" : "练习面板已关闭");
+  };
+  document.querySelectorAll(".drill-tab").forEach(btn => {
+    btn.onclick = () => switchDrillTab(btn.dataset.drillTab);
+  });
+
+  // When recording ends in pattern drill, refresh play buttons
+  Shadow.onState(state => {
+    updateShadowUI(state);
+    if (drillOpen && drillTab === "pattern" && !state.recording) {
+      // light refresh of play button disabled state without full re-render mid-type
+      const pane = $("drill-pattern-pane");
+      if (pane && drillPatternRecId) {
+        pane.querySelectorAll("[data-pat-play]").forEach(btn => {
+          const p = drillPatterns[parseInt(btn.dataset.patPlay, 10)];
+          btn.disabled = !(p && p.id === drillPatternRecId && state.hasTake);
+        });
+        pane.querySelectorAll("[data-pat-rec]").forEach(btn => {
+          const p = drillPatterns[parseInt(btn.dataset.patRec, 10)];
+          if (p && p.id === drillPatternRecId) {
+            btn.textContent = state.recording ? "停止" : "录音";
+            btn.classList.toggle("recording", !!state.recording);
+          }
+        });
+      }
+    }
+  });
 }
 
 document.addEventListener("DOMContentLoaded", init);

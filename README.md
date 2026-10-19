@@ -7,7 +7,7 @@
 | Tab | 说明 |
 |-----|------|
 | 词库 | 分类 → 词书 → 词表；顶部「今日学习」入口；释义摘要；卡片模式；加入生词本 |
-| 点读 | 顶部子 Tab：**新概念**（mleo LRC/MP3）/ **我的教材**；课文页支持**跟读录音** |
+| 点读 | 顶部子 Tab：**新概念**（mleo LRC/MP3）/ **我的教材**；课文页支持**跟读录音**、**句型练习**与**听写默写** |
 | 生词 / 复习 | 显示来源（新概念 / 词书名 / 我的教材）；与 `nce-saved` / `nce-progress` 兼容 |
 
 ### 今日学习（分级路径）
@@ -16,7 +16,7 @@
 
 1. 路径分四阶段（`data/path.json`）：入门（NCE1 1–20）→ 基础 → 进阶 → 高阶
 2. 每天显示当前阶段的一课任务 + 建议记词数量
-3. 「开始今日课文」跳转新概念点读；学完后点「完成今日」推进下一步并累计连续天数（`localStorage` 键 `nce-path-progress`）
+3. 「开始今日课文」跳转新概念点读；「今日练习」打开课文并进入句型/听写；学完后点「完成今日」推进下一步并累计连续天数（`localStorage` 键 `nce-path-progress`）
 4. 可在页面底部手动「选择起点阶段」
 
 ### 跟读录音
@@ -27,6 +27,17 @@
 2. 点选当前句 →「听原音」播该句 →「录音」用麦克风跟读 →「停止」后「播放我的」回听
 3. 录音仅存本机内存（blob），不上传；可反复重录
 4. **优先使用 GitHub Pages（HTTPS）**。本机 `http://192.168.x` 在部分手机（尤其 iOS Safari）上麦克风可能被浏览器限制
+
+### 句型口头练习 + 听写默写
+
+面向有一点基础的学习者，在点读阅读器中点「练习」（跟读旁）：
+
+1. **句型**：从本课英文句启发式抽出 3～5 条可替换句型（模板含 `____` +「试着换成」提示）。可「听模板」（浏览器 TTS）、录音口头说（复用跟读 MediaRecorder）、勾选「练过」（`localStorage nce-drill-practiced`）
+2. **听写**：抽出 5～8 个实词，先听 TTS 再拼写；对错即时反馈；错词写入 `localStorage nce-missed`；可「加入生词本」
+3. **今日学习**页有「今日练习」入口，打开当日课文并自动展开练习面板
+4. **生词**页底部展示听写错词本
+
+> 本轮**不做**短写 / DeepSeek 批改（留给下一轮）。
 
 ### A. 词库释义体验
 
@@ -89,11 +100,12 @@ python -m http.server 8080
 - 新概念课文/音频不打包进仓库，仅按需加载公开资源
 - 用户导入的音频仅存本机 IndexedDB，不上传
 - 跟读录音仅存内存 blob，刷新页面即清空
-- SheetJS 通过 CDN 加载；离线时依赖 Service Worker 缓存（`nce-vault-v3`）
+- SheetJS 通过 CDN 加载；离线时依赖 Service Worker 缓存（`nce-vault-v4`）
 
 ## 技术
 
 - 纯静态 HTML/CSS/JS + PWA
 - SheetJS 0.20.3 解析表格
 - IndexedDB（`nce-materials`）存用户教材
-- MediaRecorder + getUserMedia 跟读（HTTPS 推荐）
+- MediaRecorder + getUserMedia 跟读 / 句型录音（HTTPS 推荐）
+- speechSynthesis 听写与句型 TTS；错词本 `nce-missed`

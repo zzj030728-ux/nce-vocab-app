@@ -138,12 +138,21 @@
         <button id="loop-btn" class="speed-btn" type="button" title="单句循环">↻</button>
         <button id="speed-btn" class="speed-btn" type="button">1x</button>
         <button id="shadow-mode-btn" class="speed-btn" type="button" title="跟读模式">跟读</button>
+        <button id="drill-mode-btn" class="speed-btn" type="button" title="句型与听写练习">练习</button>
       </div>
       <div id="shadow-bar" class="shadow-bar" style="display:none;">
         <button type="button" id="shadow-listen" class="btn-secondary shadow-btn">听原音</button>
         <button type="button" id="shadow-rec" class="btn-primary shadow-btn">录音</button>
         <button type="button" id="shadow-play" class="btn-secondary shadow-btn" disabled>播放我的</button>
         <div class="shadow-hint" id="shadow-hint">先点选一句，再听原音 / 录音</div>
+      </div>
+      <div id="drill-panel" class="drill-panel" style="display:none;">
+        <div class="drill-tabs">
+          <button type="button" class="drill-tab active" data-drill-tab="pattern">句型</button>
+          <button type="button" class="drill-tab" data-drill-tab="dictation">听写</button>
+        </div>
+        <div id="drill-pattern-pane" class="drill-pane"></div>
+        <div id="drill-dictation-pane" class="drill-pane" style="display:none;"></div>
       </div>
       <div id="sentences"></div>
       <button id="mark-done" class="btn btn-primary mark-done" type="button">标记为已学完</button>
@@ -199,6 +208,7 @@
   <script src="js/player.js"></script>
   <script src="js/path.js"></script>
   <script src="js/shadow.js"></script>
+  <script src="js/drill.js"></script>
   <script src="js/catalog.js"></script>
   <script src="js/book.js"></script>
   <script src="js/app.js"></script>
