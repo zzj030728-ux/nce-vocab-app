@@ -6,8 +6,8 @@
   <meta name="theme-color" content="#2563eb">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="description" content="新概念英语点读、点词查词与间隔复习">
-  <title>新概念英语 · 点词学习</title>
+  <meta name="description" content="英语词库：960+ 词书浏览、新概念点读、生词与间隔复习">
+  <title>英语词库</title>
   <link rel="manifest" href="manifest.webmanifest">
   <link rel="apple-touch-icon" href="icon-192.png">
   <link rel="icon" href="icon-192.png">
@@ -16,8 +16,8 @@
 <body>
   <header>
     <div>
-      <h1>新概念英语</h1>
-      <p class="subtitle">点词查词 · 课文点读 · 间隔复习</p>
+      <h1 id="header-title">英语词库</h1>
+      <p class="subtitle" id="header-sub">全库浏览 · 新概念点读 · 间隔复习</p>
     </div>
   </header>
 
@@ -30,11 +30,43 @@
   </div>
 
   <div class="container">
-    <div id="lessons-view">
+    <!-- 词库：分类 -->
+    <div id="vault-view">
+      <div class="search-bar">
+        <input type="search" id="vault-search" placeholder="搜索分类或词书…" autocomplete="off">
+      </div>
+      <div id="category-grid" class="category-grid"></div>
+    </div>
+
+    <!-- 词库：某分类下的书列表 -->
+    <div id="books-view" style="display:none;">
+      <button class="back-btn" id="books-back" type="button">← 返回分类</button>
+      <h2 class="view-title" id="books-title"></h2>
+      <div class="search-bar">
+        <input type="search" id="books-search" placeholder="过滤词书…" autocomplete="off">
+      </div>
+      <div id="books-list" class="books-list"></div>
+    </div>
+
+    <!-- 词库：词表 -->
+    <div id="book-view" style="display:none;">
+      <button class="back-btn" id="book-back" type="button">← 返回词书</button>
+      <h2 class="view-title" id="book-title"></h2>
+      <div class="book-meta" id="book-meta"></div>
+      <div class="search-bar">
+        <input type="search" id="word-search" placeholder="搜索单词…" autocomplete="off">
+      </div>
+      <div id="word-list" class="word-list"></div>
+      <div class="pager" id="word-pager"></div>
+    </div>
+
+    <!-- 新概念：目录 -->
+    <div id="lessons-view" style="display:none;">
       <div class="book-tabs" id="book-tabs"></div>
       <div class="lesson-list" id="lesson-list"></div>
     </div>
 
+    <!-- 新概念：点读 -->
     <div id="reader-view" class="reader">
       <button class="back-btn" id="back-btn" type="button">← 返回</button>
       <div class="player-bar">
@@ -62,8 +94,11 @@
   </div>
 
   <nav class="bottom-nav">
-    <button data-tab="lessons" class="active" type="button">
-      <span class="icon">📖</span>课文
+    <button data-tab="vault" class="active" type="button">
+      <span class="icon">📚</span>词库
+    </button>
+    <button data-tab="lessons" type="button">
+      <span class="icon">📖</span>新概念
     </button>
     <button data-tab="vocab" type="button">
       <span class="icon">📝</span>生词
@@ -86,9 +121,12 @@
     </div>
   </div>
 
+  <script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script>
   <script src="js/lessons.js"></script>
   <script src="js/vocab.js"></script>
   <script src="js/player.js"></script>
+  <script src="js/catalog.js"></script>
+  <script src="js/book.js"></script>
   <script src="js/app.js"></script>
   <script>
     if ("serviceWorker" in navigator) {

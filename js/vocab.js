@@ -1,4 +1,4 @@
-// vocab.js — vocabulary lookup + SRS storage
+// vocab.js — vocabulary lookup + SRS storage (shared across vault + NCE)
 const Vocab = {
   data: {},
 
@@ -37,7 +37,11 @@ const Vocab = {
     const saved = this.getSaved();
     if (!saved.some(w => w.word === entry.word)) {
       saved.unshift({
-        ...entry,
+        word: entry.word,
+        ipa: entry.ipa || "",
+        definition: entry.definition || "",
+        example: entry.example || "",
+        bookSource: entry.bookSource || "",
         interval: 0,
         due: Date.now(),
         reps: 0,

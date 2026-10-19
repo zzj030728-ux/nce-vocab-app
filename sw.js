@@ -1,12 +1,15 @@
-const CACHE = "nce-final-v2";
+const CACHE = "nce-vault-v1";
 const ASSETS = [
   "./",
   "./index.html",
   "./css/style.css",
   "./js/app.js",
+  "./js/catalog.js",
+  "./js/book.js",
   "./js/lessons.js",
   "./js/vocab.js",
   "./js/player.js",
+  "./data/catalog.json",
   "./data/vocab-nce1.json",
   "./data/vocab-nce2.json",
   "./data/vocab-nce3.json",
@@ -31,8 +34,12 @@ self.addEventListener("fetch", e => {
   if (e.request.method !== "GET") return;
   const url = new URL(e.request.url);
   const isRemoteLesson = url.hostname === "nce.mleo.site";
+  const isRemoteBook =
+    url.hostname === "raw.githubusercontent.com" &&
+    url.pathname.includes("/lilinji/English/");
+  const isSheetJs = url.hostname === "cdn.sheetjs.com";
 
-  if (isRemoteLesson) {
+  if (isRemoteLesson || isRemoteBook || isSheetJs) {
     e.respondWith(
       caches.open(CACHE).then(async cache => {
         try {

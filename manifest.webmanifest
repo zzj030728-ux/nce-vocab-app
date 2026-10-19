@@ -1,7 +1,7 @@
 {
-  "name": "新概念英语 · 点词学习",
-  "short_name": "NCE 学习",
-  "description": "新概念英语点读 + 点词查词 + 间隔复习",
+  "name": "英语词库",
+  "short_name": "英语词库",
+  "description": "960+ 词书浏览 · 新概念点读 · 生词与间隔复习",
   "start_url": "./index.html",
   "scope": "./",
   "display": "standalone",
