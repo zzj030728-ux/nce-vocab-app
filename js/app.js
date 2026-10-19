@@ -13,12 +13,15 @@ let flashIndex = 0;
 let flashFlipped = false;
 let listenSub = "nce"; // nce | materials
 let drillOpen = false;
-let drillTab = "pattern"; // pattern | dictation
+let drillTab = "pattern"; // pattern | dictation | write
 let drillPatterns = [];
 let drillDictation = [];
 let drillDictationIndex = 0;
 let drillPatternRecId = null; // which pattern is being recorded
 let openDrillAfterLoad = false;
+let openDrillTabAfterLoad = null; // preferred tab when opening after load
+let writeActiveType = "sentence"; // sentence | essay
+let writePrompts = null;
 let readerBackTarget = "listen"; // where back from reader goes
 let materialObjectUrl = null;
 let modalSpeakWord = "";
@@ -493,11 +496,13 @@ async function renderTodayPage() {
           <ul class="today-checklist">
             <li>${task.doneToday ? "✅" : "☐"} 点读本课（听原音 + 跟读）</li>
             <li>☐ 句型口头练习 + 听写默写</li>
+            <li>☐ 短写：造句 + 40～60 词小作文</li>
             <li>☐ 建议复习约 ${task.step.vocabHint || 20} 个单词（词库任选）</li>
           </ul>
           <div class="today-actions">
             <button type="button" class="btn-primary" id="today-start-lesson">开始今日课文</button>
             <button type="button" class="btn-secondary" id="today-start-drill">今日练习</button>
+            <button type="button" class="btn-secondary" id="today-start-write">今日短写</button>
             <button type="button" class="btn-secondary" id="today-complete" ${task.doneToday ? "disabled" : ""}>
               ${task.doneToday ? "今日已完成" : "完成今日"}
             </button>
@@ -518,6 +523,7 @@ async function renderTodayPage() {
     if (startBtn && task.step) {
       startBtn.onclick = () => {
         openDrillAfterLoad = false;
+        openDrillTabAfterLoad = null;
         openPathLesson(task.step);
       };
     }
@@ -525,6 +531,15 @@ async function renderTodayPage() {
     if (drillBtn && task.step) {
       drillBtn.onclick = () => {
         openDrillAfterLoad = true;
+        openDrillTabAfterLoad = "pattern";
+        openPathLesson(task.step);
+      };
+    }
+    const writeBtn = $("today-start-write");
+    if (writeBtn && task.step) {
+      writeBtn.onclick = () => {
+        openDrillAfterLoad = true;
+        openDrillTabAfterLoad = "write";
         openPathLesson(task.step);
       };
     }
@@ -642,10 +657,13 @@ function switchDrillTab(tab) {
   });
   const pat = $("drill-pattern-pane");
   const dic = $("drill-dictation-pane");
+  const wr = $("drill-write-pane");
   if (pat) pat.style.display = tab === "pattern" ? "block" : "none";
   if (dic) dic.style.display = tab === "dictation" ? "block" : "none";
+  if (wr) wr.style.display = tab === "write" ? "block" : "none";
   if (tab === "pattern") renderPatternPane();
-  else renderDictationPane();
+  else if (tab === "dictation") renderDictationPane();
+  else if (tab === "write") renderWritePane();
 }
 
 function renderPatternPane() {
@@ -877,6 +895,188 @@ function renderDictationPane() {
 }
 
 
+function renderWritePane() {
+  const pane = $("drill-write-pane");
+  if (!pane) return;
+  if (!currentLesson) {
+    pane.innerHTML = `<div class="drill-intro">请先打开课文。</div>`;
+    return;
+  }
+  writePrompts = Write.generatePrompts(currentLesson);
+  const lessonId = Write.lessonKey(currentLesson);
+  const drafts = Write.loadDrafts(lessonId);
+  const type = writeActiveType === "essay" ? "essay" : "sentence";
+  const prompt = writePrompts[type];
+  const text = type === "essay" ? drafts.essay : drafts.sentence;
+  const wc = Write.wordCount(text);
+  const endpoint = Write.getEndpoint();
+  const history = (drafts.history || []).slice(0, 8);
+
+  pane.innerHTML = `
+    <div class="drill-intro">
+      根据本课生成 <strong>1 道造句</strong> + <strong>1 道 40～60 词小作文</strong>。
+      草稿保存在本机（按课文）。批改：优先「复制批改提示词」粘贴到 DeepSeek / ChatGPT；
+      电脑若已配置本机 Harness（<code>nce-dsh-endpoint</code>）可尝试发送——手机/云端 Pages <strong>无法直连</strong> 你电脑的 localhost。
+    </div>
+    <div class="write-type-tabs">
+      <button type="button" class="write-type-tab${type === "sentence" ? " active" : ""}" data-write-type="sentence">造句</button>
+      <button type="button" class="write-type-tab${type === "essay" ? " active" : ""}" data-write-type="essay">小作文</button>
+    </div>
+    <div class="write-card">
+      <div class="write-prompt-title">${escapeHtml(prompt.title)}</div>
+      <p class="write-instruction">${escapeHtml(prompt.instruction)}</p>
+      <p class="write-guide">${escapeHtml(prompt.guide || "")}</p>
+      ${prompt.hints && prompt.hints.length ? `<div class="write-hints">可用词：<strong>${prompt.hints.map(h => escapeHtml(h)).join(" · ")}</strong></div>` : ""}
+      <textarea id="write-textarea" class="write-textarea" rows="${type === "essay" ? 8 : 4}" placeholder="${type === "essay" ? "写 40～60 个英文单词…" : "写一句完整英文…"}">${escapeHtml(text)}</textarea>
+      <div class="write-meta">
+        <span id="write-wordcount">${wc} 词${type === "essay" ? (wc >= 40 && wc <= 60 ? " · 长度合适" : " · 目标 40～60") : ""}</span>
+        <span class="write-saved-hint" id="write-saved-hint">${drafts.updatedAt ? "已有草稿" : ""}</span>
+      </div>
+      <div class="write-actions">
+        <button type="button" class="btn-primary" id="write-save">保存草稿</button>
+        <button type="button" class="btn-secondary" id="write-copy">复制批改提示词</button>
+        <button type="button" class="btn-secondary" id="write-send" ${endpoint ? "" : "style=\"display:none\""}>发送到本机批改</button>
+      </div>
+      <div class="write-endpoint-row">
+        <label class="write-endpoint-label">本机批改地址（可选）</label>
+        <div class="write-endpoint-inputs">
+          <input type="url" id="write-endpoint" placeholder="http://localhost:3080/..." value="${escapeHtml(endpoint)}" autocomplete="off">
+          <button type="button" class="btn-secondary" id="write-endpoint-save">记住</button>
+        </div>
+        <p class="write-endpoint-hint">默认空。仅当你在<strong>同一台电脑</strong>的浏览器打开本站，且 DeepSeek Harness 已监听时才有用。失败请用复制。</p>
+      </div>
+      <div class="write-critique-status" id="write-critique-status"></div>
+    </div>
+    <div class="write-history">
+      <div class="write-history-title">本课草稿历史（简略）</div>
+      ${!history.length ? `<div class="drill-intro">暂无历史</div>` : history.map((h, i) => `
+        <button type="button" class="write-history-item" data-hist="${i}">
+          <span class="write-hist-type">${h.type === "essay" ? "作文" : "造句"}</span>
+          <span class="write-hist-time">${escapeHtml(Write.formatHistoryTime(h.at))}</span>
+          <span class="write-hist-preview">${escapeHtml((h.text || "").slice(0, 60))}${(h.text || "").length > 60 ? "…" : ""}</span>
+        </button>
+      `).join("")}
+    </div>
+  `;
+
+  pane.querySelectorAll("[data-write-type]").forEach(btn => {
+    btn.onclick = () => {
+      // autosave current before switch
+      const ta = $("write-textarea");
+      if (ta) Write.saveDraft(lessonId, writeActiveType, ta.value);
+      writeActiveType = btn.dataset.writeType;
+      renderWritePane();
+    };
+  });
+
+  const ta = $("write-textarea");
+  const wcEl = $("write-wordcount");
+  if (ta && wcEl) {
+    ta.addEventListener("input", () => {
+      const n = Write.wordCount(ta.value);
+      if (type === "essay") {
+        const ok = n >= 40 && n <= 60;
+        wcEl.textContent = n + " 词" + (ok ? " · 长度合适" : " · 目标 40～60");
+      } else {
+        wcEl.textContent = n + " 词";
+      }
+    });
+  }
+
+  $("write-save").onclick = () => {
+    Write.saveDraft(lessonId, type, ta ? ta.value : "");
+    toast("草稿已保存");
+    const hint = $("write-saved-hint");
+    if (hint) hint.textContent = "已保存";
+    // refresh history lightly
+    renderWritePane();
+  };
+
+  $("write-copy").onclick = async () => {
+    const userText = ta ? ta.value : "";
+    if (!String(userText).trim()) {
+      toast("请先写一点再复制");
+      return;
+    }
+    Write.saveDraft(lessonId, type, userText);
+    const promptText = Write.buildCritiquePrompt(prompt, userText, writePrompts.lessonTitle);
+    const ok = await Write.copyText(promptText);
+    toast(ok ? "批改提示词已复制，去 DeepSeek / ChatGPT 粘贴" : "复制失败，请手动全选");
+  };
+
+  const sendBtn = $("write-send");
+  if (sendBtn) {
+    sendBtn.onclick = async () => {
+      const userText = ta ? ta.value : "";
+      if (!String(userText).trim()) {
+        toast("请先写一点");
+        return;
+      }
+      const ep = Write.getEndpoint() || ($("write-endpoint") && $("write-endpoint").value.trim());
+      if (!ep) {
+        toast("请先填写本机批改地址");
+        return;
+      }
+      Write.saveDraft(lessonId, type, userText);
+      const promptText = Write.buildCritiquePrompt(prompt, userText, writePrompts.lessonTitle);
+      const status = $("write-critique-status");
+      if (status) {
+        status.className = "write-critique-status pending";
+        status.textContent = "正在发送到本机…";
+      }
+      sendBtn.disabled = true;
+      try {
+        const data = await Write.sendToLocalCritique(ep, {
+          type,
+          lessonId,
+          lessonTitle: writePrompts.lessonTitle,
+          prompt: promptText,
+          text: userText,
+          wordCount: Write.wordCount(userText)
+        });
+        const reply = (data && (data.reply || data.result || data.content || data.message)) || "";
+        if (status) {
+          status.className = "write-critique-status ok";
+          status.textContent = reply
+            ? ("本机批改回复：\n" + String(reply).slice(0, 1200))
+            : "已发送（服务端未返回可读正文，请在 Harness 侧查看）";
+        }
+        toast("已发送到本机批改");
+      } catch (err) {
+        if (status) {
+          status.className = "write-critique-status bad";
+          status.textContent = (err && err.message) || String(err);
+        }
+        toast("本机批改不可用，请用复制");
+      } finally {
+        sendBtn.disabled = false;
+      }
+    };
+  }
+
+  $("write-endpoint-save").onclick = () => {
+    const input = $("write-endpoint");
+    const v = input ? input.value.trim() : "";
+    Write.setEndpoint(v);
+    toast(v ? "已记住本机地址" : "已清空本机地址");
+    renderWritePane();
+  };
+
+  pane.querySelectorAll("[data-hist]").forEach(btn => {
+    btn.onclick = () => {
+      const idx = parseInt(btn.dataset.hist, 10);
+      const h = history[idx];
+      if (!h) return;
+      writeActiveType = h.type === "essay" ? "essay" : "sentence";
+      Write.saveDraft(lessonId, writeActiveType, h.text || "");
+      renderWritePane();
+      toast("已载入历史草稿");
+    };
+  });
+}
+
+
+
 /* ========== 点读：新概念 ========== */
 
 function renderListenHome() {
@@ -962,6 +1162,7 @@ async function openLesson(id, opts) {
       container.innerHTML = `<div class="empty">该课暂无字幕</div>`;
       Player.load(lesson.audio, []);
       openDrillAfterLoad = false;
+      openDrillTabAfterLoad = null;
       return;
     }
     container.innerHTML = lesson.sentences.map((s, i) => `
@@ -974,10 +1175,15 @@ async function openLesson(id, opts) {
     $("play-btn").textContent = "▶";
     if (openDrillAfterLoad) {
       openDrillAfterLoad = false;
+      if (openDrillTabAfterLoad) {
+        drillTab = openDrillTabAfterLoad;
+        openDrillTabAfterLoad = null;
+      }
       openDrillPanel();
     }
   } catch (err) {
     openDrillAfterLoad = false;
+    openDrillTabAfterLoad = null;
     container.innerHTML = `<div class="empty">课文加载失败<br>${escapeHtml(err.message || String(err))}</div>`;
   }
 }

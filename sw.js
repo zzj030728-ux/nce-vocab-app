@@ -1,4 +1,4 @@
-const CACHE = "nce-vault-v4";
+const CACHE = "nce-vault-v5";
 const ASSETS = [
   "./",
   "./index.html",
@@ -14,6 +14,7 @@ const ASSETS = [
   "./js/path.js",
   "./js/shadow.js",
   "./js/drill.js",
+  "./js/write.js",
   "./data/path.json",
   "./data/catalog.json",
   "./data/vocab-nce1.json",

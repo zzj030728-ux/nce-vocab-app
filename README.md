@@ -7,7 +7,7 @@
 | Tab | 说明 |
 |-----|------|
 | 词库 | 分类 → 词书 → 词表；顶部「今日学习」入口；释义摘要；卡片模式；加入生词本 |
-| 点读 | 顶部子 Tab：**新概念**（mleo LRC/MP3）/ **我的教材**；课文页支持**跟读录音**、**句型练习**与**听写默写** |
+| 点读 | 顶部子 Tab：**新概念**（mleo LRC/MP3）/ **我的教材**；课文页支持**跟读录音**、**句型/听写/短写** |
 | 生词 / 复习 | 显示来源（新概念 / 词书名 / 我的教材）；与 `nce-saved` / `nce-progress` 兼容 |
 
 ### 今日学习（分级路径）
@@ -16,7 +16,7 @@
 
 1. 路径分四阶段（`data/path.json`）：入门（NCE1 1–20）→ 基础 → 进阶 → 高阶
 2. 每天显示当前阶段的一课任务 + 建议记词数量
-3. 「开始今日课文」跳转新概念点读；「今日练习」打开课文并进入句型/听写；学完后点「完成今日」推进下一步并累计连续天数（`localStorage` 键 `nce-path-progress`）
+3. 「开始今日课文」跳转新概念点读；「今日练习」打开句型/听写；「今日短写」打开短写 Tab；学完后点「完成今日」推进下一步并累计连续天数（`localStorage` 键 `nce-path-progress`）
 4. 可在页面底部手动「选择起点阶段」
 
 ### 跟读录音
@@ -37,7 +37,16 @@
 3. **今日学习**页有「今日练习」入口，打开当日课文并自动展开练习面板
 4. **生词**页底部展示听写错词本
 
-> 本轮**不做**短写 / DeepSeek 批改（留给下一轮）。
+### 短写练习（造句 + 小作文）
+
+练习面板第三 Tab「短写」，或今日页「今日短写」：
+
+1. **本课提示**（本地启发式，不调远程 LLM）：根据当前课文中英文生成 **1 道造句** + **1 道 40～60 词小作文**
+2. 在 App 内写作，草稿按 `lessonId` 存 `localStorage`（键 `nce-write-drafts`），并保留简略历史
+3. **复制批改提示词**：把题目 + 你的作文包成可粘贴到 DeepSeek / ChatGPT 的批改 prompt（中文说明 + 英文习作）。**手机推荐流程**：写完 → 复制 → 打开 DeepSeek App / 网页粘贴
+4. **可选本机批改**：若在设置框填写并「记住」地址（存 `localStorage nce-dsh-endpoint`，默认空），出现「发送到本机批改」；`fetch` POST 到该地址。失败则提示仅 localhost 可用、请用复制——**不强依赖 DeepSeek Harness**
+5. **重要限制**：DeepSeek Harness 若跑在 Windows 本机 `http://localhost:3080`，云端 GitHub Pages / 手机浏览器 **无法直连你电脑的本机 API**。手机请一律用「复制批改提示词」；仅当你用**同一台电脑的浏览器**打开本站，且 Harness 已监听时，本机发送才可能成功
+
 
 ### A. 词库释义体验
 
@@ -100,7 +109,7 @@ python -m http.server 8080
 - 新概念课文/音频不打包进仓库，仅按需加载公开资源
 - 用户导入的音频仅存本机 IndexedDB，不上传
 - 跟读录音仅存内存 blob，刷新页面即清空
-- SheetJS 通过 CDN 加载；离线时依赖 Service Worker 缓存（`nce-vault-v4`）
+- SheetJS 通过 CDN 加载；离线时依赖 Service Worker 缓存（`nce-vault-v5`）
 
 ## 技术
 
@@ -109,3 +118,4 @@ python -m http.server 8080
 - IndexedDB（`nce-materials`）存用户教材
 - MediaRecorder + getUserMedia 跟读 / 句型录音（HTTPS 推荐）
 - speechSynthesis 听写与句型 TTS；错词本 `nce-missed`
+- 短写草稿 `nce-write-drafts`；可选本机批改地址 `nce-dsh-endpoint`
