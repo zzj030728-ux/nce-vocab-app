@@ -1,0 +1,5174 @@
+[
+  {
+    "word": "private",
+    "ipa": "[ˈpraɪvət]",
+    "definition": "n. 列兵；二等兵\nadj. 私人的；私有的；私下的",
+    "example": ""
+  },
+  {
+    "word": "conversation",
+    "ipa": "[ˌkɒnvəˈseɪʃ(ə)n]",
+    "definition": "n. 交谈，会话；社交；交往，交际；会谈；（人与计算机的）人机对话",
+    "example": ""
+  },
+  {
+    "word": "theatre",
+    "ipa": "[ˈθɪətə(r)]",
+    "definition": "n. 电影院，戏院；戏剧；阶梯式讲堂",
+    "example": ""
+  },
+  {
+    "word": "seat",
+    "ipa": "[siːt]",
+    "definition": "n. 座位；所在地；职位\nvt. 使…坐下；可容纳…的；使就职",
+    "example": ""
+  },
+  {
+    "word": "play",
+    "ipa": "[pleɪ]",
+    "definition": "n. 游戏；比赛；剧本\nvt. 游戏；扮演；演奏；播放；同…比赛\nvi. 演奏；玩耍；上演；参加比赛",
+    "example": ""
+  },
+  {
+    "word": "loudly",
+    "ipa": "[ˈlaʊdli]",
+    "definition": "adv. 大声地，响亮地",
+    "example": ""
+  },
+  {
+    "word": "angry",
+    "ipa": "[ˈæŋɡri]",
+    "definition": "adj. 生气的；愤怒的；狂暴的；（伤口等）发炎的",
+    "example": ""
+  },
+  {
+    "word": "angrily",
+    "ipa": "[ˈæŋɡrəli]",
+    "definition": "adv. 愤怒地",
+    "example": ""
+  },
+  {
+    "word": "attention",
+    "ipa": "[əˈtenʃ(ə)n]",
+    "definition": "n. 注意力；关心；立正！（口令）",
+    "example": ""
+  },
+  {
+    "word": "bear",
+    "ipa": "[beə(r)]",
+    "definition": "n. 熊\nvt. 结果实，开花（正式）\nvt. 忍受；承受；具有；支撑",
+    "example": ""
+  },
+  {
+    "word": "business",
+    "ipa": "[ˈbɪznəs]",
+    "definition": "n. 商业；[贸易] 生意；[贸易] 交易；事情",
+    "example": ""
+  },
+  {
+    "word": "rudely",
+    "ipa": "[ˈruːdli]",
+    "definition": "adv. 无礼地；粗暴地",
+    "example": ""
+  },
+  {
+    "word": "until",
+    "ipa": "[ənˈtɪl]",
+    "definition": "prep. 在…以前；到…为止\nconj. 在…以前；直到…时",
+    "example": ""
+  },
+  {
+    "word": "outside",
+    "ipa": "[ˌaʊtˈsaɪd]",
+    "definition": "adj. 外面的，外部的；外来的\nn. 外部；外观\nadv. 在外面，向外面；在室外\nprep. 在…范围之外",
+    "example": ""
+  },
+  {
+    "word": "ring",
+    "ipa": "[rɪŋ]",
+    "definition": "n. 戒指；铃声，钟声；拳击场；环形物\nvi. 按铃；敲钟；回响；成环形\nvt. 按铃；包围；敲钟；套住",
+    "example": ""
+  },
+  {
+    "word": "aunt",
+    "ipa": "[ɑːnt]",
+    "definition": "n. 阿姨；姑妈；伯母；舅妈",
+    "example": ""
+  },
+  {
+    "word": "repeat",
+    "ipa": "[rɪˈpiːt]",
+    "definition": "n. 重复；副本\nvi. 重做；重复发生\nvt. 重复；复制；背诵",
+    "example": ""
+  },
+  {
+    "word": "send",
+    "ipa": "[send]",
+    "definition": "n. 上升运动\nvi. 派人；寄信\nvt. 发送，寄；派遣；使进入；发射",
+    "example": ""
+  },
+  {
+    "word": "postcard",
+    "ipa": "[ˈpəʊstkɑːd]",
+    "definition": "n. 明信片",
+    "example": ""
+  },
+  {
+    "word": "spoil",
+    "ipa": "[spɔɪl]",
+    "definition": "n. 次品；奖品\nvt. 溺爱；糟蹋；破坏；掠夺\nvi. 掠夺；变坏；腐败",
+    "example": ""
+  },
+  {
+    "word": "museum",
+    "ipa": "[mjuˈziːəm]",
+    "definition": "n. 博物馆",
+    "example": ""
+  },
+  {
+    "word": "public",
+    "ipa": "[ˈpʌblɪk]",
+    "definition": "n. 公众；社会；公共场所\nadj. 公众的；政府的；公用的；公立的",
+    "example": ""
+  },
+  {
+    "word": "friendly",
+    "ipa": "[ˈfrendli]",
+    "definition": "adj. 友好的；亲切的；支持的；融洽的，和睦的\nadv. 友善地；温和地",
+    "example": ""
+  },
+  {
+    "word": "waiter",
+    "ipa": "[ˈweɪtə(r)]",
+    "definition": "n. 服务员，侍者",
+    "example": ""
+  },
+  {
+    "word": "lend",
+    "ipa": "[lend]",
+    "definition": "vt. 贷；增添，提供；把……借给\nvi. 贷款",
+    "example": ""
+  },
+  {
+    "word": "decision",
+    "ipa": "[dɪˈsɪʒ(ə)n]",
+    "definition": "n. 决定，决心；决议",
+    "example": ""
+  },
+  {
+    "word": "whole",
+    "ipa": "[həʊl]",
+    "definition": "n. 整体；全部\nadj. 完整的；纯粹的",
+    "example": ""
+  },
+  {
+    "word": "single",
+    "ipa": "[ˈsɪŋɡ(ə)l]",
+    "definition": "n. 一个；单打；单程票\nadj. 单一的；单身的；单程的\nvt. 选出\nvi. 击出一垒安打",
+    "example": ""
+  },
+  {
+    "word": "exciting",
+    "ipa": "[ɪkˈsaɪtɪŋ]",
+    "definition": "adj. 令人兴奋的；使人激动的\nv. 激动；刺激（excite的ing形式）；唤起",
+    "example": ""
+  },
+  {
+    "word": "receive",
+    "ipa": "[rɪˈsiːv]",
+    "definition": "vt. 收到；接待；接纳\nvi. 接收",
+    "example": ""
+  },
+  {
+    "word": "firm",
+    "ipa": "[fɜːm]",
+    "definition": "n. 公司；商号\nadj. 坚定的；牢固的；严格的；结实的\nvt. 使坚定；使牢固\nadv. 稳固地\nvi. 变坚实；变稳固",
+    "example": ""
+  },
+  {
+    "word": "different",
+    "ipa": "[ˈdɪfrənt]",
+    "definition": "adj. 不同的；个别的，与众不同的",
+    "example": ""
+  },
+  {
+    "word": "centre",
+    "ipa": "[ˈsentə(r)]",
+    "definition": "n. 中心\nadj. 中央的\nvt. 集中；将…放在中央\nvi. 以…为中心",
+    "example": ""
+  },
+  {
+    "word": "abroad",
+    "ipa": "[əˈbrɔːd]",
+    "definition": "n. 海外；异国\nadj. 往国外的\nadv. 在国外；到海外",
+    "example": ""
+  },
+  {
+    "word": "pigeon",
+    "ipa": "[ˈpɪdʒɪn]",
+    "definition": "n. 鸽子",
+    "example": ""
+  },
+  {
+    "word": "message",
+    "ipa": "[ˈmesɪdʒ]",
+    "definition": "n. 消息；差使；启示；预言；广告词\nvi. 报信，报告；[通信] 报文\nvt. 通知",
+    "example": ""
+  },
+  {
+    "word": "cover",
+    "ipa": "[ˈkʌvə(r)]",
+    "definition": "n. 封面，封皮；盖子；掩蔽物;幌子，借口\nvt. 包括；采访，报导；涉及\nvi. 覆盖；代替",
+    "example": ""
+  },
+  {
+    "word": "distance",
+    "ipa": "[ˈdɪstəns]",
+    "definition": "n. 距离；远方；疏远；间隔\nvt. 疏远；把…远远甩在后面",
+    "example": ""
+  },
+  {
+    "word": "request",
+    "ipa": "[rɪˈkwest]",
+    "definition": "n. 请求；需要\nvt. 要求，请求",
+    "example": ""
+  },
+  {
+    "word": "spare part",
+    "ipa": "",
+    "definition": "n. 备件；配件；零件",
+    "example": ""
+  },
+  {
+    "word": "service",
+    "ipa": "[ˈsɜːvɪs]",
+    "definition": "n. 服务，服侍；服役；仪式\nadj. 服务性的；耐用的；服现役的\nvt. 维修，检修；保养",
+    "example": ""
+  },
+  {
+    "word": "beggar",
+    "ipa": "[ˈbeɡə(r)]",
+    "definition": "n. 乞丐；穷人；家伙\nvt. 使贫穷；使沦为乞丐",
+    "example": ""
+  },
+  {
+    "word": "food",
+    "ipa": "[fuːd]",
+    "definition": "n. 食物；养料",
+    "example": ""
+  },
+  {
+    "word": "pocket",
+    "ipa": "[ˈpɒkɪt]",
+    "definition": "n. 口袋；钱；容器\nadj. 小型的，袖珍的；金钱上的\nvt. 隐藏；忍受；将…放入衣袋\nvi. 形成袋或囊",
+    "example": ""
+  },
+  {
+    "word": "call",
+    "ipa": "[kɔːl]",
+    "definition": "n. 电话；呼叫；要求；访问\nvi. 呼叫；拜访；叫牌\nvt. 呼叫；称呼；召集",
+    "example": ""
+  },
+  {
+    "word": "detective",
+    "ipa": "[dɪˈtektɪv]",
+    "definition": "n. 侦探\nadj. 侦探的",
+    "example": ""
+  },
+  {
+    "word": "airport",
+    "ipa": "[ˈeəpɔːt]",
+    "definition": "n. 机场；航空站",
+    "example": ""
+  },
+  {
+    "word": "expect",
+    "ipa": "[ɪkˈspekt]",
+    "definition": "vi. 期待；预期\nvt. 期望；指望；认为；预料",
+    "example": ""
+  },
+  {
+    "word": "valuable",
+    "ipa": "[ˈvæljuəbl]",
+    "definition": "n. 贵重物品\nadj. 有价值的；贵重的；可估价的",
+    "example": ""
+  },
+  {
+    "word": "parcel",
+    "ipa": "[ˈpɑːs(ə)l]",
+    "definition": "n. 包裹，小包\nvt. 打包；捆扎",
+    "example": ""
+  },
+  {
+    "word": "diamond",
+    "ipa": "[ˈdaɪmənd]",
+    "definition": "n. 钻石，金刚石；菱形；方块牌\nadj. 菱形的；金刚钻的",
+    "example": ""
+  },
+  {
+    "word": "steal",
+    "ipa": "[stiːl]",
+    "definition": "n. 偷窃；便宜货；偷垒；断球\nvt. 剽窃；偷偷地做；偷窃\nvi. 窃取；偷偷地行动；偷垒",
+    "example": ""
+  },
+  {
+    "word": "main",
+    "ipa": "[meɪn]",
+    "definition": "n. 主要部分，要点；体力；总管道\nadj. 主要的，最重要的；全力的",
+    "example": ""
+  },
+  {
+    "word": "airfield",
+    "ipa": "[ˈeəfiːld]",
+    "definition": "n. 飞机场",
+    "example": ""
+  },
+  {
+    "word": "guard",
+    "ipa": "[ɡɑːd]",
+    "definition": "n. 守卫；警戒；护卫队；防护装置\nvi. 警惕\nvt. 保卫；监视",
+    "example": ""
+  },
+  {
+    "word": "precious",
+    "ipa": "[ˈpreʃəs]",
+    "definition": "adj. 宝贵的；珍贵的；矫揉造作的",
+    "example": ""
+  },
+  {
+    "word": "stone",
+    "ipa": "[stəʊn]",
+    "definition": "n. 石头；结石；[宝] 宝石\nadj. 石的，石制的\nvt. 向扔石块；用石头铺",
+    "example": ""
+  },
+  {
+    "word": "sand",
+    "ipa": "[sænd]",
+    "definition": "n. 沙；沙地；沙洲；沙滩；沙子\nvt. 撒沙于；以沙掩盖；用砂纸等擦平或磨光某物；使撒沙似地布满；给…掺沙子\nvi. 被沙堵塞",
+    "example": ""
+  },
+  {
+    "word": "competition",
+    "ipa": "[ˌkɒmpəˈtɪʃn]",
+    "definition": "n. 竞争；比赛，竞赛",
+    "example": ""
+  },
+  {
+    "word": "neat",
+    "ipa": "[niːt]",
+    "definition": "adj. 灵巧的；整洁的；优雅的；齐整的；未搀水的；平滑的",
+    "example": ""
+  },
+  {
+    "word": "path",
+    "ipa": "[pɑːθ]",
+    "definition": "n. 道路；小路；轨道",
+    "example": ""
+  },
+  {
+    "word": "wooden",
+    "ipa": "[ˈwʊdn]",
+    "definition": "adj. 木制的；僵硬的，呆板的",
+    "example": ""
+  },
+  {
+    "word": "pool",
+    "ipa": "[puːl]",
+    "definition": "n. 联营；撞球；水塘；共同资金\nvt. 合伙经营\nvi. 联营，合伙经营",
+    "example": ""
+  },
+  {
+    "word": "welcome",
+    "ipa": "[ˈwelkəm]",
+    "definition": "n. 欢迎\nvt. 欢迎\nadj. 受欢迎的\nint. 欢迎",
+    "example": ""
+  },
+  {
+    "word": "crowd",
+    "ipa": "[kraʊd]",
+    "definition": "n. 群众,一伙;一堆,许多,大众\nv. 拥挤,挤满,挤进\nvt. 挤满,将...塞进;催促,催逼\nvi. 挤,拥挤,聚集",
+    "example": ""
+  },
+  {
+    "word": "gather",
+    "ipa": "[ˈɡæðə(r)]",
+    "definition": "n. 聚集；衣褶；收获量\nvt. 收集；收割；使…聚集；使…皱起\nvi. 聚集；化脓；皱起",
+    "example": ""
+  },
+  {
+    "word": "hand",
+    "ipa": "[hænd]",
+    "definition": "n. 手，手艺；帮助；指针；插手\nvt. 传递，交给；支持；搀扶",
+    "example": ""
+  },
+  {
+    "word": "shout",
+    "ipa": "[ʃaʊt]",
+    "definition": "n. 呼喊；呼叫\nvi. 呼喊；喊叫；大声说\nvt. 呼喊；大声说",
+    "example": ""
+  },
+  {
+    "word": "refuse",
+    "ipa": "[rɪˈfjuːz; ˈrefjuːs]",
+    "definition": "n. 垃圾；废物\nvi. 拒绝\nvt. 拒绝；不愿；抵制",
+    "example": ""
+  },
+  {
+    "word": "laugh",
+    "ipa": "[lɑːf]",
+    "definition": "n. 笑；引人发笑的事或人\nvi. 笑\nvt. 以笑表示；使…笑得",
+    "example": ""
+  },
+  {
+    "word": "jazz",
+    "ipa": "[dʒæz]",
+    "definition": "n. 爵士乐，爵士舞；喧闹\nvi. 奏爵士乐，跳爵士舞；游荡\nvt. 奏爵士乐；使活泼\nadj. 爵士乐的；喧吵的",
+    "example": ""
+  },
+  {
+    "word": "musical",
+    "ipa": "[ˈmjuːzɪk(ə)l]",
+    "definition": "adj. 音乐的；悦耳的\nn. 音乐片",
+    "example": ""
+  },
+  {
+    "word": "instrument",
+    "ipa": "[ˈɪnstrəmənt]",
+    "definition": "n. 仪器；工具；乐器；手段；器械",
+    "example": ""
+  },
+  {
+    "word": "clavichord",
+    "ipa": "[ˈklævɪkɔːd]",
+    "definition": "n. 古钢琴，翼琴",
+    "example": ""
+  },
+  {
+    "word": "recently",
+    "ipa": "[ˈriːs(ə)ntli]",
+    "definition": "adv. 最近；新近",
+    "example": ""
+  },
+  {
+    "word": "damage",
+    "ipa": "[ˈdæmɪdʒ]",
+    "definition": "vi. 损害；损毁\nvt. 损害，毁坏\nn. 损害；损毁；赔偿金",
+    "example": ""
+  },
+  {
+    "word": "key",
+    "ipa": "[kiː]",
+    "definition": "n. （打字机等的）键；关键；钥匙\nvt. 键入；锁上；调节…的音调；提供线索\nvi. 使用钥匙\nadj. 关键的",
+    "example": ""
+  },
+  {
+    "word": "string",
+    "ipa": "[strɪŋ]",
+    "definition": "n. 线，弦，细绳；一串，一行",
+    "example": ""
+  },
+  {
+    "word": "shock",
+    "ipa": "[ʃɒk]",
+    "definition": "n. 休克；震惊；震动；打击；禾束堆\nadj. 浓密的；蓬乱的\nvt. 使休克；使震惊；使震动；使受电击；把…堆成禾束堆\nvi. 感到震惊；受到震动；堆成禾束堆",
+    "example": ""
+  },
+  {
+    "word": "allow",
+    "ipa": "[əˈlaʊ]",
+    "definition": "vi. 容许；考虑\nvt. 允许；给予；认可",
+    "example": ""
+  },
+  {
+    "word": "touch",
+    "ipa": "[tʌtʃ]",
+    "definition": "n. 接触；触觉；格调；少许\nvt. 接触；触动；使轻度受害\nvi. 触摸；涉及；接近；提到",
+    "example": ""
+  },
+  {
+    "word": "turn",
+    "ipa": "[tɜːn]",
+    "definition": "n. 转弯；变化；(损害或有益于别人的)行为，举动，举止\nvi. 转向；转变；转动\nvt. 转动，使旋转；转弯；翻过来；兑换",
+    "example": ""
+  },
+  {
+    "word": "deserve",
+    "ipa": "[dɪˈzɜːv]",
+    "definition": "vi. 应受，应得\nvt. 应受，应得",
+    "example": ""
+  },
+  {
+    "word": "lawyer",
+    "ipa": "[ˈlɔɪə(r)]",
+    "definition": "n. 律师；法学家",
+    "example": ""
+  },
+  {
+    "word": "bank",
+    "ipa": "[bæŋk]",
+    "definition": "n. 银行；岸；浅滩；储库\nvt. 将…存入银行；倾斜转弯\nvi. 堆积；倾斜转弯",
+    "example": ""
+  },
+  {
+    "word": "salary",
+    "ipa": "[ˈsæləri]",
+    "definition": "n. 薪水\nvt. 给...加薪；给...薪水",
+    "example": ""
+  },
+  {
+    "word": "immediately",
+    "ipa": "[ɪˈmiːdiətli]",
+    "definition": "conj. 一…就\nadv. 立即，立刻；直接地",
+    "example": ""
+  },
+  {
+    "word": "luck",
+    "ipa": "[lʌk]",
+    "definition": "n. 运气；幸运；带来好运的东西\nvi. 靠运气，走运；凑巧碰上",
+    "example": ""
+  },
+  {
+    "word": "captain",
+    "ipa": "[ˈkæptɪn]",
+    "definition": "n. 队长，首领；船长；上尉；海军上校\nvt. 指挥；率领",
+    "example": ""
+  },
+  {
+    "word": "sail",
+    "ipa": "[seɪl]",
+    "definition": "n. 帆，篷；航行\nvi. 航行；启航，开船\nvt. 航行",
+    "example": ""
+  },
+  {
+    "word": "harbour",
+    "ipa": "[ˈhɑːbə(r)]",
+    "definition": "n. 海港（等于harbor）；避难所\nvt. 庇护；藏匿；入港停泊\nvi. 藏匿；入港停泊；庇护",
+    "example": ""
+  },
+  {
+    "word": "proud",
+    "ipa": "[praʊd]",
+    "definition": "adj. 自豪的；得意的；自负的",
+    "example": ""
+  },
+  {
+    "word": "important",
+    "ipa": "[ɪmˈpɔːtnt]",
+    "definition": "adj. 重要的，重大的；有地位的；有权力的",
+    "example": ""
+  },
+  {
+    "word": "group",
+    "ipa": "[ɡruːp]",
+    "definition": "n. 组；团体\nadj. 群的；团体的\nvt. 把…聚集；把…分组\nvi. 聚合",
+    "example": ""
+  },
+  {
+    "word": "pop singer",
+    "ipa": "",
+    "definition": "n. 流行歌歌星",
+    "example": ""
+  },
+  {
+    "word": "club",
+    "ipa": "[klʌb]",
+    "definition": "n. 俱乐部，社团；夜总会；棍棒；（扑克牌中的）梅花\nadj. 俱乐部的\nvt. 用棍棒打；募集\nvi. 集资；组成俱乐部",
+    "example": ""
+  },
+  {
+    "word": "performance",
+    "ipa": "[pəˈfɔːməns]",
+    "definition": "n. 性能；绩效；表演；执行；表现",
+    "example": ""
+  },
+  {
+    "word": "occasion",
+    "ipa": "[əˈkeɪʒ(ə)n]",
+    "definition": "n. 时机，机会；场合；理由\nvt. 引起，惹起",
+    "example": ""
+  },
+  {
+    "word": "amusing",
+    "ipa": "[əˈmjuːzɪŋ]",
+    "definition": "adj. 有趣的，好玩的；引人发笑的\nv. 逗乐；打发；使…高兴（amuse的ing形式）",
+    "example": ""
+  },
+  {
+    "word": "experience",
+    "ipa": "[ɪkˈspɪəriəns]",
+    "definition": "n. 经验；经历；体验\nvt. 经验；经历；体验",
+    "example": ""
+  },
+  {
+    "word": "wave",
+    "ipa": "[weɪv]",
+    "definition": "n. 波动；波浪；高潮；挥手示意；卷曲\nvt. 卷（烫）发；向…挥手示意；使成波浪形\nvi. 波动；起伏；挥手示意；摇动；呈波形",
+    "example": ""
+  },
+  {
+    "word": "lift",
+    "ipa": "[lɪft]",
+    "definition": "vt. 举起；提升；鼓舞；空运；抄袭\nvi. 消散；升起；耸立\nn. 电梯；举起；起重机；搭车",
+    "example": ""
+  },
+  {
+    "word": "reply",
+    "ipa": "[rɪˈplaɪ]",
+    "definition": "n. 回答；[法] 答辩\nvt. 回答；答复\nvi. 回答；[法] 答辩；回击",
+    "example": ""
+  },
+  {
+    "word": "language",
+    "ipa": "[ˈlæŋɡwɪdʒ]",
+    "definition": "n. 语言；语言文字；表达能力",
+    "example": ""
+  },
+  {
+    "word": "journey",
+    "ipa": "[ˈdʒɜːni]",
+    "definition": "n. 旅行；行程\nvi. 旅行",
+    "example": ""
+  },
+  {
+    "word": "secretary",
+    "ipa": "[ˈsekrət(ə)ri]",
+    "definition": "n. 秘书；书记；部长；大臣",
+    "example": ""
+  },
+  {
+    "word": "nervous",
+    "ipa": "[ˈnɜːvəs]",
+    "definition": "adj. 神经的；紧张不安的；强健有力的",
+    "example": ""
+  },
+  {
+    "word": "afford",
+    "ipa": "[əˈfɔːd]",
+    "definition": "vt. 给予，提供；买得起",
+    "example": ""
+  },
+  {
+    "word": "weak",
+    "ipa": "[wiːk]",
+    "definition": "adj. [经] 疲软的；虚弱的；无力的；不牢固的",
+    "example": ""
+  },
+  {
+    "word": "interrupt",
+    "ipa": "[ˌɪntəˈrʌpt]",
+    "definition": "n. 中断\nvt. 中断；打断；插嘴；妨碍\nvi. 打断；打扰",
+    "example": ""
+  },
+  {
+    "word": "park",
+    "ipa": "[pɑːk]",
+    "definition": "n. 公园；[交] 停车场\nvt. 停放；放置；寄存\nvi. 停放车辆",
+    "example": ""
+  },
+  {
+    "word": "traffic",
+    "ipa": "[ˈtræfɪk]",
+    "definition": "n. 交通；运输；贸易；[通信] 通信量\nvt. 用…作交换；在…通行\nvi. 交易，买卖",
+    "example": ""
+  },
+  {
+    "word": "ticket",
+    "ipa": "[ˈtɪkɪt]",
+    "definition": "vt. 加标签于；指派；对…开出交通违规罚单",
+    "example": ""
+  },
+  {
+    "word": "note",
+    "ipa": "[nəʊt]",
+    "definition": "n. 笔记；音符；票据；注解；纸币；便笺；照会；调子\nvt. 注意；记录；注解",
+    "example": ""
+  },
+  {
+    "word": "area",
+    "ipa": "[ˈeəriə]",
+    "definition": "n. 区域，地区；面积；范围",
+    "example": ""
+  },
+  {
+    "word": "sign",
+    "ipa": "[saɪn]",
+    "definition": "n. 迹象；符号；记号；手势；指示牌\nvt. 签署；示意\nvi. 签署；签名",
+    "example": ""
+  },
+  {
+    "word": "reminder",
+    "ipa": "[rɪˈmaɪndə(r)]",
+    "definition": "n. 暗示；提醒的人/物；催单",
+    "example": ""
+  },
+  {
+    "word": "fail",
+    "ipa": "[feɪl]",
+    "definition": "n. 不及格\nvi. 失败，不及格；破产；缺乏；衰退\nvt. 不及格；使失望；忘记；舍弃",
+    "example": ""
+  },
+  {
+    "word": "obey",
+    "ipa": "[əˈbeɪ]",
+    "definition": "vt. 服从，听从；按照……行动\nvi. 服从，顺从；听话",
+    "example": ""
+  },
+  {
+    "word": "appear",
+    "ipa": "[əˈpɪə(r)]",
+    "definition": "vi. 出现；显得；似乎；出庭；登场",
+    "example": ""
+  },
+  {
+    "word": "stage",
+    "ipa": "[steɪdʒ]",
+    "definition": "n. 阶段；舞台；戏剧；驿站\nvt. 举行；上演；筹划\nvi. 举行；适于上演；乘驿车旅行",
+    "example": ""
+  },
+  {
+    "word": "bright",
+    "ipa": "[braɪt]",
+    "definition": "n. 车头灯光\nadj. 明亮的，鲜明的；聪明的；愉快的\nadv. 明亮地；光明地；欢快地",
+    "example": ""
+  },
+  {
+    "word": "stocking",
+    "ipa": "[ˈstɒkɪŋ]",
+    "definition": "n. 长袜",
+    "example": ""
+  },
+  {
+    "word": "sock",
+    "ipa": "[sɒk]",
+    "definition": "vt. 重击；给……穿袜\nn. 短袜；一击\nadv. 正着地；不偏不倚地\nadj. 非常成功的",
+    "example": ""
+  },
+  {
+    "word": "pub",
+    "ipa": "[pʌb]",
+    "definition": "n. 酒馆；客栈",
+    "example": ""
+  },
+  {
+    "word": "landlord",
+    "ipa": "[ˈlændlɔːd]",
+    "definition": "n. 房东，老板；地主",
+    "example": ""
+  },
+  {
+    "word": "bill",
+    "ipa": "[bɪl]",
+    "definition": "n. [法] 法案；广告；账单；[金融] 票据；钞票；清单\nvt. 宣布；开账单；用海报宣传",
+    "example": ""
+  },
+  {
+    "word": "hurry",
+    "ipa": "[ˈhʌri]",
+    "definition": "n. 匆忙，急忙\nv. 仓促（做某事）；催促；（朝某方向）迅速移动；迅速处理",
+    "example": ""
+  },
+  {
+    "word": "ticket office",
+    "ipa": "",
+    "definition": "na. 票房",
+    "example": ""
+  },
+  {
+    "word": "pity",
+    "ipa": "[ˈpɪti]",
+    "definition": "n. 怜悯，同情；遗憾\nvt. 对……表示怜悯；对……感到同情",
+    "example": ""
+  },
+  {
+    "word": "exclaim",
+    "ipa": "[ɪkˈskleɪm]",
+    "definition": "vt. 大声说出\nvi. 呼喊，惊叫；大声叫嚷",
+    "example": ""
+  },
+  {
+    "word": "return",
+    "ipa": "[rɪˈtɜːn]",
+    "definition": "vi. 返回；报答\nadj. 报答的；回程的；返回的\nvt. 返回；报答\nn. 返回；归还；回球",
+    "example": ""
+  },
+  {
+    "word": "sadly",
+    "ipa": "[ˈsædli]",
+    "definition": "adv. 悲哀地；悲痛地",
+    "example": ""
+  },
+  {
+    "word": "catch",
+    "ipa": "[kætʃ]",
+    "definition": "n. 捕捉；捕获物；窗钩\nvt. 赶上；抓住；感染；了解\nvi. 赶上；抓住",
+    "example": ""
+  },
+  {
+    "word": "fisherman",
+    "ipa": "[ˈfɪʃəmən]",
+    "definition": "n. 渔夫；渔人",
+    "example": ""
+  },
+  {
+    "word": "boot",
+    "ipa": "[buːt]",
+    "definition": "n. 靴子；踢；汽车行李箱\nvt. 引导；踢；解雇；使穿靴",
+    "example": ""
+  },
+  {
+    "word": "waste",
+    "ipa": "[weɪst]",
+    "definition": "n. 浪费；废物；荒地；损耗；地面风化物\nadj. 废弃的；多余的；荒芜的\nvt. 浪费；消耗；使荒芜\nvi. 浪费；变消瘦；挥霍钱财",
+    "example": ""
+  },
+  {
+    "word": "realize",
+    "ipa": "[ˈriːəlaɪz; ˈrɪəlaɪz]",
+    "definition": "vt. 实现；认识到；了解；将某物卖得，把(证券等)变成现钱；变卖",
+    "example": ""
+  },
+  {
+    "word": "mad",
+    "ipa": "[mæd]",
+    "definition": "adj. 疯狂的；发疯的；愚蠢的；着迷的\nn. 狂怒",
+    "example": ""
+  },
+  {
+    "word": "reason",
+    "ipa": "[ˈriːz(ə)n]",
+    "definition": "n. 理由；理性；动机\nvt. 说服；推论；辩论\nvi. 推论；劝说",
+    "example": ""
+  },
+  {
+    "word": "sum",
+    "ipa": "[sʌm]",
+    "definition": "n. 金额；总数\nvt. 总结；合计\nvi. 概括",
+    "example": ""
+  },
+  {
+    "word": "determined",
+    "ipa": "[dɪˈtɜːmɪnd]",
+    "definition": "v. 决定；断定（determine的过去分词）\nadj. 决定了的；坚决的",
+    "example": ""
+  },
+  {
+    "word": "dream",
+    "ipa": "[driːm]",
+    "definition": "n. 梦想，愿望；梦\nadj. 梦的；理想的；不切实际的\nvt. 梦想；做梦；想到\nvi. 梦想；做梦，梦见；想到",
+    "example": ""
+  },
+  {
+    "word": "age",
+    "ipa": "[eɪdʒ]",
+    "definition": "n. 年龄；时代；寿命，使用年限；阶段\nvt. 使成熟；使变老，使上年纪\nvi. 成熟；变老",
+    "example": ""
+  },
+  {
+    "word": "channel",
+    "ipa": "[ˈtʃæn(ə)l]",
+    "definition": "n. 通道；频道；海峡\nvt. 引导，开导；形成河道",
+    "example": ""
+  },
+  {
+    "word": "throw",
+    "ipa": "[θrəʊ]",
+    "definition": "n. 投掷；冒险\nvt. 投；抛；掷\nvi. 抛；投掷",
+    "example": ""
+  },
+  {
+    "word": "complete",
+    "ipa": "[kəmˈpliːt]",
+    "definition": "adj. 完整的；完全的；彻底的\nvt. 完成",
+    "example": ""
+  },
+  {
+    "word": "modern",
+    "ipa": "[ˈmɒdn]",
+    "definition": "adj. 现代的，近代的；时髦的\nn. 现代人；有思想的人",
+    "example": ""
+  },
+  {
+    "word": "strange",
+    "ipa": "[streɪndʒ]",
+    "definition": "adj. 奇怪的；陌生的；外行的\nadv. 奇怪地；陌生地，冷淡地",
+    "example": ""
+  },
+  {
+    "word": "district",
+    "ipa": "[ˈdɪstrɪkt]",
+    "definition": "n. 区域；地方；行政区",
+    "example": ""
+  },
+  {
+    "word": "manager",
+    "ipa": "[ˈmænɪdʒə(r)]",
+    "definition": "n. 经理；管理人员",
+    "example": ""
+  },
+  {
+    "word": "upset",
+    "ipa": "[ˌʌpˈset]",
+    "definition": "n. 混乱；翻倒；颠覆\nadj. 心烦的；混乱的；弄翻的\nvt. 使心烦；颠覆；扰乱\nvi. 翻倒",
+    "example": ""
+  },
+  {
+    "word": "sympathetic",
+    "ipa": "[ˌsɪmpəˈθetɪk]",
+    "definition": "n. 交感神经；容易感受的人\nadj. 同情的；交感神经的；共鸣的；赞同的；和谐的；合意的",
+    "example": ""
+  },
+  {
+    "word": "complain",
+    "ipa": "[kəmˈpleɪn]",
+    "definition": "vi. 投诉；发牢骚；诉说\nvt. 抱怨；控诉",
+    "example": ""
+  },
+  {
+    "word": "wicked",
+    "ipa": "[ˈwɪkɪd]",
+    "definition": "adj. 邪恶的；恶劣的；不道德的；顽皮的",
+    "example": ""
+  },
+  {
+    "word": "contain",
+    "ipa": "[kənˈteɪn]",
+    "definition": "vi. 含有；自制\nvt. 包含；控制；容纳；牵制（敌军）",
+    "example": ""
+  },
+  {
+    "word": "honesty",
+    "ipa": "[ˈɒnəsti]",
+    "definition": "n. 诚实，正直",
+    "example": ""
+  },
+  {
+    "word": "railway",
+    "ipa": "[ˈreɪlweɪ]",
+    "definition": "n. （英）铁路；轨道；铁道部门\nvi. 乘火车旅行",
+    "example": ""
+  },
+  {
+    "word": "porter",
+    "ipa": "[ˈpɔːtə(r)]",
+    "definition": "n. 门房；服务员；行李搬运工；守门人",
+    "example": ""
+  },
+  {
+    "word": "several",
+    "ipa": "[ˈsevrəl]",
+    "definition": "adj. 几个的；各自的\npron. 几个；数个",
+    "example": ""
+  },
+  {
+    "word": "foreigner",
+    "ipa": "[ˈfɒrənə(r)]",
+    "definition": "n. 外地人，外国人",
+    "example": ""
+  },
+  {
+    "word": "wonder",
+    "ipa": "[ˈwʌndə(r)]",
+    "definition": "n. 惊奇；奇迹；惊愕\nadj. 奇妙的；非凡的\nvi. 怀疑；想知道；惊讶\nvt. 怀疑；惊奇；对…感到惊讶",
+    "example": ""
+  },
+  {
+    "word": "art",
+    "ipa": "[ɑːt]",
+    "definition": "n. 艺术；美术；艺术品\nv. 是（be的变体）\nadj. 艺术的；艺术品的",
+    "example": ""
+  },
+  {
+    "word": "critic",
+    "ipa": "[ˈkrɪtɪk]",
+    "definition": "n. 批评家，评论家；爱挑剔的人",
+    "example": ""
+  },
+  {
+    "word": "paint",
+    "ipa": "[peɪnt]",
+    "definition": "vt. 油漆；绘画；装饰；涂色于；描绘；（用语言，文字等）描写；擦脂粉等\nvi. 油漆；描绘；绘画；化妆\nn. 油漆；颜料，涂料；绘画作品；胭脂等化妆品；色彩，装饰",
+    "example": ""
+  },
+  {
+    "word": "pretend",
+    "ipa": "[prɪˈtend]",
+    "definition": "vt. 假装，伪装，模拟\nadj. 假装的\nvi. 假装，伪装，佯装",
+    "example": ""
+  },
+  {
+    "word": "pattern",
+    "ipa": "[ˈpæt(ə)n]",
+    "definition": "n. 模式；图案；样品\nvt. 模仿；以图案装饰\nvi. 形成图案",
+    "example": ""
+  },
+  {
+    "word": "curtain",
+    "ipa": "[ˈkɜːt(ə)n]",
+    "definition": "n. 幕；窗帘\nvt. 遮蔽；装上门帘",
+    "example": ""
+  },
+  {
+    "word": "material",
+    "ipa": "[məˈtɪəriəl]",
+    "definition": "adj. 重要的；物质的，实质性的；肉体的\nn. 材料，原料；物资；布料",
+    "example": ""
+  },
+  {
+    "word": "appreciate",
+    "ipa": "[əˈpriːʃieɪt]",
+    "definition": "vi. 增值；涨价\nvt. 欣赏；感激；领会；鉴别",
+    "example": ""
+  },
+  {
+    "word": "notice",
+    "ipa": "[ˈnəʊtɪs]",
+    "definition": "n. 通知，布告；注意；公告\nvt. 通知；注意到；留心\nvi. 引起注意",
+    "example": ""
+  },
+  {
+    "word": "whether",
+    "ipa": "[ˈweðə(r)]",
+    "definition": "conj. 是否；不论\npron. 两个中的哪一个",
+    "example": ""
+  },
+  {
+    "word": "hang",
+    "ipa": "[hæŋ]",
+    "definition": "n. 悬挂；暂停，中止\nvt. 悬挂，垂下；装饰；绞死；使悬而未决\nvi. 悬着，垂下；被绞死；悬而不决",
+    "example": ""
+  },
+  {
+    "word": "critically",
+    "ipa": "[ˈkrɪtɪkli]",
+    "definition": "adv. 精密地；危急地；严重地；批评性地；用钻研眼光地；很大程度上；极为重要地",
+    "example": ""
+  },
+  {
+    "word": "upside down",
+    "ipa": "[ˌʌpsaɪd ˈdaʊn]",
+    "definition": "adv. 颠倒；倒转；翻转",
+    "example": ""
+  },
+  {
+    "word": "tent",
+    "ipa": "[tent]",
+    "definition": "n. 帐篷；住处；帷幕\nvt. 用帐篷遮盖；使在帐篷里住宿\nvi. 住帐蓬；暂时居住",
+    "example": ""
+  },
+  {
+    "word": "field",
+    "ipa": "[fiːld]",
+    "definition": "n. 领域；牧场；旷野；战场；运动场\nadj. 扫描场；田赛的；野生的\nvt. 把暴晒于场上；使上场\nvi. 担任场外队员",
+    "example": ""
+  },
+  {
+    "word": "smell",
+    "ipa": "[smel]",
+    "definition": "n. 气味，嗅觉；臭味\nvt. 嗅，闻；察觉到；发出…的气味\nvi. 嗅，闻；有…气味",
+    "example": ""
+  },
+  {
+    "word": "wonderful",
+    "ipa": "[ˈwʌndəf(ə)l]",
+    "definition": "adj. 极好的，精彩的，绝妙的；奇妙的；美妙；胜；神妙",
+    "example": ""
+  },
+  {
+    "word": "campfire",
+    "ipa": "[ˈkæmpfaɪə(r)]",
+    "definition": "n. 营火；营火会",
+    "example": ""
+  },
+  {
+    "word": "creep",
+    "ipa": "[kriːp]",
+    "definition": "n. 爬行；毛骨悚然的感觉；谄媚者\nvi. 爬行；蔓延；慢慢地移动；起鸡皮疙瘩",
+    "example": ""
+  },
+  {
+    "word": "sleeping bag",
+    "ipa": "",
+    "definition": "n. 睡袋",
+    "example": ""
+  },
+  {
+    "word": "comfortable",
+    "ipa": "[ˈkʌmftəbl; ˈkʌmfətəbl]",
+    "definition": "n. 盖被\nadj. 舒适的，舒服的",
+    "example": ""
+  },
+  {
+    "word": "soundly",
+    "ipa": "[ˈsaʊndli]",
+    "definition": "adv. 健全地；完全地；稳健地；彻底地；牢固地",
+    "example": ""
+  },
+  {
+    "word": "leap",
+    "ipa": "[liːp]",
+    "definition": "vi. 跳，跳跃\nn. 飞跃；跳跃\nvt. 跳跃，跳过；使跃过",
+    "example": ""
+  },
+  {
+    "word": "heavily",
+    "ipa": "[ˈhevɪli]",
+    "definition": "adv. 沉重地；猛烈地；沉闷地",
+    "example": ""
+  },
+  {
+    "word": "stream",
+    "ipa": "[striːm]",
+    "definition": "n. 溪流；流动；潮流；光线\nvt. 流出；涌出；使飘动\nvi. 流；涌进；飘扬",
+    "example": ""
+  },
+  {
+    "word": "form",
+    "ipa": "[fɔːm]",
+    "definition": "n. 形式，形状；形态，外形；方式；表格\nvt. 构成，组成；排列，组织；产生，塑造\nvi. 形成，构成；排列",
+    "example": ""
+  },
+  {
+    "word": "wind",
+    "ipa": "[wɪnd]",
+    "definition": "vi. 缠绕；上发条；吹响号角\nn. 风；呼吸；气味；卷绕\nvt. 缠绕；上发条；使弯曲；吹号角；绕住或缠住某人",
+    "example": ""
+  },
+  {
+    "word": "right",
+    "ipa": "[raɪt]",
+    "definition": "n. 正确；右边；正义\nadj. 正确的；直接的；右方的\nvt. 纠正\nadv. 正确地；恰当地；彻底地\nvi. 复正；恢复平稳",
+    "example": ""
+  },
+  {
+    "word": "rare",
+    "ipa": "[reə(r)]",
+    "definition": "adj. 稀有的；稀薄的；半熟的\nadj. 杰出的；极度的；非常好的\nadv. 非常；极其\nvi. 用后腿站起；渴望",
+    "example": ""
+  },
+  {
+    "word": "ancient",
+    "ipa": "[ˈeɪnʃənt]",
+    "definition": "n. 古代人；老人\nadj. 古代的；古老的，过时的；年老的",
+    "example": ""
+  },
+  {
+    "word": "myth",
+    "ipa": "[mɪθ]",
+    "definition": "n. 神话；虚构的人，虚构的事",
+    "example": ""
+  },
+  {
+    "word": "trouble",
+    "ipa": "[ˈtrʌb(ə)l]",
+    "definition": "n. 麻烦；烦恼；故障；动乱\nvt. 麻烦；使烦恼；折磨\nvi. 费心，烦恼",
+    "example": ""
+  },
+  {
+    "word": "effect",
+    "ipa": "[ɪˈfekt]",
+    "definition": "n. 影响；效果；作用\nvt. 产生；达到目的",
+    "example": ""
+  },
+  {
+    "word": "Medusa",
+    "ipa": "",
+    "definition": "n. 水母；水母体",
+    "example": ""
+  },
+  {
+    "word": "Gorgon",
+    "ipa": "",
+    "definition": "n. 蛇发女怪（希腊神话中的一个形象）；丑陋女人",
+    "example": ""
+  },
+  {
+    "word": "taxi",
+    "ipa": "[ˈtæksi]",
+    "definition": "n. 出租汽车\nvt. 使滑行；用出租车送\nvi. 乘出租车；滑行",
+    "example": ""
+  },
+  {
+    "word": "Pilatus Porter",
+    "ipa": "",
+    "definition": "皮勒特斯·波特；飞机名；人座飞机",
+    "example": ""
+  },
+  {
+    "word": "land",
+    "ipa": "[lænd]",
+    "definition": "n. 国土；陆地；地面\nvt. 使…登陆；使…陷于；将…卸下\nvi. 登陆；到达",
+    "example": ""
+  },
+  {
+    "word": "plough",
+    "ipa": "[plaʊ]",
+    "definition": "n. 犁；耕地（等于plow）\nvi. 用犁耕田；开路\nvt. 犁；耕",
+    "example": ""
+  },
+  {
+    "word": "lonely",
+    "ipa": "[ˈləʊnli]",
+    "definition": "adj. 寂寞的；偏僻的\nn. 孤独者",
+    "example": ""
+  },
+  {
+    "word": "Welsh",
+    "ipa": "[welʃ]",
+    "definition": "n. 威尔士语\nadj. 威尔士的；威尔士人的；威尔士语的",
+    "example": ""
+  },
+  {
+    "word": "roof",
+    "ipa": "[ruːf]",
+    "definition": "n. 屋顶；最高处，顶部；最高限度\nvt. 给…盖屋顶，覆盖",
+    "example": ""
+  },
+  {
+    "word": "block",
+    "ipa": "[blɒk]",
+    "definition": "n. 块；街区；大厦；障碍物\nadj. 成批的，大块的；交通堵塞的\nvt. 阻止；阻塞；限制；封盖",
+    "example": ""
+  },
+  {
+    "word": "flat",
+    "ipa": "[flæt]",
+    "definition": "n. 平地；公寓；平面\nadj. 平的；单调的；不景气的；干脆的；平坦的；扁平的；浅的\nvi. 逐渐变平；[音乐]以降调唱（或奏）\nvt. 使变平；[音乐]使（音调）下降，尤指降半音\nadv. （尤指贴着另一表面）平直地；断然地；水平地；直接地，完全地",
+    "example": ""
+  },
+  {
+    "word": "desert",
+    "ipa": "[ˈdezət]",
+    "definition": "n. 沙漠；荒原；应得的赏罚\nvt. 遗弃；放弃；逃跑\nadj. 沙漠的；荒凉的；不毛的\nvi. 遗弃；开小差；逃掉",
+    "example": ""
+  },
+  {
+    "word": "polo",
+    "ipa": "[ˈpəʊləʊ]",
+    "definition": "n. 马球；水球",
+    "example": ""
+  },
+  {
+    "word": "Wayle",
+    "ipa": "",
+    "definition": "威尔；威尔河",
+    "example": ""
+  },
+  {
+    "word": "cut",
+    "ipa": "[kʌt]",
+    "definition": "n. 伤口；切口；削减；（服装等的）式样；削球；切入\nadj. 割下的；雕过的；缩减的\nvt. [机] 切割；削减；缩短；刺痛\nvi. [机] 切割；相交；切牌；停拍；不出席",
+    "example": ""
+  },
+  {
+    "word": "row",
+    "ipa": "[rəʊ; raʊ]",
+    "definition": "n. 行，排；划船；街道；吵闹\nvt. 划船；使……成排\nvi. 划船；争吵",
+    "example": ""
+  },
+  {
+    "word": "kick",
+    "ipa": "[kɪk]",
+    "definition": "vt. 踢；反冲，朝后座\nn. 踢；反冲，后座力\nvi. 踢；反冲",
+    "example": ""
+  },
+  {
+    "word": "towards",
+    "ipa": "[təˈwɔːdz]",
+    "definition": "prep. 朝，向；对于；有助于",
+    "example": ""
+  },
+  {
+    "word": "nearly",
+    "ipa": "[ˈnɪəli]",
+    "definition": "adv. 差不多，几乎；密切地",
+    "example": ""
+  },
+  {
+    "word": "sight",
+    "ipa": "[saɪt]",
+    "definition": "n. 视力；景象；眼界；见解\nadj. 见票即付的；即席的\nvt. 看见；瞄准\nvi. 瞄准；观看",
+    "example": ""
+  },
+  {
+    "word": "retire",
+    "ipa": "[rɪˈtaɪə(r)]",
+    "definition": "n. 退休；退隐；退兵信号\nvi. 退休；撤退；退却\nvt. 退休；离开；收回",
+    "example": ""
+  },
+  {
+    "word": "company",
+    "ipa": "[ˈkʌmpəni]",
+    "definition": "n. 公司；陪伴，同伴；连队\nvt. 陪伴\nvi. 交往",
+    "example": ""
+  },
+  {
+    "word": "bicycle",
+    "ipa": "[ˈbaɪsɪk(ə)l]",
+    "definition": "n. 自行车\nvt. 骑自行车运送\nvi. 骑脚踏车",
+    "example": ""
+  },
+  {
+    "word": "save",
+    "ipa": "[seɪv]",
+    "definition": "prep. 除...之外\nn. 救援\nvi. 节省；挽救\nvt. 节省；保存；储蓄；解救",
+    "example": ""
+  },
+  {
+    "word": "workshop",
+    "ipa": "[ˈwɜːkʃɒp]",
+    "definition": "n. 车间；研讨会；工场；讲习班",
+    "example": ""
+  },
+  {
+    "word": "helper",
+    "ipa": "[ˈhelpə(r)]",
+    "definition": "n. 助手，帮手",
+    "example": ""
+  },
+  {
+    "word": "employ",
+    "ipa": "[ɪmˈplɔɪ]",
+    "definition": "n. 使用；雇用\nvt. 使用，采用；雇用；使忙于，使从事于",
+    "example": ""
+  },
+  {
+    "word": "grandson",
+    "ipa": "[ˈɡrænsʌn]",
+    "definition": "n. 孙子；外孙",
+    "example": ""
+  },
+  {
+    "word": "once",
+    "ipa": "[wʌns]",
+    "definition": "adv. 一次；曾经\nconj. 一旦\nn. 一次，一回",
+    "example": ""
+  },
+  {
+    "word": "temptation",
+    "ipa": "[tempˈteɪʃ(ə)n]",
+    "definition": "n. 引诱；诱惑物",
+    "example": ""
+  },
+  {
+    "word": "article",
+    "ipa": "[ˈɑːtɪk(ə)l]",
+    "definition": "n. 文章；物品；条款；[语] 冠词\nvt. 订约将…收为学徒或见习生；使…受协议条款的约束\nvi. 签订协议；进行控告",
+    "example": ""
+  },
+  {
+    "word": "wrap",
+    "ipa": "[ræp]",
+    "definition": "n. 外套；围巾\nvt. 包；缠绕；隐藏；掩护\nvi. 包起来；缠绕；穿外衣",
+    "example": ""
+  },
+  {
+    "word": "simply",
+    "ipa": "[ˈsɪmpli]",
+    "definition": "adv. 简单地；仅仅；简直；朴素地；坦白地",
+    "example": ""
+  },
+  {
+    "word": "arrest",
+    "ipa": "[əˈrest]",
+    "definition": "n. 逮捕；监禁\nvt. 逮捕；阻止；吸引",
+    "example": ""
+  },
+  {
+    "word": "darkness",
+    "ipa": "[ˈdɑːknəs]",
+    "definition": "n. 黑暗；模糊；无知；阴郁",
+    "example": ""
+  },
+  {
+    "word": "explain",
+    "ipa": "[ɪkˈspleɪn]",
+    "definition": "v. 说明；解释",
+    "example": ""
+  },
+  {
+    "word": "coast",
+    "ipa": "[kəʊst]",
+    "definition": "n. 海岸；滑坡\nvt. 沿…岸航行\nvi. 滑行；沿岸航行",
+    "example": ""
+  },
+  {
+    "word": "storm",
+    "ipa": "[stɔːm]",
+    "definition": "n. 暴风雨；大动荡\nvt. 猛攻；怒骂\nvi. 起风暴；横冲直撞；狂怒咆哮",
+    "example": ""
+  },
+  {
+    "word": "towards",
+    "ipa": "[təˈwɔːdz]",
+    "definition": "prep. 朝，向；对于；有助于",
+    "example": ""
+  },
+  {
+    "word": "rock",
+    "ipa": "[rɒk]",
+    "definition": "n. 岩石；摇滚乐；暗礁\nvt. 摇动；使摇晃\nvi. 摇动；摇晃",
+    "example": ""
+  },
+  {
+    "word": "shore",
+    "ipa": "[ʃɔː(r)]",
+    "definition": "n. 海滨；支柱\nvt. 支撑，使稳住；用支柱撑住",
+    "example": ""
+  },
+  {
+    "word": "light",
+    "ipa": "[laɪt]",
+    "definition": "n. 光；光线；灯；打火机；领悟；浅色；天窗\nadj. 轻的；浅色的；明亮的；轻松的；容易的；清淡的\nvi. 点着；变亮；着火\nvt. 照亮；点燃；着火\nadv. 轻地；清楚地；轻便地",
+    "example": ""
+  },
+  {
+    "word": "ahead",
+    "ipa": "[əˈhed]",
+    "definition": "adj. 向前；在前的；领先\nadv. 向前地；领先地；在（某人或某事物的）前面；预先；在将来，为未来",
+    "example": ""
+  },
+  {
+    "word": "cliff",
+    "ipa": "[klɪf]",
+    "definition": "n. 悬崖；绝壁",
+    "example": ""
+  },
+  {
+    "word": "struggle",
+    "ipa": "[ˈstrʌɡ(ə)l]",
+    "definition": "n. 努力，奋斗；竞争\nvt. 使劲移动；尽力使得\nvi. 奋斗，努力；挣扎",
+    "example": ""
+  },
+  {
+    "word": "hospital",
+    "ipa": "[ˈhɒspɪt(ə)l]",
+    "definition": "n. 医院",
+    "example": ""
+  },
+  {
+    "word": "station",
+    "ipa": "[ˈsteɪʃ(ə)n]",
+    "definition": "n. 车站；驻地；地位；身份\nvt. 配置；安置；驻扎",
+    "example": ""
+  },
+  {
+    "word": "most",
+    "ipa": "[məʊst]",
+    "definition": "adv. 最；非常，极其；最多；几乎\nadj. 大部分的，多数的；最多的\nn. 大部分，大多数",
+    "example": ""
+  },
+  {
+    "word": "while",
+    "ipa": "[waɪl]",
+    "definition": "conj. 虽然；然而；当……的时候\nn. 一会儿；一段时间\nvt. 消磨；轻松地度过",
+    "example": ""
+  },
+  {
+    "word": "regret",
+    "ipa": "[rɪˈɡret]",
+    "definition": "n. 遗憾；抱歉；悲叹\nvi. 感到后悔；感到抱歉\nvt. 后悔；惋惜；哀悼",
+    "example": ""
+  },
+  {
+    "word": "far",
+    "ipa": "[fɑː(r)]",
+    "definition": "n. 远方\nadj. 远的；久远的\nadv. 很；遥远地；久远地；到很远的距离；到很深的程度",
+    "example": ""
+  },
+  {
+    "word": "rush",
+    "ipa": "[rʌʃ]",
+    "definition": "n. 冲进；匆促；急流；灯心草\nadj. 急需的\nvt. 使冲；突袭；匆忙地做；飞跃\nvi. 冲；奔；闯；赶紧；涌现",
+    "example": ""
+  },
+  {
+    "word": "act",
+    "ipa": "[ækt]",
+    "definition": "n. 行为，行动；法令，法案；（戏剧，歌剧的）一幕，段；装腔作势\nvt. 扮演；装作，举动像\nvi. 行动；扮演，充当；表现，举止；假装，演戏；起作用，见效",
+    "example": ""
+  },
+  {
+    "word": "straight",
+    "ipa": "[streɪt]",
+    "definition": "n. 直；直线；直男，直女，异性恋者\nadj. 直的；连续的；笔直的；正直的；整齐的；异性恋的\nadv. 直接地；不断地；立即；坦率地",
+    "example": ""
+  },
+  {
+    "word": "fright",
+    "ipa": "[fraɪt]",
+    "definition": "n. 惊吓；惊骇\nvt. 使惊恐",
+    "example": ""
+  },
+  {
+    "word": "battered",
+    "ipa": "[ˈbætəd]",
+    "definition": "v. 连续猛击；磨损（batter的过去分词）\nadj. 破旧的；磨损的；弄垮的；受到虐待的",
+    "example": ""
+  },
+  {
+    "word": "shortly",
+    "ipa": "[ˈʃɔːtli]",
+    "definition": "adv. 立刻；简短地；唐突地",
+    "example": ""
+  },
+  {
+    "word": "afterwards",
+    "ipa": "[ˈɑːftəwədz]",
+    "definition": "adv. 后来；然后",
+    "example": ""
+  },
+  {
+    "word": "record",
+    "ipa": "[ˈrekɔːd; rɪˈkɔːd]",
+    "definition": "n. 档案，履历；唱片；最高纪录\nadj. 创纪录的\nvt. 记录，记载；标明；将...录音\nvi. 记录；录音",
+    "example": ""
+  },
+  {
+    "word": "strong",
+    "ipa": "[strɒŋ]",
+    "definition": "adj. 坚强的；强壮的；牢固的；擅长的\nadv. 强劲地；猛烈地",
+    "example": ""
+  },
+  {
+    "word": "swimmer",
+    "ipa": "[ˈswɪmə(r)]",
+    "definition": "n. 游泳者",
+    "example": ""
+  },
+  {
+    "word": "succeed",
+    "ipa": "[səkˈsiːd]",
+    "definition": "vi. 成功；继承；继任；兴旺\nvt. 继承；接替；继…之后",
+    "example": ""
+  },
+  {
+    "word": "train",
+    "ipa": "[treɪn]",
+    "definition": "n. 火车；行列；长队；裙裾\nv. 培养；训练；瞄准",
+    "example": ""
+  },
+  {
+    "word": "anxiously",
+    "ipa": "[ˈæŋkʃəsli]",
+    "definition": "adv. 不安地，忧虑地",
+    "example": ""
+  },
+  {
+    "word": "intend",
+    "ipa": "[ɪnˈtend]",
+    "definition": "vi. 有打算\nvt. 打算；想要；意指",
+    "example": ""
+  },
+  {
+    "word": "solid",
+    "ipa": "[ˈsɒlɪd]",
+    "definition": "n. 固体；立方体\nadj. 固体的；可靠的；立体的；结实的；一致的",
+    "example": ""
+  },
+  {
+    "word": "Olympic",
+    "ipa": "[əˈlɪmpɪk]",
+    "definition": "adj. 奥林匹斯山的，奥林匹亚的；奥林匹克的",
+    "example": ""
+  },
+  {
+    "word": "hold",
+    "ipa": "[həʊld]",
+    "definition": "n. 控制；保留\nvi. 支持；有效；持续\nvt. 持有；拥有；保存；拘留；约束或控制\n又作“Hold住”使用，中英混用词汇，表示轻松掌控全局。\n[ 过去式 held 过去分词 held或holden 现在分词 holding ]",
+    "example": ""
+  },
+  {
+    "word": "government",
+    "ipa": "[ˈɡʌvənmənt]",
+    "definition": "n. 政府；政体；管辖",
+    "example": ""
+  },
+  {
+    "word": "immense",
+    "ipa": "[ɪˈmens]",
+    "definition": "adj. 巨大的，广大的；无边无际的；非常好的",
+    "example": ""
+  },
+  {
+    "word": "stadium",
+    "ipa": "[ˈsteɪdiəm]",
+    "definition": "n. 体育场；露天大型运动场",
+    "example": ""
+  },
+  {
+    "word": "standard",
+    "ipa": "[ˈstændəd]",
+    "definition": "n. 标准；水准；旗；度量衡标准\nadj. 标准的；合规格的；公认为优秀的",
+    "example": ""
+  },
+  {
+    "word": "capital",
+    "ipa": "[ˈkæpɪt(ə)l]",
+    "definition": "n. 首都，省会；资金；大写字母；资本家\nadj. 首都的；重要的；大写的",
+    "example": ""
+  },
+  {
+    "word": "fantastic",
+    "ipa": "[fænˈtæstɪk]",
+    "definition": "n. 古怪的人\nadj. 奇异的；空想的；异想天开的；古怪的；极好的，极出色的；不可思议的；不切实际的",
+    "example": ""
+  },
+  {
+    "word": "design",
+    "ipa": "[dɪˈzaɪn]",
+    "definition": "n. 设计；图案\nvt. 设计；计划；构思\nvi. 设计",
+    "example": ""
+  },
+  {
+    "word": "except",
+    "ipa": "[ɪkˈsept]",
+    "definition": "conj. 除了；要不是\nprep. 除…之外\nvt. 不计；把…除外\nvi. 反对",
+    "example": ""
+  },
+  {
+    "word": "Mediterranean",
+    "ipa": "[ˌmedɪtəˈreɪniən]",
+    "definition": "n. 地中海\nadj. 地中海的",
+    "example": ""
+  },
+  {
+    "word": "complain",
+    "ipa": "[kəmˈpleɪn]",
+    "definition": "vi. 投诉；发牢骚；诉说\nvt. 抱怨；控诉",
+    "example": ""
+  },
+  {
+    "word": "continually",
+    "ipa": "[kənˈtɪnjuəli]",
+    "definition": "adv. 不断地；频繁地",
+    "example": ""
+  },
+  {
+    "word": "bitterly",
+    "ipa": "[ˈbɪtəli]",
+    "definition": "adv. 苦涩地，悲痛地；残酷地；怨恨地",
+    "example": ""
+  },
+  {
+    "word": "sunshine",
+    "ipa": "[ˈsʌnʃaɪn]",
+    "definition": "n. 阳光；愉快；晴天；快活",
+    "example": ""
+  },
+  {
+    "word": "operation",
+    "ipa": "[ˌɒpəˈreɪʃ(ə)n]",
+    "definition": "n. 操作；经营；[外科] 手术；[数][计] 运算",
+    "example": ""
+  },
+  {
+    "word": "successful",
+    "ipa": "[səkˈsesf(ə)l]",
+    "definition": "adj. 成功的；一帆风顺的",
+    "example": ""
+  },
+  {
+    "word": "following",
+    "ipa": "[ˈfɒləʊɪŋ]",
+    "definition": "n. 下列事物；一批追随者\nv. 跟随；沿行（follow的ing形式）\nadj. 下面的；其次的，接着的",
+    "example": ""
+  },
+  {
+    "word": "patient",
+    "ipa": "[ˈpeɪʃ(ə)nt]",
+    "definition": "n. 病人；患者\nadj. 有耐心的，能容忍的",
+    "example": ""
+  },
+  {
+    "word": "alone",
+    "ipa": "[əˈləʊn]",
+    "definition": "adj. 独自的；单独的；孤独的\nadv. 独自地；单独地",
+    "example": ""
+  },
+  {
+    "word": "exchange",
+    "ipa": "[ɪksˈtʃeɪndʒ]",
+    "definition": "n. 交换；交流；交易所；兑换\nvt. 交换；交易；兑换\nvi. 交换；交易；兑换",
+    "example": ""
+  },
+  {
+    "word": "inquire",
+    "ipa": "[ɪnˈkwaɪə(r)]",
+    "definition": "vi. 询问；查究；询价\nvt. 询问；查究；问明",
+    "example": ""
+  },
+  {
+    "word": "certain",
+    "ipa": "[ˈsɜːt(ə)n]",
+    "definition": "adj. 某一；必然的；确信；无疑的；有把握的\npron. 某些；某几个",
+    "example": ""
+  },
+  {
+    "word": "caller",
+    "ipa": "[ˈkɔːlə(r)]",
+    "definition": "n. 访客；[通信] 呼叫者；打电话者；召集员\nadj. 新鲜的",
+    "example": ""
+  },
+  {
+    "word": "relative",
+    "ipa": "[ˈrelətɪv]",
+    "definition": "n. 亲戚；相关物；[语] 关系词；亲缘植物\nadj. 相对的；有关系的；成比例的",
+    "example": ""
+  },
+  {
+    "word": "hostess",
+    "ipa": "[ˈhəʊstəs]",
+    "definition": "n. 女主人，女老板；女服务员；舞女；女房东",
+    "example": ""
+  },
+  {
+    "word": "unsmiling",
+    "ipa": "[ˌʌnˈsmaɪlɪŋ]",
+    "definition": "adj. 严肃的；不笑的",
+    "example": ""
+  },
+  {
+    "word": "tight",
+    "ipa": "[taɪt]",
+    "definition": "adj. 紧的；密封的；绷紧的；麻烦的；严厉的；没空的；吝啬的\nadv. 紧紧地；彻底地",
+    "example": ""
+  },
+  {
+    "word": "fix",
+    "ipa": "[fɪks]",
+    "definition": "n. 困境；方位；贿赂\nvt. 使固定；修理；安装；准备\nvi. 固定；注视",
+    "example": ""
+  },
+  {
+    "word": "globe",
+    "ipa": "[ɡləʊb]",
+    "definition": "n. 地球；地球仪；球体\nvt. 使…成球形\nvi. 成球状",
+    "example": ""
+  },
+  {
+    "word": "despair",
+    "ipa": "[dɪˈspeə(r)]",
+    "definition": "n. 绝望；令人绝望的人或事\nvi. 绝望，丧失信心",
+    "example": ""
+  },
+  {
+    "word": "rude",
+    "ipa": "[ruːd]",
+    "definition": "adj. 粗鲁的；无礼的；狂暴的；未开化的",
+    "example": ""
+  },
+  {
+    "word": "mirror",
+    "ipa": "[ˈmɪrə(r)]",
+    "definition": "n. 镜子；真实的写照；榜样\nvt. 反射；反映",
+    "example": ""
+  },
+  {
+    "word": "hole",
+    "ipa": "[həʊl]",
+    "definition": "n. 洞，孔；洞穴，穴；突破口\nvt. 凿洞\nvi. 凿洞，穿孔；（高尔夫球等）进洞",
+    "example": ""
+  },
+  {
+    "word": "remark",
+    "ipa": "[rɪˈmɑːk]",
+    "definition": "n. 注意；言辞\nvt. 评论；觉察\nvi. 谈论",
+    "example": ""
+  },
+  {
+    "word": "remind",
+    "ipa": "[rɪˈmaɪnd]",
+    "definition": "vt. 提醒；使想起",
+    "example": ""
+  },
+  {
+    "word": "lighthouse",
+    "ipa": "[ˈlaɪthaʊs]",
+    "definition": "n. 灯塔",
+    "example": ""
+  },
+  {
+    "word": "musical",
+    "ipa": "[ˈmjuːzɪk(ə)l]",
+    "definition": "adj. 音乐的；悦耳的\nn. 音乐片",
+    "example": ""
+  },
+  {
+    "word": "market",
+    "ipa": "[ˈmɑːkɪt]",
+    "definition": "n. 市场；行情；股票市场；市面；集市；销路；商店\nvt. 在市场上出售\nvi. 做买卖",
+    "example": ""
+  },
+  {
+    "word": "snake charmer",
+    "ipa": "",
+    "definition": "n. 耍蛇人；弄蛇人",
+    "example": ""
+  },
+  {
+    "word": "pipe",
+    "ipa": "[paɪp]",
+    "definition": "n. 管；烟斗；笛\nvt. 用管道输送；尖声唱；用管乐器演奏\nvi. 吹笛；尖叫",
+    "example": ""
+  },
+  {
+    "word": "tune",
+    "ipa": "[tjuːn]",
+    "definition": "n. 曲调；和谐；心情\nvt. 调整；使一致；为…调音\nvi. [电子][通信] 调谐；协调",
+    "example": ""
+  },
+  {
+    "word": "glimpse",
+    "ipa": "[ɡlɪmps]",
+    "definition": "n. 一瞥，一看\nvt. 瞥见\nvi. 瞥见",
+    "example": ""
+  },
+  {
+    "word": "snake",
+    "ipa": "[sneɪk]",
+    "definition": "n. 蛇；阴险的人\nvt. 拉（木材等）；迂回前进\nvi. 迂回前进",
+    "example": ""
+  },
+  {
+    "word": "movement",
+    "ipa": "[ˈmuːvmənt]",
+    "definition": "n. 运动；活动；运转；乐章",
+    "example": ""
+  },
+  {
+    "word": "continue",
+    "ipa": "[kənˈtɪnjuː]",
+    "definition": "vt. 继续说…；使…继续；使…延长\nvi. 继续，延续；仍旧，连续",
+    "example": ""
+  },
+  {
+    "word": "dance",
+    "ipa": "[dɑːns]",
+    "definition": "n. 舞蹈；舞会；舞曲\nadj. 舞蹈的；用于跳舞的\nvt. 跳舞；使跳跃\nvi. 跳舞；跳跃；飘扬",
+    "example": ""
+  },
+  {
+    "word": "obviously",
+    "ipa": "[ˈɒbviəsli]",
+    "definition": "adv. 明显地\n显然地",
+    "example": ""
+  },
+  {
+    "word": "difference",
+    "ipa": "[ˈdɪfrəns]",
+    "definition": "n. 差异；不同；争执",
+    "example": ""
+  },
+  {
+    "word": "Indian",
+    "ipa": "[ˈɪndiən]",
+    "definition": "n. 印度人；印第安人；印第安语\nadj. 印度的；印第安人的；印第安语的",
+    "example": ""
+  },
+  {
+    "word": "pole",
+    "ipa": "[pəʊl]",
+    "definition": "n. 杆；极点；电极\nvt. 用竿支撑",
+    "example": ""
+  },
+  {
+    "word": "flight",
+    "ipa": "[flaɪt]",
+    "definition": "n. 飞行；班机；逃走\nvt. 射击；使惊飞\nvi. 迁徙",
+    "example": ""
+  },
+  {
+    "word": "explorer",
+    "ipa": "[ɪkˈsplɔːrə(r)]",
+    "definition": "n. 探险家；勘探者；探测器；[医]探针",
+    "example": ""
+  },
+  {
+    "word": "lie",
+    "ipa": "[laɪ]",
+    "definition": "vi. 躺；说谎；位于；展现\nvt. 谎骗\nn. 谎言；位置",
+    "example": ""
+  },
+  {
+    "word": "serious",
+    "ipa": "[ˈsɪəriəs]",
+    "definition": "adj. 严肃的，严重的；认真的；庄重的；危急的",
+    "example": ""
+  },
+  {
+    "word": "point",
+    "ipa": "[pɔɪnt]",
+    "definition": "n. 要点；得分；标点；[机] 尖端\nvt. 指向；弄尖；加标点于\nvi. 表明；指向",
+    "example": ""
+  },
+  {
+    "word": "seem",
+    "ipa": "[siːm]",
+    "definition": "vi. 似乎；像是；装作",
+    "example": ""
+  },
+  {
+    "word": "crash",
+    "ipa": "[kræʃ]",
+    "definition": "n. 撞碎；坠毁；破产；轰隆声；睡觉\nvi. 摔碎；坠落；发出隆隆声；(金融企业等)破产\nvt. 打碎；使坠毁、撞坏；擅自闯入",
+    "example": ""
+  },
+  {
+    "word": "sack",
+    "ipa": "[sæk]",
+    "definition": "n. 麻布袋；洗劫\nvt. 解雇；把……装入袋；劫掠",
+    "example": ""
+  },
+  {
+    "word": "clear",
+    "ipa": "[klɪə(r)]",
+    "definition": "n. 清除；空隙\nadj. 清楚的；清澈的；晴朗的；无罪的\nvt. 通过；清除；使干净；跳过\nvi. 放晴；变清澈\nadv. 清晰地；完全地",
+    "example": ""
+  },
+  {
+    "word": "aircraft",
+    "ipa": "[ˈeəkrɑːft]",
+    "definition": "n. 飞机，航空器",
+    "example": ""
+  },
+  {
+    "word": "endless",
+    "ipa": "[ˈendləs]",
+    "definition": "adj. 无止境的；连续的；环状的；漫无目的的",
+    "example": ""
+  },
+  {
+    "word": "plain",
+    "ipa": "[pleɪn]",
+    "definition": "n. 平原；无格式；朴实无华的东西\nadj. 平的；简单的；朴素的；清晰的\nadv. 清楚地；平易地",
+    "example": ""
+  },
+  {
+    "word": "forest",
+    "ipa": "[ˈfɒrɪst]",
+    "definition": "n. 森林\nvt. 植树于，使成为森林",
+    "example": ""
+  },
+  {
+    "word": "risk",
+    "ipa": "[rɪsk]",
+    "definition": "n. 风险；危险；冒险\nvt. 冒…的危险",
+    "example": ""
+  },
+  {
+    "word": "picnic",
+    "ipa": "[ˈpɪknɪk]",
+    "definition": "n. 野餐\nvi. 去野餐",
+    "example": ""
+  },
+  {
+    "word": "edge",
+    "ipa": "[edʒ]",
+    "definition": "n. 边缘；优势；刀刃；锋利\nvt. 使锐利；将…开刃；给…加上边\nvi. 缓缓移动；侧着移动",
+    "example": ""
+  },
+  {
+    "word": "strap",
+    "ipa": "[stræp]",
+    "definition": "n. 带；皮带；磨刀皮带；鞭打\nvt. 用带捆绑；用皮条抽打；约束\nvi. 精力旺盛地工作；受束缚",
+    "example": ""
+  },
+  {
+    "word": "possession",
+    "ipa": "[pəˈzeʃn]",
+    "definition": "n. 拥有；财产；领地；自制；着迷",
+    "example": ""
+  },
+  {
+    "word": "breath",
+    "ipa": "[breθ]",
+    "definition": "n. 呼吸，气息；一口气，（呼吸的）一次；瞬间，瞬息；微风；迹象；无声音，气音",
+    "example": ""
+  },
+  {
+    "word": "content",
+    "ipa": "[ˈkɒntent]",
+    "definition": "n. 内容，目录；满足；容量\nadj. 满意的\nvt. 使满足",
+    "example": ""
+  },
+  {
+    "word": "mend",
+    "ipa": "[mend]",
+    "definition": "vt. 修理，修补；改善；修改\nvi. 改善，好转\nn. 好转，改进；修补处",
+    "example": ""
+  },
+  {
+    "word": "clear",
+    "ipa": "[klɪə(r)]",
+    "definition": "n. 清除；空隙\nadj. 清楚的；清澈的；晴朗的；无罪的\nvt. 通过；清除；使干净；跳过\nvi. 放晴；变清澈\nadv. 清晰地；完全地",
+    "example": ""
+  },
+  {
+    "word": "conscience",
+    "ipa": "[ˈkɒnʃəns]",
+    "definition": "n. 道德心，良心",
+    "example": ""
+  },
+  {
+    "word": "wallet",
+    "ipa": "[ˈwɒlɪt]",
+    "definition": "n. 钱包，皮夹",
+    "example": ""
+  },
+  {
+    "word": "savings",
+    "ipa": "[ˈseɪvɪŋz]",
+    "definition": "n. 储蓄；存款；救助；节省物（saving的复数形式）",
+    "example": ""
+  },
+  {
+    "word": "villager",
+    "ipa": "[ˈvɪlɪdʒə(r)]",
+    "definition": "n. 乡村居民，村民",
+    "example": ""
+  },
+  {
+    "word": "per cent",
+    "ipa": "",
+    "definition": "adj. 每一百中\nn. 百分之…",
+    "example": ""
+  },
+  {
+    "word": "unload",
+    "ipa": "[ˌʌnˈləʊd]",
+    "definition": "vt. 卸；摆脱…之负担；倾销\nvi. 卸货；退子弹",
+    "example": ""
+  },
+  {
+    "word": "wooden",
+    "ipa": "[ˈwʊdn]",
+    "definition": "adj. 木制的；僵硬的，呆板的",
+    "example": ""
+  },
+  {
+    "word": "extremely",
+    "ipa": "[ɪkˈstriːmli]",
+    "definition": "adv. 非常，极其；极端地",
+    "example": ""
+  },
+  {
+    "word": "occur",
+    "ipa": "[əˈkɜː(r)]",
+    "definition": "vi. 发生；出现；存在",
+    "example": ""
+  },
+  {
+    "word": "astonish",
+    "ipa": "[əˈstɒnɪʃ]",
+    "definition": "vt. 使惊讶",
+    "example": ""
+  },
+  {
+    "word": "pile",
+    "ipa": "[paɪl]",
+    "definition": "n. 堆；大量；建筑群\nvt. 累积；打桩于\nvi. 挤；堆积；积累",
+    "example": ""
+  },
+  {
+    "word": "woollen",
+    "ipa": "[ˈwʊlən]",
+    "definition": "n. 毛织品\nadj. 羊毛制的",
+    "example": ""
+  },
+  {
+    "word": "goods",
+    "ipa": "[ɡʊdz]",
+    "definition": "n. 商品；动产；合意的人；真本领",
+    "example": ""
+  },
+  {
+    "word": "discover",
+    "ipa": "[dɪˈskʌvə(r)]",
+    "definition": "vi. 发现\nvt. 发现；发觉",
+    "example": ""
+  },
+  {
+    "word": "admit",
+    "ipa": "[ədˈmɪt]",
+    "definition": "vi. 承认；容许\nvt. 承认；准许进入；可容纳",
+    "example": ""
+  },
+  {
+    "word": "confine",
+    "ipa": "[kənˈfaɪn]",
+    "definition": "n. 界限，边界;约束；限制\nvt. 限制；禁闭",
+    "example": ""
+  },
+  {
+    "word": "normal",
+    "ipa": "[ˈnɔːm(ə)l]",
+    "definition": "adj. 正常的；正规的，标准的\nn. 正常；标准；常态",
+    "example": ""
+  },
+  {
+    "word": "thirsty",
+    "ipa": "[ˈθɜːsti]",
+    "definition": "adj. 口渴的，口干的；渴望的，热望的",
+    "example": ""
+  },
+  {
+    "word": "ghost",
+    "ipa": "[ɡəʊst]",
+    "definition": "n. 鬼，幽灵\nvt. 作祟于；替…捉刀；为人代笔\nvi. 替人代笔",
+    "example": ""
+  },
+  {
+    "word": "haunt",
+    "ipa": "[hɔːnt]",
+    "definition": "n. 栖息地；常去的地方\nvt. 常出没于…；萦绕于…；经常去…\nvi. 出没；作祟",
+    "example": ""
+  },
+  {
+    "word": "block",
+    "ipa": "[blɒk]",
+    "definition": "n. 块；街区；大厦；障碍物\nadj. 成批的，大块的；交通堵塞的\nvt. 阻止；阻塞；限制；封盖",
+    "example": ""
+  },
+  {
+    "word": "furniture",
+    "ipa": "[ˈfɜːnɪtʃə(r)]",
+    "definition": "n. 家具；设备；储藏物",
+    "example": ""
+  },
+  {
+    "word": "whisky",
+    "ipa": "[ˈwɪski]",
+    "definition": "n. 威士忌酒\nadj. 威士忌酒的",
+    "example": ""
+  },
+  {
+    "word": "suggest",
+    "ipa": "[səˈdʒest]",
+    "definition": "vt. 提议，建议；启发；使人想起；显示；暗示",
+    "example": ""
+  },
+  {
+    "word": "shake",
+    "ipa": "[ʃeɪk]",
+    "definition": "n. 摇动；哆嗦\nvt. 动摇；摇动；震动；握手\nvi. 动摇；摇动；发抖",
+    "example": ""
+  },
+  {
+    "word": "accept",
+    "ipa": "[əkˈsept]",
+    "definition": "vi. 承认；同意；承兑\nvt. 接受；承认；承担；承兑；容纳",
+    "example": ""
+  },
+  {
+    "word": "pull",
+    "ipa": "[pʊl]",
+    "definition": "n. 拉，拉绳；拉力，牵引力；拖\nvt. 拉；拔；拖\nvi. 拉，拖；拔",
+    "example": ""
+  },
+  {
+    "word": "cotton wool",
+    "ipa": "",
+    "definition": "n. 药棉；脱脂棉",
+    "example": ""
+  },
+  {
+    "word": "collect",
+    "ipa": "[kəˈlekt]",
+    "definition": "vt. 收集；募捐\nadj. 由收件人付款的\nvi. 收集；聚集；募捐\nadv. 由收件人付款地",
+    "example": ""
+  },
+  {
+    "word": "collection",
+    "ipa": "[kəˈlekʃn]",
+    "definition": "n. 采集，聚集；[税收] 征收；收藏品；募捐",
+    "example": ""
+  },
+  {
+    "word": "nod",
+    "ipa": "[nɒd]",
+    "definition": "n. 点头；打盹；摆动\nvt. 点头；点头表示\nvi. 点头；打盹；摆动",
+    "example": ""
+  },
+  {
+    "word": "meanwhile",
+    "ipa": "[ˈmiːnwaɪl]",
+    "definition": "adv. 同时，其间\nn. 其间，其时",
+    "example": ""
+  },
+  {
+    "word": "tired",
+    "ipa": "[ˈtaɪəd]",
+    "definition": "v. 疲倦；对…腻烦（tire的过去分词形式）\nadj. 疲倦的；厌倦的，厌烦的",
+    "example": ""
+  },
+  {
+    "word": "real",
+    "ipa": "[ˈriːəl; rɪəl]",
+    "definition": "n. 现实；实数\nadj. 实际的；真实的；实在的\nadv. 真正地；确实地",
+    "example": ""
+  },
+  {
+    "word": "owner",
+    "ipa": "[ˈəʊnə(r)]",
+    "definition": "n. [经] 所有者；物主",
+    "example": ""
+  },
+  {
+    "word": "spring",
+    "ipa": "[sprɪŋ]",
+    "definition": "n. 春天；弹簧；泉水；活力；跳跃\nadj. 春天的\nvt. 使跳起；使爆炸；突然提出；使弹开\nvi. 生长；涌出；跃出；裂开",
+    "example": ""
+  },
+  {
+    "word": "mattress",
+    "ipa": "[ˈmætrəs]",
+    "definition": "n. 床垫；褥子；空气垫",
+    "example": ""
+  },
+  {
+    "word": "gust",
+    "ipa": "[ɡʌst]",
+    "definition": "n. 风味；一阵狂风；趣味\nvi. 一阵阵地劲吹",
+    "example": ""
+  },
+  {
+    "word": "sweep",
+    "ipa": "[swiːp]",
+    "definition": "n. 打扫，扫除；范围；全胜\nvt. 扫除；猛拉；掸去\nvi. 扫，打扫；席卷；扫视；袭击",
+    "example": ""
+  },
+  {
+    "word": "courtyard",
+    "ipa": "[ˈkɔːtjɑːd]",
+    "definition": "n. 庭院，院子；天井",
+    "example": ""
+  },
+  {
+    "word": "smash",
+    "ipa": "[smæʃ]",
+    "definition": "n. 破碎；扣球；冲突；大败\nvt. 粉碎；使破产；溃裂\nadj. 了不起的；非常轰动的；出色的\nvi. 粉碎；打碎",
+    "example": ""
+  },
+  {
+    "word": "miraculously",
+    "ipa": "[mɪˈrækjələsli]",
+    "definition": "adv. 奇迹般地；神奇地；非凡地；出乎意料地",
+    "example": ""
+  },
+  {
+    "word": "unhurt",
+    "ipa": "[ʌnˈhɜːt]",
+    "definition": "adj. 没有受伤的",
+    "example": ""
+  },
+  {
+    "word": "glance",
+    "ipa": "[ɡlɑːns]",
+    "definition": "n. 一瞥；一滑；闪光\nvt. 扫视；瞥见；擦过\nvi. 扫视，匆匆一看；反光；瞥闪，瞥见",
+    "example": ""
+  },
+  {
+    "word": "promptly",
+    "ipa": "[ˈprɒmptli]",
+    "definition": "adv. 迅速地；立即地；敏捷地",
+    "example": ""
+  },
+  {
+    "word": "ride",
+    "ipa": "[raɪd]",
+    "definition": "n. 骑；乘坐；交通工具；可供骑行的路；（乘坐汽车等的）旅行；乘骑；（乘车或骑车的）短途旅程；供乘骑的游乐设施\nvi. 骑马；乘车；依靠；漂浮\nvt. 骑；乘；控制；（骑马、自行车等）穿越；搭乘；飘浮",
+    "example": ""
+  },
+  {
+    "word": "excursion",
+    "ipa": "[ɪkˈskɜːʃn]",
+    "definition": "n. 偏移；远足；短程旅行；离题；游览，游览团",
+    "example": ""
+  },
+  {
+    "word": "conductor",
+    "ipa": "[kənˈdʌktə(r)]",
+    "definition": "n. 导体；售票员；领导者；管理人",
+    "example": ""
+  },
+  {
+    "word": "view",
+    "ipa": "[vjuː]",
+    "definition": "n. 观察；视野；意见；风景\nvt. 观察；考虑；查看",
+    "example": ""
+  },
+  {
+    "word": "reward",
+    "ipa": "[rɪˈwɔːd]",
+    "definition": "n. [劳经] 报酬；报答；酬谢\nvt. [劳经] 奖励；奖赏",
+    "example": ""
+  },
+  {
+    "word": "virtue",
+    "ipa": "[ˈvɜːtʃuː]",
+    "definition": "n. 美德；优点；贞操；功效",
+    "example": ""
+  },
+  {
+    "word": "diet",
+    "ipa": "[ˈdaɪət]",
+    "definition": "n. 饮食；食物；规定饮食\nvt. [医] 照规定饮食\nvi. 节食",
+    "example": ""
+  },
+  {
+    "word": "forbid",
+    "ipa": "[fəˈbɪd]",
+    "definition": "vt. 禁止；不准；不允许；〈正式〉严禁",
+    "example": ""
+  },
+  {
+    "word": "hurriedly",
+    "ipa": "[ˈhʌrɪdli]",
+    "definition": "adv. 匆忙地；仓促地",
+    "example": ""
+  },
+  {
+    "word": "embarrass",
+    "ipa": "[ɪmˈbærəs]",
+    "definition": "vt. 使局促不安；使困窘；阻碍",
+    "example": ""
+  },
+  {
+    "word": "guiltily",
+    "ipa": "[ˈɡɪltɪli]",
+    "definition": "adv. 内疚地；有罪地",
+    "example": ""
+  },
+  {
+    "word": "strict",
+    "ipa": "[strɪkt]",
+    "definition": "adj. 严格的；绝对的；精确的；详细的",
+    "example": ""
+  },
+  {
+    "word": "occasionally",
+    "ipa": "[əˈkeɪʒnəli]",
+    "definition": "adv. 偶尔；间或",
+    "example": ""
+  },
+  {
+    "word": "temporarily",
+    "ipa": "[ˈtemprərəli]",
+    "definition": "adv. 临时地，临时",
+    "example": ""
+  },
+  {
+    "word": "inch",
+    "ipa": "[ɪntʃ]",
+    "definition": "n. 英寸；身高；少许\nvt. 使缓慢地移动\nvi. 慢慢前进",
+    "example": ""
+  },
+  {
+    "word": "space",
+    "ipa": "[speɪs]",
+    "definition": "n. 空间；太空；距离\nvt. 隔开\nvi. 留间隔",
+    "example": ""
+  },
+  {
+    "word": "actually",
+    "ipa": "[ˈæktʃuəli]",
+    "definition": "adv. 实际上；事实上",
+    "example": ""
+  },
+  {
+    "word": "hot",
+    "ipa": "[hɒt]",
+    "definition": "adj. 热的；辣的；热情的；激动的；紧迫的\nvt. 增加；给…加温\nadv. 热；紧迫地\nvi. 变热",
+    "example": ""
+  },
+  {
+    "word": "fireman",
+    "ipa": "[ˈfaɪəmən]",
+    "definition": "n. 消防队员；救火队员；锅炉工",
+    "example": ""
+  },
+  {
+    "word": "cause",
+    "ipa": "[kɔːz]",
+    "definition": "n. 原因；事业；目标\nvt. 引起；使遭受",
+    "example": ""
+  },
+  {
+    "word": "examine",
+    "ipa": "[ɪɡˈzæmɪn]",
+    "definition": "vt. 检查；调查； 检测；考试\nvi. 检查；调查",
+    "example": ""
+  },
+  {
+    "word": "accidentally",
+    "ipa": "[ˌæksɪˈdentəli]",
+    "definition": "adv. 意外地；偶然地",
+    "example": ""
+  },
+  {
+    "word": "remains",
+    "ipa": "[rɪˈmeɪnz]",
+    "definition": "n. 残余；遗骸",
+    "example": ""
+  },
+  {
+    "word": "wire",
+    "ipa": "[ˈwaɪə(r)]",
+    "definition": "n. 电线；金属丝；电报\nvt. 拍电报；给…装电线\nvi. 打电报",
+    "example": ""
+  },
+  {
+    "word": "volt",
+    "ipa": "[vəʊlt]",
+    "definition": "n. 伏特（电压单位）；环骑；闪避",
+    "example": ""
+  },
+  {
+    "word": "power line",
+    "ipa": "",
+    "definition": "n. 电力线；输电线",
+    "example": ""
+  },
+  {
+    "word": "solve",
+    "ipa": "[sɒlv]",
+    "definition": "vt. 解决；解答；溶解\nvi. 作解答",
+    "example": ""
+  },
+  {
+    "word": "mystery",
+    "ipa": "[ˈmɪstri]",
+    "definition": "n. 秘密，谜；神秘，神秘的事物；推理小说，推理剧；常作 mysteries 秘技，秘诀",
+    "example": ""
+  },
+  {
+    "word": "snatch",
+    "ipa": "[snætʃ]",
+    "definition": "n. 抢夺；抓举；小量\nvt. 夺得；抽空做；及时救助\nvi. 抢走；很快接受",
+    "example": ""
+  },
+  {
+    "word": "spark",
+    "ipa": "[spɑːk]",
+    "definition": "n. 火花；朝气；闪光\nvt. 发动；鼓舞；求婚\nvi. 闪烁；发火花；求婚",
+    "example": ""
+  },
+  {
+    "word": "sticky",
+    "ipa": "[ˈstɪki]",
+    "definition": "adj. 粘的；粘性的",
+    "example": ""
+  },
+  {
+    "word": "finger",
+    "ipa": "[ˈfɪŋɡə(r)]",
+    "definition": "n. 手指；指针，指状物\nvt. 伸出；用手指拨弄\nvi. 用指触摸；拨弄",
+    "example": ""
+  },
+  {
+    "word": "pie",
+    "ipa": "[paɪ]",
+    "definition": "n. 馅饼；饼图；爱说话的人\nvt. 使杂乱",
+    "example": ""
+  },
+  {
+    "word": "mix",
+    "ipa": "[mɪks]",
+    "definition": "vt. 配制；混淆；使混和；使结交\nvi. 参与；相混合；交往\nn. 混合；混合物；混乱",
+    "example": ""
+  },
+  {
+    "word": "pastry",
+    "ipa": "[ˈpeɪstri]",
+    "definition": "n. 油酥点心；面粉糕饼",
+    "example": ""
+  },
+  {
+    "word": "annoying",
+    "ipa": "[əˈnɔɪɪŋ]",
+    "definition": "v. 骚扰（annoy的ing形式）\nadj. 讨厌的；恼人的",
+    "example": ""
+  },
+  {
+    "word": "receiver",
+    "ipa": "[rɪˈsiːvə(r)]",
+    "definition": "n. 接收器；接受者；收信机；收款员，接待者",
+    "example": ""
+  },
+  {
+    "word": "dismay",
+    "ipa": "[dɪsˈmeɪ]",
+    "definition": "n. 沮丧，灰心；惊慌\nvt. 使沮丧；使惊慌",
+    "example": ""
+  },
+  {
+    "word": "recognize",
+    "ipa": "[ˈrekəɡnaɪz]",
+    "definition": "vt. 认出，识别；承认\nvi. 确认，承认；具结",
+    "example": ""
+  },
+  {
+    "word": "persuade",
+    "ipa": "[pəˈsweɪd]",
+    "definition": "vt. 说服，劝说；使某人相信；劝某人做（不做）某事\nadj. 空闲的，有闲的\nvi. 说服；被说服",
+    "example": ""
+  },
+  {
+    "word": "mess",
+    "ipa": "[mes]",
+    "definition": "n. 混乱；食堂，伙食团；困境；脏乱的东西\nvt. 弄乱，弄脏；毁坏；使就餐\nvi. 把事情弄糟；制造脏乱；玩弄",
+    "example": ""
+  },
+  {
+    "word": "doorknob",
+    "ipa": "[ˈdɔːnɒb]",
+    "definition": "n. 门把手",
+    "example": ""
+  },
+  {
+    "word": "sign",
+    "ipa": "[saɪn]",
+    "definition": "n. 迹象；符号；记号；手势；指示牌\nvt. 签署；示意\nvi. 签署；签名",
+    "example": ""
+  },
+  {
+    "word": "register",
+    "ipa": "[ˈredʒɪstə(r)]",
+    "definition": "n. 登记；注册；记录；寄存器；登记簿\nvt. 登记；注册；记录；挂号邮寄；把…挂号；正式提出\nvi. 登记；注册；挂号",
+    "example": ""
+  },
+  {
+    "word": "gold",
+    "ipa": "[ɡəʊld]",
+    "definition": "n. 金，黄金；金色；金币\nadj. 金的，金制的；金色的",
+    "example": ""
+  },
+  {
+    "word": "mine",
+    "ipa": "[maɪn]",
+    "definition": "n. 矿，矿藏；矿山，矿井；地雷，水雷\nvt. 开采，采掘；在…布雷\nvi. 开矿，采矿；埋设地雷\npron. 我的",
+    "example": ""
+  },
+  {
+    "word": "treasure",
+    "ipa": "[ˈtreʒə(r)]",
+    "definition": "n. 财富，财产；财宝；珍品\nvt. 珍爱；珍藏",
+    "example": ""
+  },
+  {
+    "word": "revealer",
+    "ipa": "[rɪ'vi:lə]",
+    "definition": "n. 启示者",
+    "example": ""
+  },
+  {
+    "word": "invent",
+    "ipa": "[ɪnˈvent]",
+    "definition": "vt. 发明；创造；虚构",
+    "example": ""
+  },
+  {
+    "word": "detect",
+    "ipa": "[dɪˈtekt]",
+    "definition": "vt. 察觉；发现；探测",
+    "example": ""
+  },
+  {
+    "word": "bury",
+    "ipa": "[ˈberi]",
+    "definition": "vt. 埋葬；隐藏",
+    "example": ""
+  },
+  {
+    "word": "cave",
+    "ipa": "[keɪv]",
+    "definition": "n. 洞穴，窑洞\nvi. 凹陷，塌落；投降\nvt. 使凹陷，使塌落；在…挖洞穴",
+    "example": ""
+  },
+  {
+    "word": "seashore",
+    "ipa": "[ˈsiːʃɔː(r)]",
+    "definition": "n. 海滨；海岸\nadj. 海滨的；在海滨的",
+    "example": ""
+  },
+  {
+    "word": "pirate",
+    "ipa": "[ˈpaɪrət]",
+    "definition": "n. 海盗；盗版；侵犯专利权者\nvt. 掠夺；翻印；剽窃\nvi. 做海盗；从事劫掠",
+    "example": ""
+  },
+  {
+    "word": "arm",
+    "ipa": "[ɑːm]",
+    "definition": "n. 手臂；武器；袖子；装备；部门\nvt. 武装；备战\nvi. 武装起来",
+    "example": ""
+  },
+  {
+    "word": "soil",
+    "ipa": "[sɔɪl]",
+    "definition": "n. 土地；土壤；国家；粪便；务农；温床\nvt. 弄脏；污辱\nvi. 变脏",
+    "example": ""
+  },
+  {
+    "word": "entrance",
+    "ipa": "[ˈentrəns]",
+    "definition": "n. 入口；进入\nvt. 使出神，使入迷",
+    "example": ""
+  },
+  {
+    "word": "finally",
+    "ipa": "[ˈfaɪnəli]",
+    "definition": "adv. 最后；终于；决定性地",
+    "example": ""
+  },
+  {
+    "word": "worthless",
+    "ipa": "[ˈwɜːθləs]",
+    "definition": "adj. 无价值的；不值钱的；卑微的",
+    "example": ""
+  },
+  {
+    "word": "thoroughly",
+    "ipa": "[ˈθʌrəli]",
+    "definition": "adv. 彻底地，完全地",
+    "example": ""
+  },
+  {
+    "word": "trunk",
+    "ipa": "[trʌŋk]",
+    "definition": "n. 树干；躯干；象鼻；汽车车尾的行李箱\nadj. 干线的；躯干的；箱子的\nvt. 把…放入旅行箱内",
+    "example": ""
+  },
+  {
+    "word": "confident",
+    "ipa": "[ˈkɒnfɪdənt]",
+    "definition": "adj. 自信的；确信的",
+    "example": ""
+  },
+  {
+    "word": "value",
+    "ipa": "[ˈvæljuː]",
+    "definition": "n. 值；价值；价格；重要性；确切涵义\nvt. 评价；重视；估价",
+    "example": ""
+  },
+  {
+    "word": "sound",
+    "ipa": "[saʊnd]",
+    "definition": "n. 声音，语音；噪音；海峡；吵闹；听力范围；[医] 探条\nadj. 健全的，健康的；合理的；可靠的；有效彻底的\nvt. 听（诊）；测量，测…深；使发声；试探；宣告\nvi. 听起来；发出声音；回响；测深\nadv. 彻底地，充分地",
+    "example": ""
+  },
+  {
+    "word": "excitement",
+    "ipa": "[ɪkˈsaɪtmənt]",
+    "definition": "n. 兴奋；刺激；令人兴奋的事物",
+    "example": ""
+  },
+  {
+    "word": "handsome",
+    "ipa": "[ˈhænsəm]",
+    "definition": "adj. （男子）英俊的；可观的；大方的，慷慨的；健美而端庄的",
+    "example": ""
+  },
+  {
+    "word": "Rolls-Royce",
+    "ipa": "",
+    "definition": "n. 劳斯莱斯\nadj. 最佳的",
+    "example": ""
+  },
+  {
+    "word": "Benz",
+    "ipa": "[benz]",
+    "definition": "n. 奔驰（世界著名汽车品牌）",
+    "example": ""
+  },
+  {
+    "word": "wheel",
+    "ipa": "[wiːl]",
+    "definition": "n. 车轮；方向盘；转动\nvt. 转动；使变换方向；给…装轮子\nvi. 旋转；突然转变方向；盘旋飞行",
+    "example": ""
+  },
+  {
+    "word": "explosion",
+    "ipa": "[ɪkˈspləʊʒ(ə)n]",
+    "definition": "n. 爆炸；爆发；激增",
+    "example": ""
+  },
+  {
+    "word": "course",
+    "ipa": "[kɔːs]",
+    "definition": "n. 科目；课程；过程；进程；道路；路线，航向；一道菜\nvt. 追赶；跑过\nvi. 指引航线；快跑",
+    "example": ""
+  },
+  {
+    "word": "rival",
+    "ipa": "[ˈraɪv(ə)l]",
+    "definition": "n. 对手；竞争者\nadj. 竞争的\nvt. 与…竞争；比得上某人\nvi. 竞争",
+    "example": ""
+  },
+  {
+    "word": "speed",
+    "ipa": "[spiːd]",
+    "definition": "n. 速度，速率；迅速，快速；昌盛，繁荣\nvt. 加快…的速度；使成功，使繁荣\nvi. 超速，加速；加速，迅速前行；兴隆",
+    "example": ""
+  },
+  {
+    "word": "downhill",
+    "ipa": "[ˌdaʊnˈhɪl; ˈdaʊnhɪl]",
+    "definition": "n. 下坡；滑降\nadj. 下坡的；容易的\nadv. 下坡；向下；每况愈下",
+    "example": ""
+  },
+  {
+    "word": "madam",
+    "ipa": "[ˈmædəm]",
+    "definition": "n. 夫人；女士；鸨母",
+    "example": ""
+  },
+  {
+    "word": "jeans",
+    "ipa": "[dʒiːnz]",
+    "definition": "n. 牛仔裤；工装裤",
+    "example": ""
+  },
+  {
+    "word": "hesitate",
+    "ipa": "[ˈhezɪteɪt]",
+    "definition": "vt. 踌躇，犹豫；有疑虑，不愿意\nvi. 踌躇，犹豫；不愿",
+    "example": ""
+  },
+  {
+    "word": "serve",
+    "ipa": "[sɜːv]",
+    "definition": "n. 发球，轮到发球\nvi. 服役，服务；适合，足够；发球；招待，侍候\nvt. 招待，供应；为…服务；对…有用；可作…用",
+    "example": ""
+  },
+  {
+    "word": "scornfully",
+    "ipa": "[ˈskɔːnfəli]",
+    "definition": "adv. 轻蔑地；藐视地",
+    "example": ""
+  },
+  {
+    "word": "punish",
+    "ipa": "[ˈpʌnɪʃ]",
+    "definition": "vt. 惩罚；严厉对待；贪婪地吃喝\nvi. 惩罚",
+    "example": ""
+  },
+  {
+    "word": "fur",
+    "ipa": "[fɜː(r)]",
+    "definition": "n. 皮，皮子；毛皮；软毛\nn. 水垢\nvt. 用毛皮覆盖；使穿毛皮服装",
+    "example": ""
+  },
+  {
+    "word": "eager",
+    "ipa": "[ˈiːɡə(r)]",
+    "definition": "adj. 渴望的；热切的；热心的",
+    "example": ""
+  },
+  {
+    "word": "blessing",
+    "ipa": "[ˈblesɪŋ]",
+    "definition": "n. 祝福；赐福；祷告\nv. 使幸福（bless的ing形式）；使神圣化；为…祈神赐福",
+    "example": ""
+  },
+  {
+    "word": "disguise",
+    "ipa": "[dɪsˈɡaɪz]",
+    "definition": "n. 伪装；假装；用作伪装的东西\nvt. 掩饰；假装；隐瞒",
+    "example": ""
+  },
+  {
+    "word": "tiny",
+    "ipa": "[ˈtaɪni]",
+    "definition": "adj. 微小的；很少的",
+    "example": ""
+  },
+  {
+    "word": "possess",
+    "ipa": "[pəˈzes]",
+    "definition": "vt. 控制；使掌握；持有；迷住；拥有，具备",
+    "example": ""
+  },
+  {
+    "word": "cursed",
+    "ipa": "[kɜːst; ˈkɜːsɪd]",
+    "definition": "v. 诅咒（curse的过去分词）\nadj. 被诅咒的",
+    "example": ""
+  },
+  {
+    "word": "increase",
+    "ipa": "[ɪnˈkriːs]",
+    "definition": "n. 增加，增长；提高\nvt. 增加，加大\nvi. 增加，增大；繁殖",
+    "example": ""
+  },
+  {
+    "word": "plant",
+    "ipa": "[plɑːnt]",
+    "definition": "n. 工厂，车间；植物；设备；庄稼\nvt. 种植；培养；栽培；安置\nvi. 种植",
+    "example": ""
+  },
+  {
+    "word": "church",
+    "ipa": "[tʃɜːtʃ]",
+    "definition": "n. 教堂；礼拜；教派\nadj. 教会的；礼拜的\nvt. 领…到教堂接受宗教仪式",
+    "example": ""
+  },
+  {
+    "word": "evil",
+    "ipa": "[ˈiːv(ə)l]",
+    "definition": "n. 罪恶，邪恶；不幸\nadj. 邪恶的；不幸的；有害的；讨厌的",
+    "example": ""
+  },
+  {
+    "word": "reputation",
+    "ipa": "[ˌrepjuˈteɪʃn]",
+    "definition": "n. 名声，名誉；声望",
+    "example": ""
+  },
+  {
+    "word": "claim",
+    "ipa": "[kleɪm]",
+    "definition": "n. 要求；声称；索赔；断言；值得\nvt. 要求；声称；需要；认领\nvi. 提出要求",
+    "example": ""
+  },
+  {
+    "word": "victim",
+    "ipa": "[ˈvɪktɪm]",
+    "definition": "n. 受害人；牺牲品；牺牲者",
+    "example": ""
+  },
+  {
+    "word": "vicar",
+    "ipa": "[ˈvɪkə(r)]",
+    "definition": "n. 教区牧师，教堂牧师；传教牧师；代理人",
+    "example": ""
+  },
+  {
+    "word": "source",
+    "ipa": "[sɔːs]",
+    "definition": "n. 来源；水源；原始资料",
+    "example": ""
+  },
+  {
+    "word": "income",
+    "ipa": "[ˈɪnkʌm]",
+    "definition": "n. 收入，收益；所得",
+    "example": ""
+  },
+  {
+    "word": "trunk",
+    "ipa": "[trʌŋk]",
+    "definition": "n. 树干；躯干；象鼻；汽车车尾的行李箱\nadj. 干线的；躯干的；箱子的\nvt. 把…放入旅行箱内",
+    "example": ""
+  },
+  {
+    "word": "bark",
+    "ipa": "[bɑːk]",
+    "definition": "n. 树皮；深青棕色；毛皮；皮肤；狗叫\nvt. 狗叫；尖叫；剥皮",
+    "example": ""
+  },
+  {
+    "word": "press",
+    "ipa": "[pres]",
+    "definition": "n. 压；按；新闻；出版社；[印刷] 印刷机\nvt. 压；按；逼迫；紧抱\nvi. 压；逼；重压",
+    "example": ""
+  },
+  {
+    "word": "paw",
+    "ipa": "[pɔː]",
+    "definition": "n. 爪子；手\nvt. 抓，扒；亲昵地抚摸\nvi. 用爪子抓；翻找",
+    "example": ""
+  },
+  {
+    "word": "latch",
+    "ipa": "[lætʃ]",
+    "definition": "vi. 占有，抓住；闭锁\nvt. 闩上；纠缠住某人\nn. 门闩",
+    "example": ""
+  },
+  {
+    "word": "expert",
+    "ipa": "[ˈekspɜːt]",
+    "definition": "n. 专家；行家；能手\nadj. 熟练的；内行的；老练的\nvt. 当专家；在…中当行家",
+    "example": ""
+  },
+  {
+    "word": "develop",
+    "ipa": "[dɪˈveləp]",
+    "definition": "vi. 发育；生长；进化；显露\nvt. 开发；进步；使成长；使显影",
+    "example": ""
+  },
+  {
+    "word": "habit",
+    "ipa": "[ˈhæbɪt]",
+    "definition": "n. 习惯，习性；嗜好\nvt. 使穿衣",
+    "example": ""
+  },
+  {
+    "word": "remove",
+    "ipa": "[rɪˈmuːv]",
+    "definition": "n. 移动；距离；搬家\nvt. 移动，迁移；开除；调动\nvi. 移动，迁移；搬家",
+    "example": ""
+  },
+  {
+    "word": "future",
+    "ipa": "[ˈfjuːtʃə(r)]",
+    "definition": "n. 未来；前途；期货；将来时\nadj. 将来的，未来的",
+    "example": ""
+  },
+  {
+    "word": "fair",
+    "ipa": "[feə(r)]",
+    "definition": "n. 展览会；市集；美人\nadj. 公平的；美丽的，白皙的；[气象] 晴朗的\nvi. 转晴\nadv. 公平地；直接地；清楚地",
+    "example": ""
+  },
+  {
+    "word": "fortune-teller",
+    "ipa": "[ˈfɔːtʃuːn telə(r)]",
+    "definition": "n. 算命者；占卜者；用算命来欺诈的人",
+    "example": ""
+  },
+  {
+    "word": "crystal",
+    "ipa": "[ˈkrɪst(ə)l]",
+    "definition": "n. 结晶，晶体；水晶；水晶饰品\nadj. 水晶的；透明的，清澈的",
+    "example": ""
+  },
+  {
+    "word": "relation",
+    "ipa": "[rɪˈleɪʃn]",
+    "definition": "n. 关系；叙述；故事；亲属关系",
+    "example": ""
+  },
+  {
+    "word": "impatiently",
+    "ipa": "[ɪmˈpeɪʃntli]",
+    "definition": "adv. 无耐性地",
+    "example": ""
+  },
+  {
+    "word": "Hubble",
+    "ipa": "",
+    "definition": "n. 小瘤；小凸起",
+    "example": ""
+  },
+  {
+    "word": "telescope",
+    "ipa": "[ˈtelɪskəʊp]",
+    "definition": "n. 望远镜；缩叠式旅行袋\nvi. 套叠；变短\nvt. 压缩；使套叠",
+    "example": ""
+  },
+  {
+    "word": "launch",
+    "ipa": "[lɔːntʃ]",
+    "definition": "vt. 发射（导弹、火箭等）；发起，发动；使…下水\nvi. 开始；下水；起飞\nn. 发射；发行，投放市场；下水；汽艇",
+    "example": ""
+  },
+  {
+    "word": "space",
+    "ipa": "[speɪs]",
+    "definition": "n. 空间；太空；距离\nvt. 隔开\nvi. 留间隔",
+    "example": ""
+  },
+  {
+    "word": "NASA",
+    "ipa": "[ˈnæsə]",
+    "definition": "abbr. 美国国家航空和宇宙航行局（National Aeronautics and Space Administration）",
+    "example": ""
+  },
+  {
+    "word": "billion",
+    "ipa": "[ˈbɪljən]",
+    "definition": "num. 十亿\nn. 十亿；大量\nadj. 十亿的",
+    "example": ""
+  },
+  {
+    "word": "faulty",
+    "ipa": "[ˈfɔːlti]",
+    "definition": "adj. 有错误的；有缺点的",
+    "example": ""
+  },
+  {
+    "word": "astronaut",
+    "ipa": "[ˈæstrənɔːt]",
+    "definition": "n. 宇航员，航天员；太空旅行者",
+    "example": ""
+  },
+  {
+    "word": "shuttle",
+    "ipa": "[ˈʃʌt(ə)l]",
+    "definition": "n. 航天飞机；穿梭；梭子；穿梭班机、公共汽车等\nvt. 使穿梭般来回移动；短程穿梭般运送\nvi. 穿梭往返",
+    "example": ""
+  },
+  {
+    "word": "Endeavour",
+    "ipa": "",
+    "definition": "n. 尽力，竭力\nvi. 竭力；企图\nvt. 竭力做到，试图或力图（做某事）",
+    "example": ""
+  },
+  {
+    "word": "robot-arm",
+    "ipa": "",
+    "definition": "机械手臂；机械臂；机器手",
+    "example": ""
+  },
+  {
+    "word": "grab",
+    "ipa": "[ɡræb]",
+    "definition": "n. 攫取；霸占；夺取之物\nvt. 攫取；霸占；将…深深吸引\nvi. 攫取；夺取",
+    "example": ""
+  },
+  {
+    "word": "atmosphere",
+    "ipa": "[ˈætməsfɪə(r)]",
+    "definition": "n. 气氛；大气；空气",
+    "example": ""
+  },
+  {
+    "word": "distant",
+    "ipa": "[ˈdɪstənt]",
+    "definition": "adj. 遥远的；冷漠的；远隔的；不友好的，冷淡的",
+    "example": ""
+  },
+  {
+    "word": "galaxy",
+    "ipa": "[ˈɡæləksi]",
+    "definition": "n. 银河；[天] 星系；银河系；一群显赫的人\nn. 三星智能手机品牌 2015年三星中国公布Galaxy的中文名称为“盖乐世”（Galaxy）\n[ 复数galaxies ]",
+    "example": ""
+  },
+  {
+    "word": "universe",
+    "ipa": "[ˈjuːnɪvɜːs]",
+    "definition": "n. 宇宙；世界；领域",
+    "example": ""
+  },
+  {
+    "word": "eagle eye",
+    "ipa": "[ˌiːɡl ˈaɪ]",
+    "definition": "n. 敏锐的眼光；锐利的目光",
+    "example": ""
+  },
+  {
+    "word": "control",
+    "ipa": "[kənˈtrəʊl]",
+    "definition": "n. 控制；管理；抑制；操纵装置\nvt. 控制；管理；抑制",
+    "example": ""
+  },
+  {
+    "word": "smoke",
+    "ipa": "[sməʊk]",
+    "definition": "n. 烟；抽烟；无常的事物\nvt. 吸烟；抽\nvi. 冒烟，吸烟；抽烟；弥漫",
+    "example": ""
+  },
+  {
+    "word": "desolate",
+    "ipa": "[ˈdesələt]",
+    "definition": "adj. 荒凉的；无人烟的\nvt. 使荒凉；使孤寂",
+    "example": ""
+  },
+  {
+    "word": "threaten",
+    "ipa": "[ˈθret(ə)n]",
+    "definition": "vt. 威胁；恐吓；预示\nvi. 威胁；可能来临",
+    "example": ""
+  },
+  {
+    "word": "surrounding",
+    "ipa": "[səˈraʊndɪŋ]",
+    "definition": "n. 环境，周围的事物\nadj. 周围的，附近的",
+    "example": ""
+  },
+  {
+    "word": "destruction",
+    "ipa": "[dɪˈstrʌkʃ(ə)n]",
+    "definition": "n. 破坏，毁灭；摧毁",
+    "example": ""
+  },
+  {
+    "word": "flood",
+    "ipa": "[flʌd]",
+    "definition": "n. 洪水；泛滥；一大批\nvt. 淹没；充满；溢出\nvi. 涌出；涌进；为水淹没",
+    "example": ""
+  },
+  {
+    "word": "authority",
+    "ipa": "[ɔːˈθɒrəti]",
+    "definition": "n. 权威；权力；当局",
+    "example": ""
+  },
+  {
+    "word": "grass-seed",
+    "ipa": "",
+    "definition": "草籽",
+    "example": ""
+  },
+  {
+    "word": "spray",
+    "ipa": "[spreɪ]",
+    "definition": "n. 喷雾；喷雾器；水沫\nvt. 喷射\nvi. 喷",
+    "example": ""
+  },
+  {
+    "word": "quantity",
+    "ipa": "[ˈkwɒntəti]",
+    "definition": "n. 量，数量；大量；总量",
+    "example": ""
+  },
+  {
+    "word": "root",
+    "ipa": "[ruːt]",
+    "definition": "n. 根；根源；词根；祖先\nvt. 生根，固定；根源在于\nvi. 生根；根除",
+    "example": ""
+  },
+  {
+    "word": "century",
+    "ipa": "[ˈsentʃəri]",
+    "definition": "n. 世纪，百年；（板球）一百分",
+    "example": ""
+  },
+  {
+    "word": "patch",
+    "ipa": "[pætʃ]",
+    "definition": "n. 眼罩；斑点；碎片；小块土地\nvi. 打补丁\nvt. 修补；解决；掩饰",
+    "example": ""
+  },
+  {
+    "word": "blacken",
+    "ipa": "[ˈblækən]",
+    "definition": "vt. 使变黑；诽谤，诋毁\nvi. 变黑",
+    "example": ""
+  },
+  {
+    "word": "circle",
+    "ipa": "[ˈsɜːk(ə)l]",
+    "definition": "n. 循环，周期；圆；圈子；圆形物\nvt. 画圆圈；环绕…移动\nvi. 盘旋，旋转；环行",
+    "example": ""
+  },
+  {
+    "word": "admire",
+    "ipa": "[ədˈmaɪə(r)]",
+    "definition": "vt. 钦佩；赞美\nvi. 钦佩；称赞",
+    "example": ""
+  },
+  {
+    "word": "close",
+    "ipa": "[kləʊz]",
+    "definition": "n. 结束\nadj. 紧密的；亲密的；亲近的\nvt. 关；结束；使靠近\nvi. 关；结束；关闭\nadv. 紧密地",
+    "example": ""
+  },
+  {
+    "word": "wedding",
+    "ipa": "[ˈwedɪŋ]",
+    "definition": "n. 婚礼，婚宴；结婚；结合\nv. 与…结婚（wed的ing形式）",
+    "example": ""
+  },
+  {
+    "word": "reception",
+    "ipa": "[rɪˈsepʃn]",
+    "definition": "n. 接待；接收；招待会；感受；反应",
+    "example": ""
+  },
+  {
+    "word": "sort",
+    "ipa": "[sɔːt]",
+    "definition": "n. 种类；方式；品质\nvt. 将…分类；将…排序；挑选出某物\nvi. 分类；协调；交往",
+    "example": ""
+  },
+  {
+    "word": "tunnel",
+    "ipa": "[ˈtʌn(ə)l]",
+    "definition": "n. 隧道；坑道；洞穴通道\nvt. 挖；在…打开通道；在…挖掘隧道\nvi. 挖掘隧道；打开通道",
+    "example": ""
+  },
+  {
+    "word": "port",
+    "ipa": "[pɔːt]",
+    "definition": "n. 港口，口岸；（计算机的）端口；左舷；舱门\nvt. 持（枪）；左转舵\nvi. 转向左舷",
+    "example": ""
+  },
+  {
+    "word": "ventilate",
+    "ipa": "[ˈventɪleɪt]",
+    "definition": "vt. 使通风；给…装通风设备；宣布",
+    "example": ""
+  },
+  {
+    "word": "chimney",
+    "ipa": "[ˈtʃɪmni]",
+    "definition": "n. 烟囱",
+    "example": ""
+  },
+  {
+    "word": "sea level",
+    "ipa": "[ˈsiː lev(ə)l]",
+    "definition": "n. 海平面",
+    "example": ""
+  },
+  {
+    "word": "double",
+    "ipa": "[ˈdʌb(ə)l]",
+    "definition": "n. 两倍；双精度型\nadj. 双重的；两倍的\nvt. 使加倍\nadv. 双重地；两倍地；弓身地\nvi. 加倍，加倍努力；快步走",
+    "example": ""
+  },
+  {
+    "word": "ventilation",
+    "ipa": "[ˌventɪˈleɪʃn]",
+    "definition": "n. 通风设备；空气流通",
+    "example": ""
+  },
+  {
+    "word": "fear",
+    "ipa": "[fɪə(r)]",
+    "definition": "n. 害怕；恐惧；敬畏；担心\nvt. 害怕；敬畏；为…担心\nvi. 害怕；敬畏；为…担心",
+    "example": ""
+  },
+  {
+    "word": "invasion",
+    "ipa": "[ɪnˈveɪʒn]",
+    "definition": "n. 入侵，侵略；侵袭；侵犯",
+    "example": ""
+  },
+  {
+    "word": "officially",
+    "ipa": "[əˈfɪʃəli]",
+    "definition": "adv. 正式地；官方地；作为公务员",
+    "example": ""
+  },
+  {
+    "word": "connect",
+    "ipa": "[kəˈnekt]",
+    "definition": "vt. 连接；联合；关连\nvi. 连接，连结；联合",
+    "example": ""
+  },
+  {
+    "word": "European",
+    "ipa": "[ˌjʊərəˈpiːən]",
+    "definition": "n. 欧洲人\nadj. 欧洲的；欧洲人的",
+    "example": ""
+  },
+  {
+    "word": "continent",
+    "ipa": "[ˈkɒntɪnənt]",
+    "definition": "n. 大陆，洲，陆地\nadj. 自制的，克制的",
+    "example": ""
+  },
+  {
+    "word": "versus",
+    "ipa": "[ˈvɜːsəs]",
+    "definition": "prep. 对；与...相对；对抗",
+    "example": ""
+  },
+  {
+    "word": "Christmas",
+    "ipa": "[ˈkrɪsməs]",
+    "definition": "n. 圣诞节；圣诞节期间",
+    "example": ""
+  },
+  {
+    "word": "circus",
+    "ipa": "[ˈsɜːkəs]",
+    "definition": "n. 马戏；马戏团",
+    "example": ""
+  },
+  {
+    "word": "present",
+    "ipa": "[ˈprez(ə)nt]",
+    "definition": "n. 现在；礼物；瞄准\nadj. 现在的；出席的\nvt. 提出；介绍；呈现；赠送\nvi. 举枪瞄准",
+    "example": ""
+  },
+  {
+    "word": "accompany",
+    "ipa": "[əˈkʌmpəni]",
+    "definition": "vt. 陪伴，伴随；伴奏\nvi. 伴奏，伴唱",
+    "example": ""
+  },
+  {
+    "word": "approach",
+    "ipa": "[əˈprəʊtʃ]",
+    "definition": "n. 方法；途径；接近\nvt. 接近；着手处理\nvi. 靠近",
+    "example": ""
+  },
+  {
+    "word": "ought",
+    "ipa": "[ɔːt]",
+    "definition": "aux. 应该，应当；大概\nvi. 应该，应当；大概",
+    "example": ""
+  },
+  {
+    "word": "weigh",
+    "ipa": "[weɪ]",
+    "definition": "n. 权衡；称重量\nvt. 权衡；考虑；称…重量\nvi. 重量为…；具有重要性；成为…的重荷；起锚",
+    "example": ""
+  },
+  {
+    "word": "fortunate",
+    "ipa": "[ˈfɔːtʃənət]",
+    "definition": "adj. 幸运的；侥幸的；吉祥的；带来幸运的",
+    "example": ""
+  },
+  {
+    "word": "Lancaster",
+    "ipa": "[ˈlæŋkəstə(r)]",
+    "definition": "n. 兰卡斯特",
+    "example": ""
+  },
+  {
+    "word": "bomber",
+    "ipa": "[ˈbɒmə(r)]",
+    "definition": "n. 轰炸机；投弹手",
+    "example": ""
+  },
+  {
+    "word": "remote",
+    "ipa": "[rɪˈməʊt]",
+    "definition": "n. 远程\nadj. 遥远的；偏僻的；疏远的",
+    "example": ""
+  },
+  {
+    "word": "Pacific",
+    "ipa": "[pəˈsɪfɪk]",
+    "definition": "adj. 和平的；温和的；平静的\nn. 太平洋\nadj. 太平洋的",
+    "example": ""
+  },
+  {
+    "word": "damage",
+    "ipa": "[ˈdæmɪdʒ]",
+    "definition": "vi. 损害；损毁\nvt. 损害，毁坏\nn. 损害；损毁；赔偿金",
+    "example": ""
+  },
+  {
+    "word": "wreck",
+    "ipa": "[rek]",
+    "definition": "n. 破坏；失事；残骸；失去健康的人\nvt. 破坏；使失事；拆毁\nvi. 失事；营救失事船只",
+    "example": ""
+  },
+  {
+    "word": "rediscover",
+    "ipa": "[ˌriːdɪˈskʌvə(r)]",
+    "definition": "vt. 重新发现；再发现",
+    "example": ""
+  },
+  {
+    "word": "aerial",
+    "ipa": "[ˈeəriəl]",
+    "definition": "n. [电讯] 天线\nadj. 空中的，航空的；空气的；空想的",
+    "example": ""
+  },
+  {
+    "word": "survey",
+    "ipa": "[ˈsɜːveɪ]",
+    "definition": "n. 调查；测量；审视；纵览\nvt. 调查；勘测；俯瞰\nvi. 测量土地",
+    "example": ""
+  },
+  {
+    "word": "rescue",
+    "ipa": "[ˈreskjuː]",
+    "definition": "n. 营救；援救；解救\nvt. 营救；援救",
+    "example": ""
+  },
+  {
+    "word": "package",
+    "ipa": "[ˈpækɪdʒ]",
+    "definition": "n. 包，包裹；套装软件，[计] 程序包\nadj. 一揽子的\nvt. 打包；将…包装",
+    "example": ""
+  },
+  {
+    "word": "enthusiast",
+    "ipa": "[ɪnˈθjuːziæst]",
+    "definition": "n. 狂热者，热心家",
+    "example": ""
+  },
+  {
+    "word": "restore",
+    "ipa": "[rɪˈstɔː(r)]",
+    "definition": "vi. 恢复；还原\nvt. 恢复；修复；归还",
+    "example": ""
+  },
+  {
+    "word": "imagine",
+    "ipa": "[ɪˈmædʒɪn]",
+    "definition": "vi. 想像；猜想；想像起来\nvt. 想像；猜想；臆断",
+    "example": ""
+  },
+  {
+    "word": "packing case",
+    "ipa": "[ˈpækɪŋ keɪs]",
+    "definition": "n. 包装箱；装货箱",
+    "example": ""
+  },
+  {
+    "word": "colony",
+    "ipa": "[ˈkɒləni]",
+    "definition": "n. 殖民地；移民队；种群；动物栖息地",
+    "example": ""
+  },
+  {
+    "word": "bee",
+    "ipa": "[biː]",
+    "definition": "n. 蜜蜂，蜂；勤劳的人",
+    "example": ""
+  },
+  {
+    "word": "hive",
+    "ipa": "[haɪv]",
+    "definition": "n. 蜂房，蜂巢；热闹的场所；熙攘喧闹的人群\nvi. 群居；入蜂房；生活在蜂房中\nvt. 入蜂箱；贮备",
+    "example": ""
+  },
+  {
+    "word": "preserve",
+    "ipa": "[prɪˈzɜːv]",
+    "definition": "n. 保护区；禁猎地；加工成的食品\nvt. 保存；保护；维持；腌；禁猎",
+    "example": ""
+  },
+  {
+    "word": "beeswax",
+    "ipa": "[ˈbiːzwæks]",
+    "definition": "n. 蜂蜡\nvt. 涂蜜蜡",
+    "example": ""
+  },
+  {
+    "word": "volcano",
+    "ipa": "[vɒlˈkeɪnəʊ]",
+    "definition": "n. 火山",
+    "example": ""
+  },
+  {
+    "word": "active",
+    "ipa": "[ˈæktɪv]",
+    "definition": "n. 主动语态；积极分子\nadj. 积极的；活跃的；主动的；有效的；现役的",
+    "example": ""
+  },
+  {
+    "word": "Kivu",
+    "ipa": "['ki:vu:]",
+    "definition": "n. 基伏（位于刚果民主共和国与卢旺达的边界的湖）",
+    "example": ""
+  },
+  {
+    "word": "Congo",
+    "ipa": "[ˈkɒŋɡəʊ]",
+    "definition": "n. 刚果（位于非洲中部）",
+    "example": ""
+  },
+  {
+    "word": "Kituro",
+    "ipa": "",
+    "definition": "无",
+    "example": ""
+  },
+  {
+    "word": "erupt",
+    "ipa": "[ɪˈrʌpt]",
+    "definition": "vi. 爆发；喷出；发疹；长牙\nvt. 爆发；喷出",
+    "example": ""
+  },
+  {
+    "word": "violently",
+    "ipa": "[ˈvaɪələntli]",
+    "definition": "adv. 猛烈地，激烈地；极端地",
+    "example": ""
+  },
+  {
+    "word": "manage",
+    "ipa": "[ˈmænɪdʒ]",
+    "definition": "vt. 管理；经营；控制；设法\nvi. 处理；应付过去",
+    "example": ""
+  },
+  {
+    "word": "brilliant",
+    "ipa": "[ˈbrɪliənt]",
+    "definition": "adj. 灿烂的，闪耀的；杰出的；有才气的；精彩的，绝妙的",
+    "example": ""
+  },
+  {
+    "word": "liquid",
+    "ipa": "[ˈlɪkwɪd]",
+    "definition": "adj. 液体的；清澈的；明亮的；易变的\nn. 液体，流体；流音",
+    "example": ""
+  },
+  {
+    "word": "escape",
+    "ipa": "[ɪˈskeɪp]",
+    "definition": "n. 逃跑；逃亡；逃走；逃跑工具或方法；野生种；泄漏\nvi. 逃脱；避开；溜走；（气体，液体等）漏出；（未受伤或只受了一点伤害而）逃脱；声音（不自觉地）由…发出\nvt. 逃避，避开，避免；被忘掉；被忽视",
+    "example": ""
+  },
+  {
+    "word": "alive",
+    "ipa": "[əˈlaɪv]",
+    "definition": "adj. 活着的；活泼的；有生气的",
+    "example": ""
+  },
+  {
+    "word": "persistent",
+    "ipa": "[pəˈsɪstənt]",
+    "definition": "adj. 固执的，坚持的；持久稳固的",
+    "example": ""
+  },
+  {
+    "word": "avoid",
+    "ipa": "[əˈvɔɪd]",
+    "definition": "vt. 避免；避开，躲避；消除",
+    "example": ""
+  },
+  {
+    "word": "insist",
+    "ipa": "[ɪnˈsɪst]",
+    "definition": "vi. 坚持，强调\nvt. 坚持，强调",
+    "example": ""
+  },
+  {
+    "word": "murder",
+    "ipa": "[ˈmɜːdə(r)]",
+    "definition": "vt. 谋杀，凶杀\nn. 谋杀，凶杀\nvi. 杀人，犯杀人罪",
+    "example": ""
+  },
+  {
+    "word": "instruct",
+    "ipa": "[ɪnˈstrʌkt]",
+    "definition": "vt. 指导；通知；命令；教授",
+    "example": ""
+  },
+  {
+    "word": "acquire",
+    "ipa": "[əˈkwaɪə(r)]",
+    "definition": "vt. 获得；取得；学到；捕获",
+    "example": ""
+  },
+  {
+    "word": "confidence",
+    "ipa": "[ˈkɒnfɪdəns]",
+    "definition": "n. 信心；信任；秘密\nadj. （美）诈骗的；骗得信任的",
+    "example": ""
+  },
+  {
+    "word": "examiner",
+    "ipa": "[ɪɡˈzæmɪnə(r)]",
+    "definition": "n. 检验员；主考人；[专利] 审查员",
+    "example": ""
+  },
+  {
+    "word": "suppose",
+    "ipa": "[səˈpəʊz]",
+    "definition": "conj. 假使…结果会怎样\nvt. 假设；认为；让（虚拟语气）；推想\nvi. 猜想；料想",
+    "example": ""
+  },
+  {
+    "word": "tap",
+    "ipa": "[tæp]",
+    "definition": "n. 水龙头；轻打\nvt. 轻敲；轻打；装上嘴子\nvi. 轻拍；轻击；轻叩\nvt. 采用，利用",
+    "example": ""
+  },
+  {
+    "word": "react",
+    "ipa": "[riˈækt]",
+    "definition": "vi. 反应；影响；反抗；起反作用\nvt. 使发生相互作用；使起化学反应",
+    "example": ""
+  },
+  {
+    "word": "brake",
+    "ipa": "[breɪk]",
+    "definition": "n. 闸，刹车；阻碍\nvt. 刹车\nvi. 刹车",
+    "example": ""
+  },
+  {
+    "word": "pedal",
+    "ipa": "[ˈped(ə)l]",
+    "definition": "n. 踏板；脚蹬子\nvi. 踩踏板；骑车\nvt. 骑（自行车）；踩……的踏板\nadj. 脚的；脚踏的",
+    "example": ""
+  },
+  {
+    "word": "mournful",
+    "ipa": "[ˈmɔːnfl]",
+    "definition": "adj. 悲哀的；令人惋惜的",
+    "example": ""
+  },
+  {
+    "word": "bullfight",
+    "ipa": "[ˈbʊlfaɪt]",
+    "definition": "n. 斗牛（流行于西班牙和南美）",
+    "example": ""
+  },
+  {
+    "word": "drunk",
+    "ipa": "[drʌŋk]",
+    "definition": "v. 喝酒（drink的过去分词）\nadj. 喝醉了的",
+    "example": ""
+  },
+  {
+    "word": "wander",
+    "ipa": "[ˈwɒndə(r)]",
+    "definition": "vi. 徘徊；漫步；迷路；离题\nvt. 游荡，漫游",
+    "example": ""
+  },
+  {
+    "word": "ring",
+    "ipa": "[rɪŋ]",
+    "definition": "n. 戒指；铃声，钟声；拳击场；环形物\nvi. 按铃；敲钟；回响；成环形\nvt. 按铃；包围；敲钟；套住",
+    "example": ""
+  },
+  {
+    "word": "unaware",
+    "ipa": "[ˌʌnəˈweə(r)]",
+    "definition": "adj. 不知道的，无意的；未察觉到的\nadv. 意外地；不知不觉地",
+    "example": ""
+  },
+  {
+    "word": "bull",
+    "ipa": "[bʊl]",
+    "definition": "n. 公牛；看好股市者；粗壮如牛的人；胡说八道；印玺\nadj. 大型的；公牛似的；雄性的\nvt. 企图抬高证券价格；吓唬；强力实现\nvi. 价格上涨；走运；猛推；吹牛",
+    "example": ""
+  },
+  {
+    "word": "matador",
+    "ipa": "[ˈmætədɔː(r)]",
+    "definition": "n. 斗牛士；王牌",
+    "example": ""
+  },
+  {
+    "word": "remark",
+    "ipa": "[rɪˈmɑːk]",
+    "definition": "n. 注意；言辞\nvt. 评论；觉察\nvi. 谈论",
+    "example": ""
+  },
+  {
+    "word": "apparently",
+    "ipa": "[əˈpærəntli]",
+    "definition": "adv. 显然地；似乎，表面上",
+    "example": ""
+  },
+  {
+    "word": "sensitive",
+    "ipa": "[ˈsensətɪv]",
+    "definition": "adj. 敏感的；感觉的；[仪] 灵敏的；感光的；易受伤害的；易受影响的\nn. 敏感的人；有灵异能力的人",
+    "example": ""
+  },
+  {
+    "word": "criticism",
+    "ipa": "[ˈkrɪtɪsɪzəm]",
+    "definition": "n. 批评；考证；苛求",
+    "example": ""
+  },
+  {
+    "word": "charge",
+    "ipa": "[tʃɑːdʒ]",
+    "definition": "n. 费用；电荷；掌管；控告；命令；负载\nvt. 使充电；使承担；指责；装载；对…索费；向…冲去\nvi. 充电；控告；索价；向前冲；记在账上",
+    "example": ""
+  },
+  {
+    "word": "clumsily",
+    "ipa": "[ˈklʌmzɪli]",
+    "definition": "adv. 笨拙地；粗陋地",
+    "example": ""
+  },
+  {
+    "word": "bow",
+    "ipa": "[bəʊ]",
+    "definition": "n. 弓；鞠躬；船首\nadj. 弯曲的\nvi. 鞠躬；弯腰\nvt. 鞠躬；弯腰",
+    "example": ""
+  },
+  {
+    "word": "safety",
+    "ipa": "[ˈseɪfti]",
+    "definition": "n. 安全；保险；安全设备；保险装置；安打",
+    "example": ""
+  },
+  {
+    "word": "sympathetically",
+    "ipa": "[ˌsɪmpəˈθetɪkli]",
+    "definition": "adv. 悲怜地，怜悯地；富有同情心地",
+    "example": ""
+  },
+  {
+    "word": "parliament",
+    "ipa": "[ˈpɑːləmənt]",
+    "definition": "n. 议会，国会",
+    "example": ""
+  },
+  {
+    "word": "erect",
+    "ipa": "[ɪˈrekt]",
+    "definition": "vt. 使竖立；建造；安装\nadj. 竖立的；笔直的；因性刺激而勃起的\nvi. 直立；勃起",
+    "example": ""
+  },
+  {
+    "word": "accurate",
+    "ipa": "[ˈækjərət]",
+    "definition": "adj. 精确的",
+    "example": ""
+  },
+  {
+    "word": "official",
+    "ipa": "[əˈfɪʃ(ə)l]",
+    "definition": "adj. 官方的；正式的；公务的\nn. 官员；公务员；高级职员",
+    "example": ""
+  },
+  {
+    "word": "Greenwich",
+    "ipa": "",
+    "definition": "n. 格林威治（英国伦敦东南一市镇， 从前皇家天文台的所在地； 通过该天文台的经线被定为本初子午线）",
+    "example": ""
+  },
+  {
+    "word": "observatory",
+    "ipa": "[əbˈzɜːvətri]",
+    "definition": "n. 天文台；气象台；瞭望台",
+    "example": ""
+  },
+  {
+    "word": "check",
+    "ipa": "[tʃek]",
+    "definition": "n. <美>支票；制止，抑制；检验，核对\nvi. 核实，查核；中止；打勾；[象棋]将一军\nvt. 检查，核对；制止，抑制；在…上打勾",
+    "example": ""
+  },
+  {
+    "word": "microphone",
+    "ipa": "[ˈmaɪkrəfəʊn]",
+    "definition": "n. 扩音器，麦克风",
+    "example": ""
+  },
+  {
+    "word": "tower",
+    "ipa": "[ˈtaʊə(r)]",
+    "definition": "n. 塔；高楼；堡垒\nvi. 高耸；超越",
+    "example": ""
+  },
+  {
+    "word": "racing",
+    "ipa": "[ˈreɪsɪŋ]",
+    "definition": "n. 赛马；竞赛\nadj. 比赛的\nvi. 赛马（race的ing形式）；竞赛",
+    "example": ""
+  },
+  {
+    "word": "per",
+    "ipa": "[pə(r)]",
+    "definition": "prep. 每；经；按照；每一",
+    "example": ""
+  },
+  {
+    "word": "Utah",
+    "ipa": "[ˈjuːtɑː]",
+    "definition": "n. 美国犹他州",
+    "example": ""
+  },
+  {
+    "word": "horsepower",
+    "ipa": "[ˈhɔːspaʊə(r)]",
+    "definition": "n. 马力（功率单位）",
+    "example": ""
+  },
+  {
+    "word": "burst",
+    "ipa": "[bɜːst]",
+    "definition": "n. 爆发，突发；爆炸\nvt. 爆发，突发；爆炸\nvi. 爆发，突发；爆炸",
+    "example": ""
+  },
+  {
+    "word": "average",
+    "ipa": "[ˈævərɪdʒ]",
+    "definition": "n. 平均；平均数；海损\nadj. 平均的；普通的；通常的\nvt. 算出…的平均数；将…平均分配；使…平衡\nvi. 平均为；呈中间色",
+    "example": ""
+  },
+  {
+    "word": "footstep",
+    "ipa": "[ˈfʊtstep]",
+    "definition": "n. 脚步；脚步声；足迹",
+    "example": ""
+  },
+  {
+    "word": "record-holder",
+    "ipa": "[ˈrekɔːd həʊldə(r)]",
+    "definition": "n. 记录保持者；保持最高记录者",
+    "example": ""
+  },
+  {
+    "word": "truant",
+    "ipa": "[ˈtruːənt]",
+    "definition": "n. 旷课者；懒惰的人\nadj. 旷课的；偷懒的\nvi. 逃学；偷懒，逃避责任",
+    "example": ""
+  },
+  {
+    "word": "unimaginative",
+    "ipa": "[ˌʌnɪˈmædʒɪnətɪv]",
+    "definition": "adj. 缺乏想象力的；无趣的",
+    "example": ""
+  },
+  {
+    "word": "shame",
+    "ipa": "[ʃeɪm]",
+    "definition": "n. 羞耻，羞愧；憾事，带来耻辱的人\nvt. 使丢脸，使羞愧",
+    "example": ""
+  },
+  {
+    "word": "hitchhike",
+    "ipa": "[ˈhɪtʃhaɪk]",
+    "definition": "n. 搭便车（旅行）\nvt. 要求（搭便车）\nvi. 搭便车",
+    "example": ""
+  },
+  {
+    "word": "meantime",
+    "ipa": "[ˈmiːntaɪm]",
+    "definition": "n. 其时，其间\nadv. 同时；其间",
+    "example": ""
+  },
+  {
+    "word": "lorry",
+    "ipa": "[ˈlɒri]",
+    "definition": "n. （英）卡车；[车辆] 货车；运料车",
+    "example": ""
+  },
+  {
+    "word": "border",
+    "ipa": "[ˈbɔːdə(r)]",
+    "definition": "n. 边境；边界；国界\nvt. 接近；与…接壤；在…上镶边\nvi. 接界；近似",
+    "example": ""
+  },
+  {
+    "word": "evade",
+    "ipa": "[ɪˈveɪd]",
+    "definition": "vt. 逃避；规避；逃脱\nvi. 逃避；规避；逃脱",
+    "example": ""
+  },
+  {
+    "word": "limelight",
+    "ipa": "[ˈlaɪmlaɪt]",
+    "definition": "n. 石灰光，石灰光灯；众人注目的中心\nvt. 使显露头角，使受到注目",
+    "example": ""
+  },
+  {
+    "word": "precaution",
+    "ipa": "[prɪˈkɔːʃ(ə)n]",
+    "definition": "n. 预防，警惕；预防措施\nvt. 警惕；预先警告",
+    "example": ""
+  },
+  {
+    "word": "fan",
+    "ipa": "[fæn]",
+    "definition": "n. 迷；风扇；爱好者\nvt. 煽动；刺激；吹拂\nvi. 成扇形散开；飘动",
+    "example": ""
+  },
+  {
+    "word": "shady",
+    "ipa": "[ˈʃeɪdi]",
+    "definition": "adj. 成荫的；阴暗的；名声不好的",
+    "example": ""
+  },
+  {
+    "word": "sheriff",
+    "ipa": "[ˈʃerɪf]",
+    "definition": "n. 州长；郡治安官；执行吏",
+    "example": ""
+  },
+  {
+    "word": "notice",
+    "ipa": "[ˈnəʊtɪs]",
+    "definition": "n. 通知，布告；注意；公告\nvt. 通知；注意到；留心\nvi. 引起注意",
+    "example": ""
+  },
+  {
+    "word": "sneer",
+    "ipa": "[snɪə(r)]",
+    "definition": "vi. 嘲笑，冷笑\nvt. 嘲笑，冷笑\nn. 嘲笑，冷笑",
+    "example": ""
+  },
+  {
+    "word": "thick",
+    "ipa": "[θɪk]",
+    "definition": "n. 最拥挤部分；活动最多部分；事物的粗大浓密部分\nadj. 厚的；浓的；粗大的\nadv. 密集地；浓浓地，厚厚地",
+    "example": ""
+  },
+  {
+    "word": "signal",
+    "ipa": "[ˈsɪɡnəl]",
+    "definition": "n. 信号；暗号；导火线\nadj. 显著的；作为信号的\nvt. 标志；用信号通知；表示\nvi. 发信号",
+    "example": ""
+  },
+  {
+    "word": "stamp",
+    "ipa": "[stæmp]",
+    "definition": "n. 邮票；印记；标志；跺脚\nvt. 铭记；标出；盖章于…；贴邮票于…；用脚踩踏\nvi. 跺脚；捣碎；毁掉",
+    "example": ""
+  },
+  {
+    "word": "helicopter",
+    "ipa": "[ˈhelɪkɒptə(r)]",
+    "definition": "n. [航] 直升飞机\nvt. 由直升机运送\nvi. [航] 乘直升飞机",
+    "example": ""
+  },
+  {
+    "word": "scene",
+    "ipa": "[siːn]",
+    "definition": "n. 场面；情景；景象；事件",
+    "example": ""
+  },
+  {
+    "word": "survivor",
+    "ipa": "[səˈvaɪvə(r)]",
+    "definition": "n. 幸存者；生还者；残存物",
+    "example": ""
+  },
+  {
+    "word": "fool",
+    "ipa": "[fuːl]",
+    "definition": "n. 傻瓜；愚人；受骗者\nvt. 欺骗，愚弄\nadj. 傻的\nvi. 欺骗；开玩笑；戏弄",
+    "example": ""
+  },
+  {
+    "word": "bulletin",
+    "ipa": "[ˈbʊlətɪn]",
+    "definition": "n. 公告，公报\nvt. 公布，公告",
+    "example": ""
+  },
+  {
+    "word": "announcer",
+    "ipa": "[əˈnaʊnsə(r)]",
+    "definition": "n. [广播] 广播员；宣告者",
+    "example": ""
+  },
+  {
+    "word": "macaroni",
+    "ipa": "[ˌmækəˈrəʊni]",
+    "definition": "n. 通心粉；通心面条；纨绔子弟",
+    "example": ""
+  },
+  {
+    "word": "leading",
+    "ipa": "[ˈliːdɪŋ]",
+    "definition": "adj. 领导的；主要的\nn. 领导；铅板；行距\nv. 领导（lead的ing形式）",
+    "example": ""
+  },
+  {
+    "word": "grower",
+    "ipa": "[ˈɡrəʊə(r)]",
+    "definition": "n. 栽培者；生长物",
+    "example": ""
+  },
+  {
+    "word": "splendid",
+    "ipa": "[ˈsplendɪd]",
+    "definition": "adj. 辉煌的；灿烂的；极好的；杰出的",
+    "example": ""
+  },
+  {
+    "word": "stalk",
+    "ipa": "[stɔːk]",
+    "definition": "n. （植物的）茎，秆；（支持叶子、果实和花的）梗，柄；追踪；高视阔步\nvt. 追踪，潜近；高视阔步\nvi. 高视阔步地走；潜近，偷偷接近",
+    "example": ""
+  },
+  {
+    "word": "gather",
+    "ipa": "[ˈɡæðə(r)]",
+    "definition": "n. 聚集；衣褶；收获量\nvt. 收集；收割；使…聚集；使…皱起\nvi. 聚集；化脓；皱起",
+    "example": ""
+  },
+  {
+    "word": "thresh",
+    "ipa": "[θreʃ]",
+    "definition": "vt. 推敲；打谷；反复做\nvi. 打；打谷；颠簸\nn. 打谷",
+    "example": ""
+  },
+  {
+    "word": "process",
+    "ipa": "[prəˈses; ˈprəʊses]",
+    "definition": "n. 过程，进行；方法，步骤；作用；程序；推移\nadj. 经过特殊加工（或处理）的\nvt. 处理；加工\nvi. 列队前进",
+    "example": ""
+  },
+  {
+    "word": "Signor",
+    "ipa": "[ˈsiːnjɔː(r)]",
+    "definition": "n. 先生（意大利用语）；绅士；已婚男性",
+    "example": ""
+  },
+  {
+    "word": "present",
+    "ipa": "[ˈprez(ə)nt]",
+    "definition": "n. 现在；礼物；瞄准\nadj. 现在的；出席的\nvt. 提出；介绍；呈现；赠送\nvi. 举枪瞄准",
+    "example": ""
+  },
+  {
+    "word": "champion",
+    "ipa": "[ˈtʃæmpiən]",
+    "definition": "n. 冠军；拥护者；战士\nadj. 优胜的；第一流的\nvt. 支持；拥护",
+    "example": ""
+  },
+  {
+    "word": "studio",
+    "ipa": "[ˈstjuːdiəʊ]",
+    "definition": "n. 工作室；[广播][电视] 演播室；画室；电影制片厂",
+    "example": ""
+  },
+  {
+    "word": "mummy",
+    "ipa": "[ˈmʌmi]",
+    "definition": "n. 妈妈；木乃伊；干瘪的人",
+    "example": ""
+  },
+  {
+    "word": "Egyptian",
+    "ipa": "[iˈdʒɪpʃn]",
+    "definition": "n. 埃及人；古代埃及语\nadj. 埃及的；埃及人的",
+    "example": ""
+  },
+  {
+    "word": "temple",
+    "ipa": "[ˈtemp(ə)l]",
+    "definition": "n. 庙宇；寺院；神殿；太阳穴",
+    "example": ""
+  },
+  {
+    "word": "mark",
+    "ipa": "[mɑːk]",
+    "definition": "n. 标志；马克；符号；痕迹；分数\nvi. 作记号\nvt. .标志；做标记于；打分数\nn. . 标志；做标记于；打分数",
+    "example": ""
+  },
+  {
+    "word": "plate",
+    "ipa": "[pleɪt]",
+    "definition": "n. 碟；金属板；金属牌；感光底片\nvt. 电镀；给…装甲",
+    "example": ""
+  },
+  {
+    "word": "disease",
+    "ipa": "[dɪˈziːz]",
+    "definition": "n. 病，[医] 疾病；弊病\nvt. 传染；使…有病",
+    "example": ""
+  },
+  {
+    "word": "last",
+    "ipa": "[lɑːst]",
+    "definition": "n. 末尾，最后；上个；鞋楦（做鞋的模型）\nadj. 最后的；最近的，最新的；仅剩的；最不可能…的\nvi. 持续；维持，够用；持久\nvt. 度过，拖过；使维持\nadv. 最后地；上次，最近；最后一点",
+    "example": ""
+  },
+  {
+    "word": "prove",
+    "ipa": "[pruːv]",
+    "definition": "vi. 证明是\nvt. 证明；检验；显示",
+    "example": ""
+  },
+  {
+    "word": "resin",
+    "ipa": "[ˈrezɪn]",
+    "definition": "n. 树脂；松香\nvt. 涂树脂；用树脂处理",
+    "example": ""
+  },
+  {
+    "word": "skin",
+    "ipa": "[skɪn]",
+    "definition": "n. 皮肤；外皮\nvt. 剥皮\nvi. 愈合；长皮",
+    "example": ""
+  },
+  {
+    "word": "section",
+    "ipa": "[ˈsekʃn]",
+    "definition": "n. 截面；部分；部门；地区；章节\nvt. 把…分段；将…切片；对…进行划分\nvi. 被切割成片；被分成部分",
+    "example": ""
+  },
+  {
+    "word": "figure",
+    "ipa": "[ˈfɪɡə(r)]",
+    "definition": "n. 数字；人物；图形；价格；（人的）体形；画像\nvt. 计算；认为；描绘；象征\nvi. 计算；出现；扮演角色",
+    "example": ""
+  },
+  {
+    "word": "normally",
+    "ipa": "[ˈnɔːməli]",
+    "definition": "adv. 正常地；通常地，一般地",
+    "example": ""
+  },
+  {
+    "word": "survive",
+    "ipa": "[səˈvaɪv]",
+    "definition": "vi. 幸存；活下来\nvt. 幸存；生还；幸免于；比...活得长",
+    "example": ""
+  },
+  {
+    "word": "entitle",
+    "ipa": "[ɪnˈtaɪt(ə)l]",
+    "definition": "vt. 称做…；定名为…；给…称号；使…有权利",
+    "example": ""
+  },
+  {
+    "word": "calm",
+    "ipa": "[kɑːm]",
+    "definition": "n. 风平浪静\nadj. 静的，平静的；沉着的\nvt. 使平静；使镇定\nvi. 平静下来；镇定下来",
+    "example": ""
+  },
+  {
+    "word": "nerve",
+    "ipa": "[nɜːv]",
+    "definition": "n. 神经；勇气；[植] 叶脉\nvt. 鼓起勇气",
+    "example": ""
+  },
+  {
+    "word": "concentration",
+    "ipa": "[ˌkɒns(ə)nˈtreɪʃ(ə)n]",
+    "definition": "n. 浓度；集中；浓缩；专心；集合",
+    "example": ""
+  },
+  {
+    "word": "suffer",
+    "ipa": "[ˈsʌfə(r)]",
+    "definition": "vi. 遭受，忍受；受痛苦；经验；受损害\nvt. 遭受；忍受；经历",
+    "example": ""
+  },
+  {
+    "word": "symptom",
+    "ipa": "[ˈsɪmptəm]",
+    "definition": "n. [临床] 症状；征兆",
+    "example": ""
+  },
+  {
+    "word": "temper",
+    "ipa": "[ˈtempə(r)]",
+    "definition": "n. 脾气；（钢等）回火；性情；倾向\nvt. 使回火；锻炼；调和；使缓和\nvi. 回火；调和",
+    "example": ""
+  },
+  {
+    "word": "appetite",
+    "ipa": "[ˈæpɪtaɪt]",
+    "definition": "n. 食欲；嗜好",
+    "example": ""
+  },
+  {
+    "word": "produce",
+    "ipa": "[prəˈdjuːs]",
+    "definition": "n. 农产品，产品\nvt. 生产；引起；创作；生育，繁殖\nvi. 生产，创作",
+    "example": ""
+  },
+  {
+    "word": "urge",
+    "ipa": "[ɜːdʒ]",
+    "definition": "n. 强烈的欲望，迫切要求；推动力\nvi. 强烈要求\nvt. 力劝，催促；驱策，推进",
+    "example": ""
+  },
+  {
+    "word": "satisfaction",
+    "ipa": "[ˌsætɪsˈfækʃn]",
+    "definition": "n. 满意，满足；赔偿；乐事；赎罪",
+    "example": ""
+  },
+  {
+    "word": "delighted",
+    "ipa": "[dɪˈlaɪtɪd]",
+    "definition": "adj. 高兴的；欣喜的\nv. 使…兴高采烈；感到快乐（delight的过去分词）",
+    "example": ""
+  },
+  {
+    "word": "parent",
+    "ipa": "[ˈpeərənt]",
+    "definition": "n. 父亲（或母亲）；父母亲；根源",
+    "example": ""
+  },
+  {
+    "word": "flight attendant",
+    "ipa": "[ˈflaɪt əˈtendənt]",
+    "definition": "n. 空中乘务员；机上乘务员",
+    "example": ""
+  },
+  {
+    "word": "frightened",
+    "ipa": "[ˈfraɪtnd]",
+    "definition": "v. 害怕；使吃惊；吓走（frighten的过去分词）\nadj. 害怕的；受惊的；受恐吓的",
+    "example": ""
+  },
+  {
+    "word": "curious",
+    "ipa": "[ˈkjʊəriəs]",
+    "definition": "adj. 好奇的，有求知欲的；古怪的；爱挑剔的",
+    "example": ""
+  },
+  {
+    "word": "bomb",
+    "ipa": "[bɒm]",
+    "definition": "n. 炸弹\nvt. 轰炸，投弹于\nvi. 轰炸，投弹；失败",
+    "example": ""
+  },
+  {
+    "word": "plant",
+    "ipa": "[plɑːnt]",
+    "definition": "n. 工厂，车间；植物；设备；庄稼\nvt. 种植；培养；栽培；安置\nvi. 种植",
+    "example": ""
+  },
+  {
+    "word": "palace",
+    "ipa": "[ˈpæləs]",
+    "definition": "n. 宫殿；宅邸；豪华住宅",
+    "example": ""
+  },
+  {
+    "word": "extraordinary",
+    "ipa": "[ɪkˈstrɔːdnri]",
+    "definition": "adj. 非凡的；特别的；离奇的；临时的；特派的",
+    "example": ""
+  },
+  {
+    "word": "exhibition",
+    "ipa": "[ˌeksɪˈbɪʃ(ə)n]",
+    "definition": "n. 展览，显示；展览会；展览品",
+    "example": ""
+  },
+  {
+    "word": "iron",
+    "ipa": "[ˈaɪən]",
+    "definition": "n. 熨斗；烙铁；坚强\nadj. 铁的；残酷的；刚强的\nvt. 熨；用铁铸成\nvi. 熨衣；烫平",
+    "example": ""
+  },
+  {
+    "word": "various",
+    "ipa": "[ˈveəriəs]",
+    "definition": "adj. 各种各样的；多方面的",
+    "example": ""
+  },
+  {
+    "word": "machinery",
+    "ipa": "[məˈʃiːnəri]",
+    "definition": "n. 机械；机器；机构；机械装置",
+    "example": ""
+  },
+  {
+    "word": "display",
+    "ipa": "[dɪˈspleɪ]",
+    "definition": "n. 显示；炫耀\nvt. 显示；表现；陈列\nadj. 展览的；陈列用的\nvi. [动] 作炫耀行为",
+    "example": ""
+  },
+  {
+    "word": "steam",
+    "ipa": "[stiːm]",
+    "definition": "n. 蒸汽；精力\nadj. 蒸汽的\nvt. 蒸，散发；用蒸汽处理\nvi. 蒸，冒水汽",
+    "example": ""
+  },
+  {
+    "word": "profit",
+    "ipa": "[ˈprɒfɪt]",
+    "definition": "n. 利润；利益\nvt. 有益于\nvi. 获利；有益",
+    "example": ""
+  },
+  {
+    "word": "college",
+    "ipa": "[ˈkɒlɪdʒ]",
+    "definition": "n. 大学；学院；学会",
+    "example": ""
+  },
+  {
+    "word": "prisoner",
+    "ipa": "[ˈprɪz(ə)nə(r)]",
+    "definition": "n. 囚犯，犯人；俘虏；刑事被告",
+    "example": ""
+  },
+  {
+    "word": "bush",
+    "ipa": "[bʊʃ]",
+    "definition": "n. 灌木；矮树丛\nadj. 如灌木般长得低矮的；粗野的\nvt. 以灌木装饰；使…精疲力竭\nvi. 丛生；浓密地生长",
+    "example": ""
+  },
+  {
+    "word": "rapidly",
+    "ipa": "[ˈræpɪdli]",
+    "definition": "adv. 迅速地；很快地；立即",
+    "example": ""
+  },
+  {
+    "word": "uniform",
+    "ipa": "[ˈjuːnɪfɔːm]",
+    "definition": "n. 制服\nadj. 统一的；一致的；相同的；均衡的；始终如一的\nvt. 使穿制服；使成一样",
+    "example": ""
+  },
+  {
+    "word": "rifle",
+    "ipa": "[ˈraɪfl]",
+    "definition": "n. 步枪；来复枪\nvt. 用步枪射击；抢夺；偷走",
+    "example": ""
+  },
+  {
+    "word": "shoulder",
+    "ipa": "[ˈʃəʊldə(r)]",
+    "definition": "n. 肩，肩膀；肩部\nvi. 用肩推挤，用肩顶\nvt. 肩负，承担",
+    "example": ""
+  },
+  {
+    "word": "march",
+    "ipa": "[mɑːtʃ]",
+    "definition": "n. 三月",
+    "example": ""
+  },
+  {
+    "word": "boldly",
+    "ipa": "[ˈbəʊldli]",
+    "definition": "adv. 大胆地；冒失地；显眼地",
+    "example": ""
+  },
+  {
+    "word": "blaze",
+    "ipa": "[bleɪz]",
+    "definition": "n. 火焰，烈火；光辉；情感爆发\nvt. 在树皮上刻路标；公开宣布\nvi. 燃烧；照耀，发光；激发",
+    "example": ""
+  },
+  {
+    "word": "salute",
+    "ipa": "[səˈluːt]",
+    "definition": "n. 致敬，欢迎；敬礼\nvt. 行礼致敬，欢迎\nvi. 致意，打招呼；行礼",
+    "example": ""
+  },
+  {
+    "word": "elderly",
+    "ipa": "[ˈeldəli]",
+    "definition": "adj. 上了年纪的；过了中年的；稍老的",
+    "example": ""
+  },
+  {
+    "word": "grey",
+    "ipa": "[ɡreɪ]",
+    "definition": "n. 灰色\nadj. 灰色的；灰白的\nvt. 使变成灰色；使变老\nvi. 变成灰色；老化",
+    "example": ""
+  },
+  {
+    "word": "sharp",
+    "ipa": "[ʃɑːp]",
+    "definition": "n. 尖头；骗子；内行\nadj. 急剧的；锋利的；强烈的；敏捷的；刺耳的\nvt. 磨快；把音调升高\nadv. 急剧地；锐利地；突然地\nvi. 打扮；升音演奏",
+    "example": ""
+  },
+  {
+    "word": "blow",
+    "ipa": "[bləʊ]",
+    "definition": "n. 吹；打击；殴打\nvt. 风吹\nvi. 风吹；喘气",
+    "example": ""
+  },
+  {
+    "word": "monster",
+    "ipa": "[ˈmɒnstə(r)]",
+    "definition": "n. 怪物；巨人，巨兽；残忍的人\nadj. 巨大的，庞大的",
+    "example": ""
+  },
+  {
+    "word": "sailor",
+    "ipa": "[ˈseɪlə(r)]",
+    "definition": "n. 水手，海员；乘船者",
+    "example": ""
+  },
+  {
+    "word": "sight",
+    "ipa": "[saɪt]",
+    "definition": "n. 视力；景象；眼界；见解\nadj. 见票即付的；即席的\nvt. 看见；瞄准\nvi. 瞄准；观看",
+    "example": ""
+  },
+  {
+    "word": "creature",
+    "ipa": "[ˈkriːtʃə(r)]",
+    "definition": "n. 动物，生物；人；创造物",
+    "example": ""
+  },
+  {
+    "word": "peculiar",
+    "ipa": "[pɪˈkjuːliə(r)]",
+    "definition": "n. 特权；特有财产\nadj. 特殊的；独特的；奇怪的；罕见的",
+    "example": ""
+  },
+  {
+    "word": "shining",
+    "ipa": "[ˈʃaɪnɪŋ]",
+    "definition": "v. 闪烁（shine的ing形式）；发亮\nadj. 光亮的；华丽的",
+    "example": ""
+  },
+  {
+    "word": "oarfish",
+    "ipa": "[ˈɔːfɪʃ]",
+    "definition": "n. 皇带鱼",
+    "example": ""
+  },
+  {
+    "word": "election",
+    "ipa": "[ɪˈlekʃ(ə)n]",
+    "definition": "n. 选举；当选；选择权；上帝的选拔",
+    "example": ""
+  },
+  {
+    "word": "former",
+    "ipa": "[ˈfɔːmə(r)]",
+    "definition": "n. 模型，样板；起形成作用的人\nadj. 从前的，前者的；前任的",
+    "example": ""
+  },
+  {
+    "word": "defeat",
+    "ipa": "[dɪˈfiːt]",
+    "definition": "n. 失败的事实；击败的行为\nvt. 击败，战胜；挫败；使…失败",
+    "example": ""
+  },
+  {
+    "word": "fanatical",
+    "ipa": "[fəˈnætɪkl]",
+    "definition": "adj. 狂热的",
+    "example": ""
+  },
+  {
+    "word": "opponent",
+    "ipa": "[əˈpəʊnənt]",
+    "definition": "n. 对手；反对者；敌手\nadj. 对立的；敌对的",
+    "example": ""
+  },
+  {
+    "word": "radical",
+    "ipa": "[ˈrædɪk(ə)l]",
+    "definition": "n. 基础；激进分子；[物化] 原子团；[数] 根数\nadj. 激进的；根本的；彻底的",
+    "example": ""
+  },
+  {
+    "word": "progressive",
+    "ipa": "[prəˈɡresɪv]",
+    "definition": "n. 改革论者；进步分子\nadj. 进步的；先进的",
+    "example": ""
+  },
+  {
+    "word": "ex-",
+    "ipa": "[eks]",
+    "definition": "prep. 从；外；离；除；超过；以前的（附在名词前，用于带连词号的复合词）",
+    "example": ""
+  },
+  {
+    "word": "suspicious",
+    "ipa": "[səˈspɪʃəs]",
+    "definition": "adj. 可疑的；怀疑的；多疑的",
+    "example": ""
+  },
+  {
+    "word": "strike",
+    "ipa": "[straɪk]",
+    "definition": "n. 罢工；打击；殴打\nvi. 打，打击；罢工；敲，敲击；抓；打动；穿透\nvt. 打，击；罢工；撞击，冲击；侵袭；打动；到达",
+    "example": ""
+  },
+  {
+    "word": "busman",
+    "ipa": "[ˈbʌsmən]",
+    "definition": "n. 公共汽车司机；售票员",
+    "example": ""
+  },
+  {
+    "word": "state",
+    "ipa": "[steɪt]",
+    "definition": "n. 国家；州；情形\nadj. 国家的；州的；正式的\nvt. 规定；声明；陈述",
+    "example": ""
+  },
+  {
+    "word": "agreement",
+    "ipa": "[əˈɡriːmənt]",
+    "definition": "n. 协议；同意，一致",
+    "example": ""
+  },
+  {
+    "word": "relieve",
+    "ipa": "[rɪˈliːv]",
+    "definition": "vt. 解除，减轻；使不单调乏味；换…的班；解围；使放心",
+    "example": ""
+  },
+  {
+    "word": "pressure",
+    "ipa": "[ˈpreʃə(r)]",
+    "definition": "n. 压力；压迫，[物] 压强\nvt. 迫使；密封；使……增压",
+    "example": ""
+  },
+  {
+    "word": "extent",
+    "ipa": "[ɪkˈstent]",
+    "definition": "n. 程度；范围；长度",
+    "example": ""
+  },
+  {
+    "word": "volunteer",
+    "ipa": "[ˌvɒlənˈtɪə(r)]",
+    "definition": "n. 志愿者；志愿兵\nadj. 志愿的\nvt. 自愿\nvi. 自愿",
+    "example": ""
+  },
+  {
+    "word": "gratitude",
+    "ipa": "[ˈɡrætɪtjuːd]",
+    "definition": "n. 感谢（的心情）；感激",
+    "example": ""
+  },
+  {
+    "word": "the Press",
+    "ipa": "[ðə pres]",
+    "definition": "新闻界；报界；报刊",
+    "example": ""
+  },
+  {
+    "word": "object",
+    "ipa": "[ˈɒbdʒɪkt; əbˈdʒekt]",
+    "definition": "n. 目标；物体；客体；宾语\nvt. 提出…作为反对的理由\nvi. 反对；拒绝",
+    "example": ""
+  },
+  {
+    "word": "inform",
+    "ipa": "[ɪnˈfɔːm]",
+    "definition": "vi. 告发；告密\nvt. 通知；告诉；报告",
+    "example": ""
+  },
+  {
+    "word": "headmaster",
+    "ipa": "[ˌhedˈmɑːstə(r)]",
+    "definition": "n. 校长",
+    "example": ""
+  },
+  {
+    "word": "contribute",
+    "ipa": "[kənˈtrɪbjuːt]",
+    "definition": "vt. 贡献，出力；投稿；捐献\nvi. 贡献，出力；投稿；捐献\n[ 过去式 contributed 过去分词 contributed 现在分词 contributing ]",
+    "example": ""
+  },
+  {
+    "word": "gift",
+    "ipa": "[ɡɪft]",
+    "definition": "n. 礼物；天赋；赠品\nvt. 赋予；向…赠送",
+    "example": ""
+  },
+  {
+    "word": "album",
+    "ipa": "[ˈælbəm]",
+    "definition": "n. 相簿；唱片集；集邮簿；签名纪念册",
+    "example": ""
+  },
+  {
+    "word": "patience",
+    "ipa": "[ˈpeɪʃ(ə)ns]",
+    "definition": "n. 耐性，耐心；忍耐，容忍",
+    "example": ""
+  },
+  {
+    "word": "encouragement",
+    "ipa": "[ɪnˈkʌrɪdʒmənt]",
+    "definition": "n. 鼓励",
+    "example": ""
+  },
+  {
+    "word": "farewell",
+    "ipa": "[ˌfeəˈwel]",
+    "definition": "n. 告别，辞别；再见；再会\nadj. 告别的\nint. 别了！（常含有永别或不容易再见面的意思）；再会！",
+    "example": ""
+  },
+  {
+    "word": "honour",
+    "ipa": "[ˈɒnə(r)]",
+    "definition": "n. 荣誉；尊敬；勋章\nvt. 尊敬；[金融] 承兑；承兑远期票据",
+    "example": ""
+  },
+  {
+    "word": "coincidence",
+    "ipa": "[kəʊˈɪnsɪdəns]",
+    "definition": "n. 巧合；一致；同时发生",
+    "example": ""
+  },
+  {
+    "word": "total",
+    "ipa": "[ˈtəʊt(ə)l]",
+    "definition": "n. 总数，合计\nadj. 全部的；完全的；整个的\nvt. 总数达\nvi. 合计",
+    "example": ""
+  },
+  {
+    "word": "devote",
+    "ipa": "[dɪˈvəʊt]",
+    "definition": "vt. 致力于；奉献",
+    "example": ""
+  },
+  {
+    "word": "gardening",
+    "ipa": "[ˈɡɑːdnɪŋ]",
+    "definition": "n. 园艺；园林工人的工作",
+    "example": ""
+  },
+  {
+    "word": "hobby",
+    "ipa": "[ˈhɒbi]",
+    "definition": "n. 嗜好；业余爱好",
+    "example": ""
+  },
+  {
+    "word": "swing",
+    "ipa": "[swɪŋ]",
+    "definition": "n. 摇摆；摆动；秋千；音律；涨落\nadj. 旋转的；悬挂的；强节奏爵士音乐的\nvt. 使旋转；挥舞；悬挂\nvi. 摇摆；转向；悬挂；大摇大摆地行走",
+    "example": ""
+  },
+  {
+    "word": "speedboat",
+    "ipa": "[ˈspiːdbəʊt]",
+    "definition": "n. 快艇；高速游艇",
+    "example": ""
+  },
+  {
+    "word": "desperately",
+    "ipa": "[ˈdespərətli]",
+    "definition": "adv. 拼命地；绝望地；极度地",
+    "example": ""
+  },
+  {
+    "word": "companion",
+    "ipa": "[kəmˈpænjən]",
+    "definition": "n. 同伴；朋友；指南；手册\nvt. 陪伴",
+    "example": ""
+  },
+  {
+    "word": "water ski",
+    "ipa": "",
+    "definition": "na. 【体】(用汽艇拖的)滑水橇",
+    "example": ""
+  },
+  {
+    "word": "buoy",
+    "ipa": "[bɔɪ]",
+    "definition": "n. [水运] 浮标；浮筒；救生圈；航标\nvt. 使浮起；支撑；鼓励",
+    "example": ""
+  },
+  {
+    "word": "dismay",
+    "ipa": "[dɪsˈmeɪ]",
+    "definition": "n. 沮丧，灰心；惊慌\nvt. 使沮丧；使惊慌",
+    "example": ""
+  },
+  {
+    "word": "tremendous",
+    "ipa": "[trəˈmendəs]",
+    "definition": "adj. 极大的，巨大的；惊人的；极好的",
+    "example": ""
+  },
+  {
+    "word": "petrol",
+    "ipa": "[ˈpetrəl]",
+    "definition": "n. （英）汽油",
+    "example": ""
+  },
+  {
+    "word": "drift",
+    "ipa": "[drɪft]",
+    "definition": "n. 漂流，漂移；趋势；漂流物\nvi. 漂流，漂移；漂泊\nvt. 使…漂流；使…受风吹积",
+    "example": ""
+  },
+  {
+    "word": "gently",
+    "ipa": "[ˈdʒentli]",
+    "definition": "adv. 轻轻地；温柔地，温和地",
+    "example": ""
+  },
+  {
+    "word": "alibi",
+    "ipa": "[ˈæləbaɪ]",
+    "definition": "n. 不在场证明或辩解；托辞\nv. 辩解；找托辞开脱",
+    "example": ""
+  },
+  {
+    "word": "commit",
+    "ipa": "[kəˈmɪt]",
+    "definition": "vt. 犯罪，做错事；把...交托给；指派…作战；使…承担义务",
+    "example": ""
+  },
+  {
+    "word": "inspector",
+    "ipa": "[ɪnˈspektə(r)]",
+    "definition": "n. 检查员；巡视员",
+    "example": ""
+  },
+  {
+    "word": "employer",
+    "ipa": "[ɪmˈplɔɪə(r)]",
+    "definition": "n. 雇主，老板",
+    "example": ""
+  },
+  {
+    "word": "confirm",
+    "ipa": "[kənˈfɜːm]",
+    "definition": "vt. 确认；确定；证实；批准；使巩固",
+    "example": ""
+  },
+  {
+    "word": "suggest",
+    "ipa": "[səˈdʒest]",
+    "definition": "vt. 提议，建议；启发；使人想起；显示；暗示",
+    "example": ""
+  },
+  {
+    "word": "truth",
+    "ipa": "[truːθ]",
+    "definition": "n. 真理；事实；诚实；实质",
+    "example": ""
+  },
+  {
+    "word": "trap",
+    "ipa": "[træp]",
+    "definition": "n. 陷阱；圈套；[建] 存水湾\nvt. 诱捕；使…受限制；使…陷入困境\nvi. 设陷阱",
+    "example": ""
+  },
+  {
+    "word": "surface",
+    "ipa": "[ˈsɜːfɪs]",
+    "definition": "n. 表面；表层；外观\nadj. 表面的，肤浅的\nvt. 使浮出水面；使成平面\nvi. 浮出水面",
+    "example": ""
+  },
+  {
+    "word": "explosive",
+    "ipa": "[ɪkˈspləʊsɪv]",
+    "definition": "n. 炸药；爆炸物\nadj. 爆炸的；爆炸性的；爆发性的",
+    "example": ""
+  },
+  {
+    "word": "vibration",
+    "ipa": "[vaɪˈbreɪʃn]",
+    "definition": "n. 振动；犹豫；心灵感应",
+    "example": ""
+  },
+  {
+    "word": "collapse",
+    "ipa": "[kəˈlæps]",
+    "definition": "n. 倒塌；失败；衰竭\nvt. 使倒塌，使崩溃；使萎陷；折叠\nvi. 倒塌；瓦解；暴跌",
+    "example": ""
+  },
+  {
+    "word": "drill",
+    "ipa": "[drɪl]",
+    "definition": "n. 训练；钻孔机；钻子；播种机\nvt. 钻孔；训练；条播\nvi. 钻孔；训练",
+    "example": ""
+  },
+  {
+    "word": "capsule",
+    "ipa": "[ˈkæpsjuːl]",
+    "definition": "n. 胶囊；[植] 蒴果；太空舱；小容器\nadj. 压缩的；概要的\nvt. 压缩；简述",
+    "example": ""
+  },
+  {
+    "word": "layer",
+    "ipa": "[ˈleɪə(r)]",
+    "definition": "n. 层，层次；膜；[植]压条；放置者，计划者\nvt. 把…分层堆放；借助压条法；生根繁殖；将（头发）剪成不同层次\nvi. 形成或分成层次；[植]通过压条法而生根",
+    "example": ""
+  },
+  {
+    "word": "beneath",
+    "ipa": "[bɪˈniːθ]",
+    "definition": "prep. 在…之下\nadv. 在下方",
+    "example": ""
+  },
+  {
+    "word": "lower",
+    "ipa": "[ˈləʊə(r)]",
+    "definition": "vt. 减弱，减少；放下，降下；贬低\nvi. 降低；减弱；跌落\nadj. 下游的；下级的；下等的",
+    "example": ""
+  },
+  {
+    "word": "progress",
+    "ipa": "[ˈprəʊɡres]",
+    "definition": "n. 进步，发展；前进\nvi. 前进，进步；进行",
+    "example": ""
+  },
+  {
+    "word": "smoothly",
+    "ipa": "[ˈsmuːðli]",
+    "definition": "adv. 平稳地，平滑地；流畅地，流利地",
+    "example": ""
+  },
+  {
+    "word": "slip",
+    "ipa": "[slɪp]",
+    "definition": "n. 滑，滑倒；片，纸片；错误；下跌；事故\nabbr. 串行线路接口协议，是旧式的协议（Serial Line Interface Protocol）\nadj. 滑动的；有活结的；活络的\nvt. 使滑动；滑过；摆脱；塞入；闪开\nvi. 滑动；滑倒；犯错；失足；减退",
+    "example": ""
+  },
+  {
+    "word": "comedy",
+    "ipa": "[ˈkɒmədi]",
+    "definition": "n. 喜剧；喜剧性；有趣的事情",
+    "example": ""
+  },
+  {
+    "word": "present",
+    "ipa": "[ˈprez(ə)nt]",
+    "definition": "n. 现在；礼物；瞄准\nadj. 现在的；出席的\nvt. 提出；介绍；呈现；赠送\nvi. 举枪瞄准",
+    "example": ""
+  },
+  {
+    "word": "queue",
+    "ipa": "[kjuː]",
+    "definition": "n. 队列；长队；辫子\nvt. 将…梳成辫子；使…排队\nvi. 排队；排队等候",
+    "example": ""
+  },
+  {
+    "word": "dull",
+    "ipa": "[dʌl]",
+    "definition": "adj. 钝的；迟钝的；无趣的；呆滞的；阴暗的\nvt. 使迟钝；使阴暗；缓和\nvi. 减少；变迟钝",
+    "example": ""
+  },
+  {
+    "word": "artiste",
+    "ipa": "[ɑːˈtiːst]",
+    "definition": "n. 艺人；大师，能手",
+    "example": ""
+  },
+  {
+    "word": "advertiser",
+    "ipa": "[ˈædvətaɪzə(r)]",
+    "definition": "n. 广告客户；刊登广告的人",
+    "example": ""
+  },
+  {
+    "word": "chip",
+    "ipa": "[tʃɪp]",
+    "definition": "n. [电子] 芯片；筹码；碎片；(食物的) 小片; 薄片\nvt. 削，凿；削成碎片\nvi. 剥落；碎裂",
+    "example": ""
+  },
+  {
+    "word": "overfish",
+    "ipa": "[ˌəʊvəˈfɪʃ]",
+    "definition": "vt. 对（鱼、渔场）捕捞过度",
+    "example": ""
+  },
+  {
+    "word": "giant",
+    "ipa": "[ˈdʒaɪənt]",
+    "definition": "n. 巨人；伟人；[动] 巨大的动物\nadj. 巨大的；巨人般的",
+    "example": ""
+  },
+  {
+    "word": "terrify",
+    "ipa": "[ˈterɪfaɪ]",
+    "definition": "vt. 恐吓；使恐怖；使害怕",
+    "example": ""
+  },
+  {
+    "word": "diver",
+    "ipa": "[ˈdaɪvə(r)]",
+    "definition": "n. 潜水者；跳水的选手；潜鸟",
+    "example": ""
+  },
+  {
+    "word": "oil rig",
+    "ipa": "[ˈɔɪl rɪɡ]",
+    "definition": "n. 石油钻塔；钻油平台；油井设备",
+    "example": ""
+  },
+  {
+    "word": "wit",
+    "ipa": "[wɪt]",
+    "definition": "n. 智慧；才智；智力\nv. <古>知道；即",
+    "example": ""
+  },
+  {
+    "word": "cage",
+    "ipa": "[keɪdʒ]",
+    "definition": "n. 笼，兽笼；牢房，监狱\nvt. 把…关进笼子；把…囚禁起来",
+    "example": ""
+  },
+  {
+    "word": "shark",
+    "ipa": "[ʃɑːk]",
+    "definition": "n. 鲨鱼；骗子\nvt. 敲诈\nvi. 诈骗",
+    "example": ""
+  },
+  {
+    "word": "whale",
+    "ipa": "[weɪl]",
+    "definition": "n. 鲸；巨大的东西\nvt. 猛揍；使惨败\nvi. 捕鲸",
+    "example": ""
+  },
+  {
+    "word": "variety",
+    "ipa": "[vəˈraɪəti]",
+    "definition": "n. 多样；种类；杂耍；变化，多样化",
+    "example": ""
+  },
+  {
+    "word": "cod",
+    "ipa": "[kɒd]",
+    "definition": "abbr. 货到付款（cash on delivery）；货到收款（collect on delivery）；化学需氧量（chemical oxygen demand）",
+    "example": ""
+  },
+  {
+    "word": "skate",
+    "ipa": "[skeɪt]",
+    "definition": "n. 溜冰；冰鞋\nvi. 滑冰；滑过",
+    "example": ""
+  },
+  {
+    "word": "factor",
+    "ipa": "[ˈfæktə(r)]",
+    "definition": "n. 因素；要素；[物] 因数；代理人\nvt. 把…作为因素计入；代理经营；把…分解成\nvi. 做代理商",
+    "example": ""
+  },
+  {
+    "word": "crew",
+    "ipa": "[kruː]",
+    "definition": "n. 队，组；全体人员，全体船员\nvt. 使当船员\nvi. 一起工作",
+    "example": ""
+  },
+  {
+    "word": "balloon",
+    "ipa": "[bəˈluːn]",
+    "definition": "n. 气球\nadj. 像气球般鼓起的\nvt. 使像气球般鼓起；使激增\nvi. 激增；膨胀如气球",
+    "example": ""
+  },
+  {
+    "word": "royal",
+    "ipa": "[ˈrɔɪəl]",
+    "definition": "n. 王室；王室成员\nadj. 皇家的；盛大的；女王的；高贵的；第一流的",
+    "example": ""
+  },
+  {
+    "word": "spy",
+    "ipa": "[spaɪ]",
+    "definition": "n. 间谍；密探\nvt. 侦察；发现；暗中监视\nvi. 侦察；当间谍",
+    "example": ""
+  },
+  {
+    "word": "track",
+    "ipa": "[træk]",
+    "definition": "n. 轨道；足迹，踪迹；小道\nvt. 追踪；通过；循路而行；用纤拉\nvi. 追踪；走；留下足迹",
+    "example": ""
+  },
+  {
+    "word": "binoculars",
+    "ipa": "[bɪˈnɒkjələz]",
+    "definition": "n. [光] 双筒望远镜；[光] 双筒镜，[光] 双目镜",
+    "example": ""
+  },
+  {
+    "word": "fast",
+    "ipa": "[fɑːst]",
+    "definition": "n. 斋戒；绝食\nadj. 快速的，迅速的；紧的，稳固的\nadv. 迅速地；紧紧地；彻底地\nvi. 禁食，斋戒",
+    "example": ""
+  },
+  {
+    "word": "ladder",
+    "ipa": "[ˈlædə(r)]",
+    "definition": "n. 阶梯；途径；梯状物\nvi. 成名；发迹\nvt. 在……上装设梯子",
+    "example": ""
+  },
+  {
+    "word": "shed",
+    "ipa": "[ʃed]",
+    "definition": "n. 小屋，棚；分水岭\nvt. 流出；摆脱；散发；倾吐\nvi. 流出；脱落；散布",
+    "example": ""
+  },
+  {
+    "word": "sarcastic",
+    "ipa": "[sɑːˈkæstɪk]",
+    "definition": "adj. 挖苦的；尖刻的，辛辣的",
+    "example": ""
+  },
+  {
+    "word": "tone",
+    "ipa": "[təʊn]",
+    "definition": "n. 语气；色调；音调；音色\nvt. 增强；用某种调子说\nvi. 颜色调和；呈现悦目色调",
+    "example": ""
+  },
+  {
+    "word": "noble",
+    "ipa": "[ˈnəʊb(ə)l]",
+    "definition": "adj. 高尚的；贵族的；惰性的；宏伟的\nn. 贵族\nvt. 抓住；逮捕",
+    "example": ""
+  },
+  {
+    "word": "monument",
+    "ipa": "[ˈmɒnjumənt]",
+    "definition": "n. 纪念碑；历史遗迹；不朽的作品\nvt. 为…树碑",
+    "example": ""
+  },
+  {
+    "word": "statue",
+    "ipa": "[ˈstætʃuː]",
+    "definition": "n. 雕像，塑像\nvt. 以雕像装饰",
+    "example": ""
+  },
+  {
+    "word": "liberty",
+    "ipa": "[ˈlɪbəti]",
+    "definition": "n. 自由；许可；冒失",
+    "example": ""
+  },
+  {
+    "word": "present",
+    "ipa": "[ˈprez(ə)nt]",
+    "definition": "n. 现在；礼物；瞄准\nadj. 现在的；出席的\nvt. 提出；介绍；呈现；赠送\nvi. 举枪瞄准",
+    "example": ""
+  },
+  {
+    "word": "sculptor",
+    "ipa": "[ˈskʌlptə(r)]",
+    "definition": "n. 雕刻家",
+    "example": ""
+  },
+  {
+    "word": "actual",
+    "ipa": "[ˈæktʃuəl]",
+    "definition": "adj. 真实的，实际的；现行的，目前的",
+    "example": ""
+  },
+  {
+    "word": "copper",
+    "ipa": "[ˈkɒpə(r)]",
+    "definition": "n. 铜；铜币；警察\nadj. 铜制的\nvt. 镀铜",
+    "example": ""
+  },
+  {
+    "word": "support",
+    "ipa": "[səˈpɔːt]",
+    "definition": "n. 支持，维持；支援，供养；支持者，支撑物\nvt. 支持，支撑，支援；扶持，帮助；赡养，供养",
+    "example": ""
+  },
+  {
+    "word": "framework",
+    "ipa": "[ˈfreɪmwɜːk]",
+    "definition": "n. 框架，骨架；结构，构架",
+    "example": ""
+  },
+  {
+    "word": "transport",
+    "ipa": "[ˈtrænspɔːt]",
+    "definition": "n. 运输；运输机；狂喜；流放犯\nvt. 运输；流放；使狂喜",
+    "example": ""
+  },
+  {
+    "word": "site",
+    "ipa": "[saɪt]",
+    "definition": "n. 地点；位置；场所\nvt. 设置；为…选址",
+    "example": ""
+  },
+  {
+    "word": "pedestal",
+    "ipa": "[ˈpedɪst(ə)l]",
+    "definition": "n. 基架，基座；基础\nvt. 搁在台上；支持；加座",
+    "example": ""
+  },
+  {
+    "word": "instruct",
+    "ipa": "[ɪnˈstrʌkt]",
+    "definition": "vt. 指导；通知；命令；教授",
+    "example": ""
+  },
+  {
+    "word": "Los Angeles",
+    "ipa": "",
+    "definition": "na. 洛杉矶",
+    "example": ""
+  },
+  {
+    "word": "reluctant",
+    "ipa": "[rɪˈlʌktənt]",
+    "definition": "adj. 不情愿的；勉强的；顽抗的",
+    "example": ""
+  },
+  {
+    "word": "weight",
+    "ipa": "[weɪt]",
+    "definition": "n. 重量，重力；负担；砝码；重要性\nvt. 加重量于，使变重",
+    "example": ""
+  },
+  {
+    "word": "underwater",
+    "ipa": "[ˌʌndəˈwɔːtə(r)]",
+    "definition": "n. 水下\nadj. 在水中的；水面下的\nadv. 在水下",
+    "example": ""
+  },
+  {
+    "word": "tricycle",
+    "ipa": "[ˈtraɪsɪk(ə)l]",
+    "definition": "n. [车辆] 三轮车",
+    "example": ""
+  },
+  {
+    "word": "compete",
+    "ipa": "[kəmˈpiːt]",
+    "definition": "vi. 竞争；比赛；对抗",
+    "example": ""
+  },
+  {
+    "word": "yard",
+    "ipa": "[jɑːd]",
+    "definition": "n. 院子；码（英制中丈量长度单位，1码=3英尺）；庭院；帆桁\nvt. 把…关进或围在畜栏里",
+    "example": ""
+  },
+  {
+    "word": "gasp",
+    "ipa": "[ɡɑːsp]",
+    "definition": "n. 喘气\nvi. 喘气；喘息；渴望\nvt. 气喘吁吁地说；喘着气说话",
+    "example": ""
+  },
+  {
+    "word": "fantasy",
+    "ipa": "[ˈfæntəsi]",
+    "definition": "n. 幻想；白日梦；幻觉\nadj. 虚幻的\nvt. 空想；想像\nvi. 耽于幻想；奏幻想曲（等于phantasy）",
+    "example": ""
+  },
+  {
+    "word": "ambassador",
+    "ipa": "[æmˈbæsədə(r)]",
+    "definition": "n. 大使；代表；使节",
+    "example": ""
+  },
+  {
+    "word": "Escalopia",
+    "ipa": "",
+    "definition": "无",
+    "example": ""
+  },
+  {
+    "word": "frightful",
+    "ipa": "[ˈfraɪtf(ə)l]",
+    "definition": "adj. 可怕的；惊人的；非常的",
+    "example": ""
+  },
+  {
+    "word": "fire extinguisher",
+    "ipa": "",
+    "definition": "n. 灭火器",
+    "example": ""
+  },
+  {
+    "word": "drily",
+    "ipa": "[ˈdraɪli]",
+    "definition": "adv. 干燥地；冷淡地；讽刺地",
+    "example": ""
+  },
+  {
+    "word": "embassy",
+    "ipa": "[ˈembəsi]",
+    "definition": "n. 大使馆；大使馆全体人员",
+    "example": ""
+  },
+  {
+    "word": "heaven",
+    "ipa": "[ˈhevn]",
+    "definition": "n. 天堂；天空；极乐",
+    "example": ""
+  },
+  {
+    "word": "basement",
+    "ipa": "[ˈbeɪsmənt]",
+    "definition": "n. 地下室；地窖",
+    "example": ""
+  },
+  {
+    "word": "definitely",
+    "ipa": "[ˈdefɪnətli]",
+    "definition": "adv. 清楚地，当然；明确地，肯定地",
+    "example": ""
+  },
+  {
+    "word": "post",
+    "ipa": "[pəʊst]",
+    "definition": "n. 岗位；邮件；标杆\nvt. 张贴；公布；邮递；布置\nvi. 快速行进",
+    "example": ""
+  },
+  {
+    "word": "shot",
+    "ipa": "[ʃɒt]",
+    "definition": "n. 发射；炮弹；射手；镜头\nv. 射击（shoot的过去式和过去分词）\nadj. 用尽的；破旧的；杂色的，闪光的",
+    "example": ""
+  },
+  {
+    "word": "festival",
+    "ipa": "[ˈfestɪv(ə)l]",
+    "definition": "n. 节日；庆祝，纪念活动；欢乐\nadj. 节日的，喜庆的；快乐的",
+    "example": ""
+  },
+  {
+    "word": "lantern",
+    "ipa": "[ˈlæntən]",
+    "definition": "n. 灯笼；提灯；灯笼式天窗",
+    "example": ""
+  },
+  {
+    "word": "spectacle",
+    "ipa": "[ˈspektək(ə)l]",
+    "definition": "n. 景象；场面；奇观；壮观；公开展示；表相，假相 n.（复）眼镜",
+    "example": ""
+  }
+]

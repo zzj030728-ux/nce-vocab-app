@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#2563eb">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="description" content="新概念英语点读、点词查词与间隔复习">
+  <title>新概念英语 · 点词学习</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <link rel="icon" href="icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>新概念英语</h1>
+      <p class="subtitle">点词查词 · 课文点读 · 间隔复习</p>
+    </div>
+  </header>
+
+  <div id="install-banner" class="install-banner" role="status">
+    <span>可安装到主屏幕，像 App 一样用</span>
+    <div class="install-actions">
+      <button type="button" id="install-dismiss" class="linkish">稍后</button>
+      <button type="button" id="install-btn" class="btn-primary install-go">安装</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="lessons-view">
+      <div class="book-tabs" id="book-tabs"></div>
+      <div class="lesson-list" id="lesson-list"></div>
+    </div>
+
+    <div id="reader-view" class="reader">
+      <button class="back-btn" id="back-btn" type="button">← 返回</button>
+      <div class="player-bar">
+        <button id="play-btn" type="button" aria-label="播放">▶</button>
+        <div class="info">
+          <div id="lesson-title" class="lesson-title"></div>
+          <div class="hint">点句子跳转 · 点单词查词</div>
+        </div>
+        <button id="loop-btn" class="speed-btn" type="button" title="单句循环">↻</button>
+        <button id="speed-btn" class="speed-btn" type="button">1x</button>
+      </div>
+      <div id="sentences"></div>
+      <button id="mark-done" class="btn btn-primary mark-done" type="button">标记为已学完</button>
+    </div>
+
+    <div id="vocab-view" style="display:none;">
+      <h2 class="view-title">我的生词本</h2>
+      <div id="vocab-items"></div>
+    </div>
+
+    <div id="review-view" style="display:none;">
+      <h2 class="view-title">今日复习</h2>
+      <div id="review-items"></div>
+    </div>
+  </div>
+
+  <nav class="bottom-nav">
+    <button data-tab="lessons" class="active" type="button">
+      <span class="icon">📖</span>课文
+    </button>
+    <button data-tab="vocab" type="button">
+      <span class="icon">📝</span>生词
+    </button>
+    <button data-tab="review" type="button">
+      <span class="icon">🔄</span>复习
+    </button>
+  </nav>
+
+  <div class="modal-overlay" id="modal-overlay">
+    <div class="modal">
+      <h3 id="modal-word"></h3>
+      <div class="ipa" id="modal-ipa"></div>
+      <div class="def" id="modal-def"></div>
+      <div class="example" id="modal-example"></div>
+      <div class="actions">
+        <button class="btn-secondary" id="close-modal" type="button">关闭</button>
+        <button class="btn-primary" id="save-btn" type="button">加入生词本</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/lessons.js"></script>
+  <script src="js/vocab.js"></script>
+  <script src="js/player.js"></script>
+  <script src="js/app.js"></script>
+  <script>
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("./sw.js").catch(function () {});
+    }
+  </script>
+</body>
+</html>
