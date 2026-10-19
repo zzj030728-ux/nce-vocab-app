@@ -1,14 +1,32 @@
 # 英语词库
 
-手机优先 PWA：**词库总站**浏览 [lilinji/English](https://github.com/lilinji/English) 全部分类与词书（按需从 GitHub raw 拉取 xlsx/xls/txt，不把 960+ 词表打进仓库）；**点读**含新概念公开源 + 用户自备教材导入；生词本与间隔复习全局共用 localStorage。
+手机优先 PWA：**词库总站**浏览 [lilinji/English](https://github.com/lilinji/English) 全部分类与词书（按需从 GitHub raw 拉取 xlsx/xls/txt，不把 960+ 词表打进仓库）；**点读**含新概念公开源 + 用户自备教材导入；**今日学习**分级路径；生词本与间隔复习全局共用 localStorage。
 
 ## 功能
 
 | Tab | 说明 |
 |-----|------|
-| 词库 | 分类 → 词书 → 词表；释义摘要一行截断；弹层发音（`speechSynthesis` en-US）；**卡片模式**翻面记词；加入生词本带 `bookSource` |
-| 点读 | 顶部子 Tab：**新概念**（mleo LRC/MP3）/ **我的教材**（本机导入 `.mp3`+`.lrc`，IndexedDB） |
+| 词库 | 分类 → 词书 → 词表；顶部「今日学习」入口；释义摘要；卡片模式；加入生词本 |
+| 点读 | 顶部子 Tab：**新概念**（mleo LRC/MP3）/ **我的教材**；课文页支持**跟读录音** |
 | 生词 / 复习 | 显示来源（新概念 / 词书名 / 我的教材）；与 `nce-saved` / `nce-progress` 兼容 |
+
+### 今日学习（分级路径）
+
+零基础不迷路：词库首页顶部大卡片进入「今日学习」。
+
+1. 路径分四阶段（`data/path.json`）：入门（NCE1 1–20）→ 基础 → 进阶 → 高阶
+2. 每天显示当前阶段的一课任务 + 建议记词数量
+3. 「开始今日课文」跳转新概念点读；学完后点「完成今日」推进下一步并累计连续天数（`localStorage` 键 `nce-path-progress`）
+4. 可在页面底部手动「选择起点阶段」
+
+### 跟读录音
+
+在点读阅读器中：
+
+1. 点「跟读」打开跟读条
+2. 点选当前句 →「听原音」播该句 →「录音」用麦克风跟读 →「停止」后「播放我的」回听
+3. 录音仅存本机内存（blob），不上传；可反复重录
+4. **优先使用 GitHub Pages（HTTPS）**。本机 `http://192.168.x` 在部分手机（尤其 iOS Safari）上麦克风可能被浏览器限制
 
 ### A. 词库释义体验
 
@@ -49,6 +67,8 @@ python -m http.server 8080
 
 同一 Wi‑Fi 下手机访问 `http://<电脑局域网IP>:8080`。
 
+> **麦克风提示**：跟读录音依赖 `getUserMedia`，在非 HTTPS 的局域网 IP 上可能不可用。完整跟读请用上方 Pages 链接。
+
 ### 卡片模式怎么用
 
 1. 打开任一词书 → 右上角打开「卡片模式」
@@ -60,7 +80,7 @@ python -m http.server 8080
 
 1. 底部「点读」→「我的教材」
 2. 选择成对的 `Lesson01.mp3` + `Lesson01.lrc`（basename 相同）
-3. 列表中进入即可点句播放、点词查词
+3. 列表中进入即可点句播放、点词查词、跟读录音
 
 ## 数据来源与限制
 
@@ -68,10 +88,12 @@ python -m http.server 8080
 - **中国大陆**访问 GitHub raw 可能较慢或需代理
 - 新概念课文/音频不打包进仓库，仅按需加载公开资源
 - 用户导入的音频仅存本机 IndexedDB，不上传
-- SheetJS 通过 CDN 加载；离线时依赖 Service Worker 缓存（`nce-vault-v2`）
+- 跟读录音仅存内存 blob，刷新页面即清空
+- SheetJS 通过 CDN 加载；离线时依赖 Service Worker 缓存（`nce-vault-v3`）
 
 ## 技术
 
 - 纯静态 HTML/CSS/JS + PWA
 - SheetJS 0.20.3 解析表格
 - IndexedDB（`nce-materials`）存用户教材
+- MediaRecorder + getUserMedia 跟读（HTTPS 推荐）

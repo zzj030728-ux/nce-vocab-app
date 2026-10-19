@@ -1,0 +1,39 @@
+{
+  "stages": [
+    {
+      "id": "stage0",
+      "title": "入门",
+      "desc": "零基础起步：新概念第一册前 20 课，熟悉语音与基础句型。",
+      "segments": [
+        { "book": "nce1", "startIndex": 1, "count": 20, "vocabHint": 20 }
+      ]
+    },
+    {
+      "id": "stage1",
+      "title": "基础",
+      "desc": "第一册后续 + 第二册前半，巩固日常表达。",
+      "segments": [
+        { "book": "nce1", "startIndex": 21, "count": 0, "vocabHint": 20 },
+        { "book": "nce2", "startIndex": 1, "count": 48, "vocabHint": 20 }
+      ]
+    },
+    {
+      "id": "stage2",
+      "title": "进阶",
+      "desc": "第二册后半 + 第三册前半，提升阅读与听力。",
+      "segments": [
+        { "book": "nce2", "startIndex": 49, "count": 0, "vocabHint": 20 },
+        { "book": "nce3", "startIndex": 1, "count": 30, "vocabHint": 25 }
+      ]
+    },
+    {
+      "id": "stage3",
+      "title": "高阶",
+      "desc": "第三册后半与第四册，冲刺高级阅读。",
+      "segments": [
+        { "book": "nce3", "startIndex": 31, "count": 0, "vocabHint": 25 },
+        { "book": "nce4", "startIndex": 1, "count": 0, "vocabHint": 30 }
+      ]
+    }
+  ]
+}

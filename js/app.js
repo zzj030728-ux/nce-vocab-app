@@ -38,7 +38,7 @@ function setHeader(title, sub) {
 }
 
 function showView(name) {
-  const views = ["vault", "books", "book", "listen", "reader", "vocab", "review"];
+  const views = ["vault", "books", "book", "today", "listen", "reader", "vocab", "review"];
   views.forEach(v => {
     const el = $(v + "-view");
     if (!el) return;
@@ -50,7 +50,7 @@ function showView(name) {
     }
   });
   const tabMap = {
-    vault: "vault", books: "vault", book: "vault",
+    vault: "vault", books: "vault", book: "vault", today: "vault",
     listen: "listen", reader: "listen",
     vocab: "vocab", review: "review"
   };
@@ -145,6 +145,7 @@ async function renderVaultHome(q) {
   grid.innerHTML = `<div class="empty">正在加载词库目录…</div>`;
   showView("vault");
   setHeader("英语词库", "按需加载 · 不打包词表");
+  refreshTodayCard();
   try {
     await Catalog.load();
     const cats = Catalog.filteredCategories(q);
@@ -420,7 +421,159 @@ function openEntryModal(entry, book) {
   overlay.classList.add("active");
 }
 
+/* ========== 今日学习路径 ========== */
+async function refreshTodayCard() {
+  const titleEl = $("today-card-title");
+  const subEl = $("today-card-sub");
+  const streakEl = $("today-card-streak");
+  if (!titleEl) return;
+  try {
+    const task = await Path.getTodayTask();
+    if (!task || !task.step) {
+      titleEl.textContent = "分级路径 · 每天一课";
+      subEl.textContent = "点此查看今天学什么";
+      if (streakEl) streakEl.textContent = "";
+      return;
+    }
+    const stageName = task.stage.title;
+    titleEl.textContent = task.doneToday
+      ? `今日已完成 · ${stageName}`
+      : `今日：${task.step.title}`;
+    subEl.textContent = task.doneToday
+      ? `连续 ${task.streak} 天 · 下一步可继续`
+      : `${stageName} · 第 ${task.stepIndex + 1}/${task.total} 步 · 建议记 ${task.step.vocabHint || 20} 词`;
+    if (streakEl) {
+      streakEl.textContent = task.streak > 0 ? `🔥 ${task.streak} 天` : "";
+    }
+  } catch (err) {
+    titleEl.textContent = "分级路径 · 每天一课";
+    subEl.textContent = "点此进入（需能访问新概念目录）";
+    if (streakEl) streakEl.textContent = "";
+  }
+}
+
+async function renderTodayPage() {
+  showView("today");
+  setHeader("今日学习", "分级路径");
+  const panel = $("today-panel");
+  panel.innerHTML = `<div class="empty">加载路径中…</div>`;
+  try {
+    await Path.load();
+    const task = await Path.getTodayTask();
+    if (!task || !task.stage) {
+      panel.innerHTML = `<div class="empty">路径配置不可用</div>`;
+      return;
+    }
+    const stages = Path.data.stages || [];
+    const stageOpts = stages.map(s =>
+      `<option value="${escapeHtml(s.id)}" ${s.id === task.stage.id ? "selected" : ""}>${escapeHtml(s.title)} — ${escapeHtml(s.desc)}</option>`
+    ).join("");
+
+    let body;
+    if (!task.step) {
+      body = `<div class="empty">当前阶段暂无课文（请检查网络或换阶段）</div>`;
+    } else if (task.pastEnd && task.doneToday) {
+      body = `
+        <div class="today-done-banner">🎉 本阶段任务已全部完成</div>
+        <p class="today-desc">可在下方切换到下一阶段继续。</p>`;
+    } else {
+      const doneClass = task.doneToday ? " is-done" : "";
+      body = `
+        <div class="today-task-card${doneClass}">
+          <div class="today-stage-label">${escapeHtml(task.stage.title)} · 第 ${task.stepIndex + 1} / ${task.total} 步</div>
+          <h3 class="today-lesson-title">${escapeHtml(task.step.title)}</h3>
+          <p class="today-desc">${escapeHtml(task.stage.desc || "")}</p>
+          <ul class="today-checklist">
+            <li>${task.doneToday ? "✅" : "☐"} 点读本课（听原音 + 跟读）</li>
+            <li>☐ 建议复习约 ${task.step.vocabHint || 20} 个单词（词库任选）</li>
+          </ul>
+          <div class="today-actions">
+            <button type="button" class="btn-primary" id="today-start-lesson">开始今日课文</button>
+            <button type="button" class="btn-secondary" id="today-complete" ${task.doneToday ? "disabled" : ""}>
+              ${task.doneToday ? "今日已完成" : "完成今日"}
+            </button>
+          </div>
+          ${task.streak > 0 ? `<div class="today-streak-line">连续学习 <strong>${task.streak}</strong> 天</div>` : ""}
+        </div>`;
+    }
+
+    panel.innerHTML = `
+      ${body}
+      <div class="today-settings">
+        <label class="today-settings-label">选择起点阶段</label>
+        <select id="today-stage-select">${stageOpts}</select>
+        <p class="today-settings-hint">切换阶段会从该阶段第 1 步重新开始（不影响已学课标记）。</p>
+      </div>`;
+
+    const startBtn = $("today-start-lesson");
+    if (startBtn && task.step) {
+      startBtn.onclick = () => openPathLesson(task.step);
+    }
+    const completeBtn = $("today-complete");
+    if (completeBtn) {
+      completeBtn.onclick = () => {
+        const res = Path.completeToday();
+        if (res.already) toast("今日已打卡");
+        else toast(`已完成 · 连续 ${res.progress.streak} 天`);
+        renderTodayPage();
+        refreshTodayCard();
+      };
+    }
+    const sel = $("today-stage-select");
+    if (sel) {
+      sel.onchange = () => {
+        Path.setStage(sel.value);
+        toast("已切换阶段");
+        renderTodayPage();
+        refreshTodayCard();
+      };
+    }
+  } catch (err) {
+    panel.innerHTML = `<div class="empty">路径加载失败<br>${escapeHtml(err.message || String(err))}<br>请确认能访问 nce.mleo.site</div>`;
+  }
+}
+
+async function openPathLesson(step) {
+  if (!step) return;
+  currentBook = step.book;
+  try {
+    const list = await Lessons.loadCatalog(step.book);
+    catalogCache[step.book] = list;
+    const meta = list.find(l => l.id === step.id) || list.find(l => l.index === step.index);
+    if (!meta) {
+      toast("找不到该课");
+      return;
+    }
+    await openLesson(meta.id, { back: "today" });
+  } catch (err) {
+    toast(err.message || String(err));
+  }
+}
+
+function updateShadowUI(state) {
+  const bar = $("shadow-bar");
+  const modeBtn = $("shadow-mode-btn");
+  const recBtn = $("shadow-rec");
+  const playBtn = $("shadow-play");
+  const hint = $("shadow-hint");
+  if (!bar || !modeBtn) return;
+  bar.style.display = state.mode ? "flex" : "none";
+  modeBtn.classList.toggle("on", state.mode);
+  modeBtn.textContent = state.mode ? "跟读中" : "跟读";
+  if (recBtn) {
+    recBtn.textContent = state.recording ? "停止" : "录音";
+    recBtn.classList.toggle("recording", state.recording);
+  }
+  if (playBtn) playBtn.disabled = !state.hasTake || state.recording;
+  if (hint) {
+    if (state.recording) hint.textContent = "正在录音… 说完后点「停止」";
+    else if (state.hasTake) hint.textContent = "可点「播放我的」回听，或再录";
+    else hint.textContent = "先点选一句，再听原音 / 录音";
+  }
+}
+
 /* ========== 点读：新概念 ========== */
+
 function renderListenHome() {
   showView("listen");
   setHeader("点读", listenSub === "nce" ? "新概念英语" : "我的教材");
@@ -481,11 +634,13 @@ async function renderLessonList() {
   }
 }
 
-async function openLesson(id) {
+async function openLesson(id, opts) {
   const meta = (catalogCache[currentBook] || []).find(l => l.id === id);
   if (!meta) return;
-  readerBackTarget = "listen";
+  readerBackTarget = (opts && opts.back) || "listen";
   listenSub = "nce";
+  Shadow.dispose();
+  updateShadowUI({ mode: false, recording: false, hasTake: false });
   const container = $("sentences");
   $("lesson-title").textContent = meta.title;
   container.innerHTML = `<div class="empty">正在加载课文与音频…</div>`;
@@ -561,6 +716,8 @@ async function renderMaterialsList() {
 async function openMaterialLesson(id) {
   readerBackTarget = "listen";
   listenSub = "materials";
+  Shadow.dispose();
+  updateShadowUI({ mode: false, recording: false, hasTake: false });
   const container = $("sentences");
   container.innerHTML = `<div class="empty">正在打开…</div>`;
   showView("reader");
@@ -779,6 +936,7 @@ function init() {
     $("play-btn").textContent = playing ? "⏸" : "▶";
   });
   setupInstall();
+  updateShadowUI({ mode: false, recording: false, hasTake: false });
   renderVaultHome("");
   bindFlashControls();
 
@@ -908,9 +1066,52 @@ function init() {
   };
   $("back-btn").onclick = () => {
     Player.pause();
+    Shadow.dispose();
+    updateShadowUI({ mode: false, recording: false, hasTake: false });
     revokeMaterialUrl();
     currentLesson = null;
-    renderListenHome();
+    const back = readerBackTarget;
+    readerBackTarget = "listen";
+    if (back === "today") renderTodayPage();
+    else renderListenHome();
+  };
+
+  $("today-card").onclick = () => renderTodayPage();
+  $("today-back").onclick = () => renderVaultHome($("vault-search").value || "");
+
+  Shadow.onState(updateShadowUI);
+  $("shadow-mode-btn").onclick = () => {
+    const on = Shadow.toggleMode();
+    toast(on ? "跟读模式开：点选句子后听原音/录音" : "跟读模式关");
+    updateShadowUI({ mode: Shadow.mode, recording: Shadow.recording, hasTake: !!Shadow.blobUrl });
+  };
+  $("shadow-listen").onclick = () => {
+    if (Player.currentIndex < 0) {
+      toast("请先点选一句");
+      return;
+    }
+    Player.jumpTo(Player.currentIndex);
+  };
+  $("shadow-rec").onclick = async () => {
+    if (Shadow.recording) {
+      Shadow.stopRecording(true);
+      toast("录音完成");
+      return;
+    }
+    if (Player.currentIndex < 0) {
+      toast("请先点选一句");
+      return;
+    }
+    Player.pause();
+    try {
+      await Shadow.startRecording();
+      toast("开始录音");
+    } catch (err) {
+      toast(err.message || String(err));
+    }
+  };
+  $("shadow-play").onclick = () => {
+    if (!Shadow.playMine()) toast("还没有录音");
   };
 }
 
